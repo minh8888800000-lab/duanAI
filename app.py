@@ -86,8 +86,8 @@ bootstrap()
 
 # Expose ASGI application for Uvicorn server compatibility
 try:
-    from a2wsgi import ASGIMiddleware
-    asgi_app = ASGIMiddleware(app)
+    from a2wsgi import WSGIMiddleware
+    asgi_app = WSGIMiddleware(app)
 except Exception:
     try:
         from asgiref.wsgi import WsgiToAsgi
