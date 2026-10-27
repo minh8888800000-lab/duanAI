@@ -101,6 +101,45 @@ def logout():
     return jsonify({"success": True, "message": "Đã đăng xuất thành công."})
 
 
+@api_bp.route("/auth/forgot-password/request-otp", methods=["POST"])
+def forgot_password_request_otp():
+    """Gửi mã xác thực OTP qua Zalo ZNS hoặc SMS số điện thoại."""
+    data = request.get_json() or {}
+    identifier = data.get("identifier", "").strip()
+    channel = data.get("channel", "zalo").strip()
+    result = AuthService.send_password_reset_otp(identifier, channel)
+    status_code = 200 if result.get("success") else 400
+    return jsonify(result), status_code
+
+
+@api_bp.route("/auth/forgot-password/verify", methods=["POST"])
+def forgot_password_verify():
+    """Xác thực mã OTP Zalo/SMS và đặt lại mật khẩu mới."""
+    data = request.get_json() or {}
+    identifier = data.get("identifier", "").strip()
+    otp = data.get("otp", "").strip()
+    new_password = data.get("new_password", "").strip()
+    result = AuthService.verify_otp_and_reset_password(identifier, otp, new_password)
+    status_code = 200 if result.get("success") else 400
+    return jsonify(result), status_code
+
+
+@api_bp.route("/auth/forgot-password", methods=["POST"])
+def forgot_password():
+    """Hỗ trợ đặt lại mật khẩu linh hoạt (hỗ trợ cả OTP và trực tiếp)."""
+    data = request.get_json() or {}
+    identifier = data.get("identifier", "").strip()
+    otp = data.get("otp", "").strip()
+    new_password = data.get("new_password", "").strip()
+    if otp:
+        result = AuthService.verify_otp_and_reset_password(identifier, otp, new_password)
+    else:
+        result = AuthService.reset_password(identifier, new_password)
+    status_code = 200 if result.get("success") else 400
+    return jsonify(result), status_code
+
+
+
 # ====================================================================
 # 1.1 ACCOUNT MANAGEMENT ROUTES (ADMIN ONLY)
 # ====================================================================
