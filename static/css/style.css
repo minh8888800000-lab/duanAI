@@ -1,60 +1,62 @@
 /* ====================================================================
-   BARBERSHOP MANAGEMENT SYSTEM - ULTRA-LUXURY DARK THEME
-   Deep Charcoal Canvas, Terracotta Orange (#d85627) & Champagne Gold
-   High Contrast (WCAG AA/AAA Compliant) & Neo-Glassmorphism
+   HAIR SALON & BARBERSHOP SYSTEM - BRIGHT ORANGE LUXURY THEME
+   Phong cách: Cam Sáng Hoàng Gia (Radiant Warm Amber & Vibrant Orange Luxury)
+   Toàn diện cho cả Khách Hàng (Landing) và Quản Trị / Nhân Viên (Internal Staff POS)
+   Độ tương phản cao WCAG AAA, Giao diện trong suốt Neo-Glassmorphism cao cấp
    ==================================================================== */
 
 :root {
-  /* Canvas & Surface Layers (Dark Vintage Luxury Barbershop) */
-  --bg-primary: #121212;           /* Deep Charcoal canvas */
-  --bg-secondary: #181818;         /* Card & Panel surface */
-  --bg-card: #1e1e1e;              /* Elevated card background */
-  --bg-card-hover: #262626;        /* Subtle hover surface */
-  --bg-card-alt: #161616;          /* Alternate surface */
-  --border-color: #2e2e2e;         /* Subtle dark borders */
-  --border-subtle: #242424;        /* Soft dividers */
-  --border-strong: #3d3d3d;        /* Visible focus / input borders */
+  /* Canvas & Surface Layers (Nền Cam Sáng & Kem Ngọc Trai Sang Trọng) */
+  --bg-primary: #fff7ed;           /* Nền canvas cam sáng ấm áp ngọc trai */
+  --bg-secondary: #fffaf5;         /* Nền phụ cam ngà sữa tinh khiết */
+  --bg-card: #ffffff;              /* Thẻ trắng tinh khiết nổi bật */
+  --bg-card-hover: #fff3e6;        /* Thẻ hover ánh cam nhẹ */
+  --bg-card-alt: #ffedd5;          /* Nền khối chức năng cam đào nhạt */
+  --border-color: #fed7aa;         /* Viền cam sữa dịu mắt */
+  --border-subtle: #ffedd5;        /* Viền phụ */
+  --border-strong: #fb923c;        /* Viền cam rực điểm nhấn */
 
-  /* High-Contrast Typography */
-  --text-primary: #f9fafb;         /* Crisp near-white */
-  --text-secondary: #d1d5db;       /* Readable light gray */
-  --text-muted: #9ca3af;           /* Muted secondary captions */
-  --text-inverse: #121212;         /* Text on bright buttons */
+  /* High-Contrast Luxury Typography */
+  --text-primary: #1c1917;         /* Đen than trầm tương phản sắc nét trên nền cam sáng */
+  --text-secondary: #431407;       /* Nâu cam espresso trầm ấm quý tộc */
+  --text-muted: #78350f;           /* Chú thích màu nâu caramel ấm */
+  --text-inverse: #ffffff;         /* Trắng tuyết trên các nút bấm cam */
 
-  /* Luxury Barbershop Terracotta Orange & Champagne Gold */
-  --barber-orange: #d85627;
-  --barber-orange-hover: #bf4316;
-  --barber-orange-light: #ff7438;
-  --barber-orange-glow: rgba(216, 86, 39, 0.45);
-  
-  --gold-primary: #d85627;         /* Primary brand accent: Barbershop Orange */
-  --gold-dark: #b84318;            /* Dark orange */
-  --gold-light: #ff854d;           /* Vibrant light orange */
-  --gold-bg: rgba(216, 86, 39, 0.12); /* Subtle orange tint */
-  --gold-border: rgba(216, 86, 39, 0.35); /* Subtle orange border */
-  --gold-glow: rgba(216, 86, 39, 0.25);
-  --champagne-gold: #cba36b;
+  /* Vibrant Barber Orange & Warm Gold Accents */
+  --barber-orange: #ea580c;        /* Màu cam chính sang trọng */
+  --barber-orange-hover: #c2410c;  /* Màu cam đậm khi hover */
+  --barber-orange-light: #f97316;  /* Màu cam tươi sáng */
+  --barber-orange-glow: rgba(234, 88, 12, 0.3);
+  --barber-orange-subtle: rgba(234, 88, 12, 0.1);
 
-  /* Semantic Accents (Vibrant for Dark Mode) */
-  --accent-cyan: #38bdf8;
-  --accent-cyan-bg: rgba(56, 189, 248, 0.12);
-  --accent-cyan-border: rgba(56, 189, 248, 0.3);
+  --gold-primary: #ea580c;         /* Đồng bộ màu cam vàng */
+  --gold-dark: #c2410c;
+  --gold-light: #f97316;
+  --gold-bg: rgba(234, 88, 12, 0.08);
+  --gold-border: rgba(234, 88, 12, 0.35);
+  --gold-glow: rgba(234, 88, 12, 0.25);
+  --champagne-gold: #f59e0b;
 
-  --accent-emerald: #34d399;
-  --accent-emerald-bg: rgba(52, 211, 153, 0.12);
-  --accent-emerald-border: rgba(52, 211, 153, 0.3);
+  /* Semantic Accents */
+  --accent-cyan: #0284c7;
+  --accent-cyan-bg: rgba(2, 132, 199, 0.1);
+  --accent-cyan-border: rgba(2, 132, 199, 0.3);
 
-  --accent-rose: #f43f5e;
-  --accent-rose-bg: rgba(244, 63, 94, 0.12);
-  --accent-rose-border: rgba(244, 63, 94, 0.3);
+  --accent-emerald: #059669;
+  --accent-emerald-bg: rgba(5, 150, 105, 0.1);
+  --accent-emerald-border: rgba(5, 150, 105, 0.3);
 
-  --accent-amber: #fbbf24;
-  --accent-amber-bg: rgba(251, 191, 36, 0.12);
-  --accent-amber-border: rgba(251, 191, 36, 0.3);
+  --accent-rose: #e11d48;
+  --accent-rose-bg: rgba(225, 29, 72, 0.1);
+  --accent-rose-border: rgba(225, 29, 72, 0.3);
 
-  --accent-purple: #a855f7;
-  --accent-purple-bg: rgba(168, 85, 247, 0.12);
-  --accent-purple-border: rgba(168, 85, 247, 0.3);
+  --accent-amber: #d97706;
+  --accent-amber-bg: rgba(217, 119, 6, 0.1);
+  --accent-amber-border: rgba(217, 119, 6, 0.3);
+
+  --accent-purple: #7c3aed;
+  --accent-purple-bg: rgba(124, 58, 237, 0.1);
+  --accent-purple-border: rgba(124, 58, 237, 0.3);
 
   /* Rounded Geometry */
   --radius-xs: 4px;
@@ -67,14 +69,15 @@
   --font-main: 'Outfit', 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
   --font-serif: 'Playfair Display', Georgia, serif;
 
-  /* Layered Drop Shadows */
-  --shadow-xs: 0 1px 2px 0 rgba(0, 0, 0, 0.4);
-  --shadow-sm: 0 2px 4px 0 rgba(0, 0, 0, 0.5);
-  --shadow-md: 0 4px 12px 0 rgba(0, 0, 0, 0.6);
-  --shadow-lg: 0 10px 25px -3px rgba(0, 0, 0, 0.7);
-  --shadow-xl: 0 20px 35px -5px rgba(0, 0, 0, 0.8);
-  --shadow-gold: 0 8px 25px rgba(216, 86, 39, 0.3);
-  --shadow-glow: 0 0 25px rgba(216, 86, 39, 0.35);
+  /* Layered Drop Shadows with Soft Warm Orange Undertone */
+  --shadow-xs: 0 1px 3px rgba(67, 20, 7, 0.05);
+  --shadow-sm: 0 2px 8px rgba(67, 20, 7, 0.06);
+  --shadow-md: 0 8px 24px rgba(67, 20, 7, 0.08), 0 2px 8px rgba(234, 88, 12, 0.12);
+  --shadow-lg: 0 16px 40px rgba(67, 20, 7, 0.1), 0 4px 16px rgba(234, 88, 12, 0.18);
+  --shadow-xl: 0 24px 50px rgba(67, 20, 7, 0.15);
+  --shadow-gold: 0 8px 25px rgba(234, 88, 12, 0.28);
+  --shadow-glow: 0 0 25px rgba(234, 88, 12, 0.3);
+  --header-bg: rgba(255, 255, 255, 0.96);
 }
 
 * {
@@ -91,18 +94,18 @@ body {
   display: flex;
   flex-direction: column;
   background-image: 
-    radial-gradient(circle at 12% 15%, rgba(216, 86, 39, 0.08) 0%, transparent 45%),
-    radial-gradient(circle at 88% 75%, rgba(203, 163, 107, 0.05) 0%, transparent 50%),
-    radial-gradient(circle at 50% 50%, rgba(18, 18, 18, 0.9) 0%, transparent 60%);
+    radial-gradient(circle at 10% 12%, rgba(249, 115, 22, 0.08) 0%, transparent 45%),
+    radial-gradient(circle at 90% 80%, rgba(251, 146, 60, 0.09) 0%, transparent 50%),
+    linear-gradient(180deg, #fffaf5 0%, #fff7ed 60%, #ffedd5 100%);
   background-attachment: fixed;
   overflow-x: hidden;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
-/* Glassmorphism Classes for Dark Theme */
+/* Glassmorphism Classes */
 .glass {
-  background: var(--bg-secondary);
+  background: var(--bg-card);
   border: 1px solid var(--border-color);
   border-radius: var(--radius-md);
   box-shadow: var(--shadow-sm);
@@ -110,26 +113,25 @@ body {
 }
 
 .glass-gold {
-  background: linear-gradient(135deg, rgba(216, 86, 39, 0.12) 0%, #1a1a1a 100%);
+  background: linear-gradient(135deg, rgba(184, 134, 40, 0.08) 0%, var(--bg-card) 100%);
   border: 1px solid var(--gold-border);
   border-radius: var(--radius-md);
   box-shadow: var(--shadow-gold);
 }
 
-/* --- HEADER & TOPBAR (STAFF & ADMIN) --- */
+/* --- HEADER & TOPBAR (STAFF & ADMIN - ĐỒNG NHẤT 100% VỚI BÊN NGOÀI: NỀN TRẮNG, VIỀN CAM SỮA, CHỮ ĐEN THAN SẮC NÉT) --- */
 .header {
   position: sticky;
   top: 0;
   z-index: 50;
-  background: rgba(18, 18, 18, 0.95);
-  backdrop-filter: blur(16px);
-  -webkit-backdrop-filter: blur(16px);
-  border-bottom: 1px solid var(--border-color);
+  background: #ffffff !important;
+  border-bottom: 2px solid #fed7aa !important;
   padding: 0.85rem 2rem;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
+  box-shadow: 0 4px 20px rgba(67, 20, 7, 0.04);
+  color: #0f172a !important;
 }
 
 .brand {
@@ -143,30 +145,54 @@ body {
   width: 44px;
   height: 44px;
   border-radius: 12px;
-  background: linear-gradient(135deg, #d85627, #b84318);
+  background: #fff7ed;
   display: flex;
   align-items: center;
   justify-content: center;
-  color: #ffffff;
+  color: #ea580c;
   font-size: 1.4rem;
-  box-shadow: 0 4px 14px rgba(180, 138, 40, 0.28);
+  border: 1.5px solid #fed7aa;
 }
 
 .brand-title {
-  font-size: 1.25rem;
+  font-size: 1.28rem;
   font-weight: 800;
   letter-spacing: 0.5px;
-  background: linear-gradient(135deg, #ffffff 30%, #ff854d 100%);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
+  color: #0f172a !important;
+  -webkit-text-fill-color: #0f172a !important;
 }
 
 .brand-subtitle {
-  font-size: 0.75rem;
-  color: var(--gold-light);
-  text-transform: uppercase;
-  letter-spacing: 1.2px;
-  font-weight: 600;
+  font-size: 0.76rem;
+  color: #ea580c !important;
+  letter-spacing: 0.5px;
+  font-weight: 700;
+}
+
+.header-revenue-pill {
+  background: #fff7ed !important;
+  border: 1.5px solid #fed7aa !important;
+  color: #431407 !important;
+  border-radius: 999px;
+  padding: 6px 14px;
+  font-size: 0.82rem;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+}
+.header-revenue-pill strong {
+  color: #0f172a !important;
+}
+
+.user-pill {
+  background: #f8fafc !important;
+  border: 1.5px solid #fed7aa !important;
+  color: #0f172a !important;
+  border-radius: 999px;
+  padding: 6px 14px;
+}
+.user-pill span {
+  color: #0f172a !important;
 }
 
 .header-actions {
@@ -178,7 +204,7 @@ body {
 .role-badge-group {
   display: flex;
   align-items: center;
-  background: #141414;
+  background: var(--bg-card-alt);
   padding: 4px;
   border-radius: var(--radius-full);
   border: 1px solid var(--border-color);
@@ -200,14 +226,14 @@ body {
 }
 
 .role-btn:hover {
-  color: #ffffff;
-  background: #242424;
+  color: var(--barber-orange);
+  background: #fffaf5;
 }
 
 .role-btn.active {
-  background: linear-gradient(135deg, #d85627, #b84318);
+  background: linear-gradient(135deg, #ea580c, #c2410c);
   color: #ffffff;
-  box-shadow: 0 2px 10px rgba(216, 86, 39, 0.4);
+  box-shadow: 0 2px 10px rgba(234, 88, 12, 0.4);
 }
 
 /* User Pill */
@@ -216,11 +242,12 @@ body {
   align-items: center;
   gap: 0.6rem;
   padding: 6px 14px;
-  background: #1c1c1c;
+  background: var(--bg-card);
   border: 1px solid var(--border-color);
   border-radius: var(--radius-full);
   font-size: 0.85rem;
   color: var(--text-primary);
+  box-shadow: var(--shadow-xs);
 }
 
 .user-status-dot {
@@ -228,14 +255,14 @@ body {
   height: 9px;
   border-radius: 50%;
   background-color: var(--accent-emerald);
-  box-shadow: 0 0 10px rgba(52, 211, 153, 0.6);
+  box-shadow: 0 0 10px rgba(5, 150, 105, 0.6);
   animation: pulse 2s infinite;
 }
 
 @keyframes pulse {
-  0% { transform: scale(0.95); box-shadow: 0 0 0 0 rgba(52, 211, 153, 0.7); }
-  70% { transform: scale(1); box-shadow: 0 0 0 8px rgba(52, 211, 153, 0); }
-  100% { transform: scale(0.95); box-shadow: 0 0 0 0 rgba(52, 211, 153, 0); }
+  0% { transform: scale(0.95); box-shadow: 0 0 0 0 rgba(5, 150, 105, 0.7); }
+  70% { transform: scale(1); box-shadow: 0 0 0 8px rgba(5, 150, 105, 0); }
+  100% { transform: scale(0.95); box-shadow: 0 0 0 0 rgba(5, 150, 105, 0); }
 }
 
 /* --- BUTTONS --- */
@@ -255,29 +282,29 @@ body {
 }
 
 .btn-primary {
-  background: linear-gradient(135deg, #d85627 0%, #b84318 100%);
+  background: linear-gradient(135deg, #ea580c 0%, #c2410c 100%);
   color: #ffffff !important;
-  border-color: #d85627;
-  box-shadow: 0 4px 14px rgba(216, 86, 39, 0.35);
+  border-color: #ea580c;
+  box-shadow: 0 4px 14px rgba(234, 88, 12, 0.35);
 }
 
 .btn-primary:hover {
   transform: translateY(-2px);
-  box-shadow: 0 6px 20px rgba(216, 86, 39, 0.5);
-  background: linear-gradient(135deg, #ea6332 0%, #c8491a 100%);
+  box-shadow: 0 6px 20px rgba(234, 88, 12, 0.5);
+  background: linear-gradient(135deg, #f97316 0%, #ea580c 100%);
 }
 
 .btn-secondary {
-  background: #242424;
-  color: #f3f4f6 !important;
-  border: 1px solid var(--border-strong);
+  background: var(--bg-card);
+  color: var(--text-primary) !important;
+  border: 1px solid var(--border-color);
   box-shadow: var(--shadow-xs);
 }
 
 .btn-secondary:hover {
-  background: #2c2c2c;
-  color: #ffffff !important;
-  border-color: var(--gold-primary);
+  background: var(--bg-card-alt);
+  color: var(--barber-orange) !important;
+  border-color: var(--barber-orange);
 }
 
 .btn-ai {
@@ -311,11 +338,16 @@ body {
   border-radius: var(--radius-sm);
 }
 
-/* --- MAIN CONTAINER & NAV TABS --- */
+/* --- MAIN CONTAINER & NAV TABS (CHUẨN CLINOVA SAAS SẠCH SẼ) --- */
+#view-staff-app {
+  background: #f1f5f9 !important;
+  min-height: 100vh;
+}
+
 .main-layout {
   display: flex;
   flex: 1;
-  max-width: 1600px;
+  max-width: 1650px;
   width: 100%;
   margin: 0 auto;
   padding: 1.5rem 2rem;
@@ -327,18 +359,32 @@ body {
   flex-shrink: 0;
   display: flex;
   flex-direction: column;
-  gap: 0.5rem;
+  gap: 0.35rem;
+  background: #ffffff !important;
+  border: 1px solid #e2e8f0 !important;
+  border-radius: 14px !important;
+  padding: 1.25rem 0.85rem !important;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.02) !important;
+}
+
+.sidebar-category-label {
+  color: #94a3b8 !important;
+  font-size: 0.72rem !important;
+  font-weight: 800 !important;
+  text-transform: uppercase !important;
+  letter-spacing: 0.6px !important;
+  padding: 10px 12px 4px 12px !important;
 }
 
 .nav-item {
   display: flex;
   align-items: center;
   gap: 0.85rem;
-  padding: 0.85rem 1.15rem;
-  color: var(--text-muted);
-  border-radius: var(--radius-md);
-  font-size: 0.92rem;
-  font-weight: 600;
+  padding: 0.65rem 1rem;
+  color: #475569 !important;
+  border-radius: 8px !important;
+  font-size: 0.88rem !important;
+  font-weight: 600 !important;
   text-decoration: none;
   cursor: pointer;
   transition: all 0.2s ease;
@@ -346,21 +392,29 @@ body {
 }
 
 .nav-item:hover {
-  background: #222222;
-  color: #ffffff;
+  background: #f8fafc !important;
+  color: #0f172a !important;
 }
 
 .nav-item.active {
-  background: rgba(216, 86, 39, 0.16);
-  color: #ff854d;
-  border-color: rgba(216, 86, 39, 0.4);
-  border-left: 3px solid #d85627;
-  font-weight: 700;
-  box-shadow: 0 2px 10px rgba(216, 86, 39, 0.2);
+  background: #eff6ff !important;
+  color: #2563eb !important;
+  border: 1px solid #dbeafe !important;
+  font-weight: 700 !important;
+  box-shadow: 0 2px 6px rgba(37, 99, 235, 0.08) !important;
+}
+
+.nav-item.active .nav-icon {
+  color: #2563eb !important;
 }
 
 .nav-icon {
-  font-size: 1.25rem;
+  font-size: 1.15rem;
+  color: #64748b;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 22px;
 }
 
 .content-area {
@@ -377,46 +431,41 @@ body {
 }
 
 .kpi-card {
-  padding: 1.25rem;
+  padding: 1.25rem 1.4rem;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  border-radius: var(--radius-md);
-  background: #1c1c1c;
-  border: 1px solid var(--border-color);
-  box-shadow: var(--shadow-sm);
+  border-radius: 12px;
+  background: #ffffff !important;
+  border: 1px solid #e2e8f0 !important;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.03) !important;
   position: relative;
   overflow: hidden;
-  transition: transform 0.25s ease, box-shadow 0.25s ease;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
 
 .kpi-card:hover {
   transform: translateY(-2px);
-  box-shadow: var(--shadow-md);
-  border-color: var(--gold-primary);
-  background: #222222;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.06) !important;
+  border-color: #cbd5e1 !important;
+  background: #ffffff !important;
 }
 
 .kpi-card::after {
-  content: '';
-  position: absolute;
-  top: 0; right: 0;
-  width: 90px; height: 90px;
-  background: radial-gradient(circle, rgba(216, 86, 39, 0.12) 0%, transparent 70%);
-  pointer-events: none;
+  display: none !important;
 }
 
 .kpi-value {
-  font-size: 1.75rem;
+  font-size: 1.65rem;
   font-weight: 800;
-  color: #ffffff;
-  margin-top: 0.35rem;
+  color: #0f172a !important;
+  margin-top: 0.3rem;
   letter-spacing: -0.5px;
 }
 
 .kpi-label {
-  font-size: 0.8rem;
-  color: var(--text-muted);
+  font-size: 0.75rem;
+  color: #64748b !important;
   text-transform: uppercase;
   letter-spacing: 0.5px;
   font-weight: 700;
@@ -430,28 +479,29 @@ body {
   align-items: center;
   justify-content: center;
   font-size: 1.5rem;
-  background: #262626;
-  border: 1px solid var(--border-strong);
+  background: #f8fafc;
+  border: 1px solid #e2e8f0;
+  color: #2563eb;
 }
 
-/* --- BADGES & STATUSES --- */
+/* --- BADGES & STATUSES (CHUẨN CLINOVA DỊU MẮT) --- */
 .badge {
   display: inline-flex;
   align-items: center;
   gap: 5px;
   padding: 4px 10px;
-  border-radius: var(--radius-full);
+  border-radius: 9999px;
   font-size: 0.75rem;
   font-weight: 700;
   letter-spacing: 0.3px;
 }
 
-.badge-warning { background: rgba(251, 191, 36, 0.15); color: #fbbf24; border: 1px solid rgba(251, 191, 36, 0.35); }
-.badge-info { background: rgba(56, 189, 248, 0.15); color: #38bdf8; border: 1px solid rgba(56, 189, 248, 0.35); }
-.badge-primary { background: rgba(168, 85, 247, 0.15); color: #c084fc; border: 1px solid rgba(168, 85, 247, 0.35); }
-.badge-success { background: rgba(52, 211, 153, 0.15); color: #34d399; border: 1px solid rgba(52, 211, 153, 0.35); }
-.badge-danger { background: rgba(244, 63, 94, 0.15); color: #f43f5e; border: 1px solid rgba(244, 63, 94, 0.35); }
-.badge-secondary { background: #242424; color: var(--text-muted); border: 1px solid var(--border-strong); }
+.badge-warning { background: #ffedd5 !important; color: #c2410c !important; border: 1px solid #fed7aa !important; }
+.badge-info { background: #e0f2fe !important; color: #0369a1 !important; border: 1px solid #bae6fd !important; }
+.badge-primary { background: #eff6ff !important; color: #2563eb !important; border: 1px solid #bfdbfe !important; }
+.badge-success { background: #dcfce7 !important; color: #15803d !important; border: 1px solid #bbf7d0 !important; }
+.badge-danger { background: #fee2e2 !important; color: #b91c1c !important; border: 1px solid #fecaca !important; }
+.badge-secondary { background: #f1f5f9 !important; color: #475569 !important; border: 1px solid #e2e8f0 !important; }
 
 /* --- APPOINTMENTS TIMELINE & CARDS --- */
 .appt-grid {
@@ -466,7 +516,7 @@ body {
   display: flex;
   flex-direction: column;
   gap: 0.85rem;
-  background: #1c1c1c;
+  background: var(--bg-card);
   border: 1px solid var(--border-color);
   border-radius: var(--radius-md);
   box-shadow: var(--shadow-sm);
@@ -476,24 +526,24 @@ body {
 
 .appt-card:hover {
   transform: translateY(-3px);
-  background: #222222;
+  background: var(--bg-card-hover);
   border-color: var(--gold-primary);
-  box-shadow: var(--shadow-lg);
+  box-shadow: var(--shadow-md);
 }
 
 .appt-card.status-dang-phuc-vu {
-  border-left: 4px solid #10b981;
-  background: linear-gradient(to right, rgba(16, 185, 129, 0.08), #1c1c1c);
+  border-left: 4px solid var(--accent-emerald);
+  background: linear-gradient(to right, var(--accent-emerald-bg), var(--bg-card));
 }
 
 .appt-card.status-cho-xac-nhan {
-  border-left: 4px solid #f59e0b;
-  background: linear-gradient(to right, rgba(245, 158, 11, 0.08), #1c1c1c);
+  border-left: 4px solid var(--accent-amber);
+  background: linear-gradient(to right, var(--accent-amber-bg), var(--bg-card));
 }
 
 .appt-card.status-da-xac-nhan {
-  border-left: 4px solid #0284c7;
-  background: linear-gradient(to right, rgba(2, 132, 199, 0.08), #1c1c1c);
+  border-left: 4px solid var(--accent-cyan);
+  background: linear-gradient(to right, var(--accent-cyan-bg), var(--bg-card));
 }
 
 .appt-card.status-hoan-thanh {
@@ -501,7 +551,7 @@ body {
 }
 
 .appt-card.status-da-huy {
-  border-left: 4px solid #ef4444;
+  border-left: 4px solid var(--accent-rose);
   opacity: 0.65;
 }
 
@@ -514,7 +564,7 @@ body {
 .appt-time {
   font-size: 1.05rem;
   font-weight: 700;
-  color: #ff854d;
+  color: var(--gold-primary);
   display: flex;
   align-items: center;
   gap: 6px;
@@ -523,7 +573,7 @@ body {
 .appt-customer {
   font-size: 1.1rem;
   font-weight: 700;
-  color: #f9fafb;
+  color: var(--text-primary);
 }
 
 .service-chip-list {
@@ -533,51 +583,95 @@ body {
 }
 
 .service-chip {
-  background: #242424;
+  background: var(--bg-card-alt);
   border: 1px solid var(--border-color);
   padding: 3px 8px;
   border-radius: var(--radius-sm);
   font-size: 0.75rem;
-  color: #d1d5db;
+  color: var(--text-secondary);
   font-weight: 600;
 }
 
-/* --- TABLE STYLING --- */
+/* --- TABLE STYLING (CHUẨN CLINOVA SAAS SẠCH SẼ) --- */
 .table-responsive {
   width: 100%;
   overflow-x: auto;
-  border-radius: var(--radius-md);
-  border: 1px solid var(--border-color);
-  background: #181818;
+  border-radius: 12px !important;
+  border: 1px solid #e2e8f0 !important;
+  background: #ffffff !important;
   margin-top: 1rem;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.03) !important;
 }
 
 .custom-table {
   width: 100%;
   border-collapse: collapse;
   text-align: left;
+  background: #ffffff !important;
 }
 
 .custom-table th {
-  background: #141414;
-  padding: 0.95rem 1.15rem;
-  font-size: 0.8rem;
-  text-transform: uppercase;
-  color: var(--text-muted);
-  font-weight: 700;
-  letter-spacing: 0.5px;
-  border-bottom: 1px solid var(--border-color);
+  background: #f8fafc !important;
+  padding: 12px 16px !important;
+  font-size: 0.78rem !important;
+  text-transform: uppercase !important;
+  color: #475569 !important;
+  font-weight: 700 !important;
+  letter-spacing: 0.5px !important;
+  border-bottom: 2px solid #e2e8f0 !important;
 }
 
 .custom-table td {
-  padding: 1rem 1.15rem;
-  font-size: 0.9rem;
-  color: #f3f4f6;
-  border-bottom: 1px solid #222222;
+  padding: 13px 16px !important;
+  font-size: 0.88rem !important;
+  color: #1e293b !important;
+  border-bottom: 1px solid #f1f5f9 !important;
+  vertical-align: middle !important;
 }
 
 .custom-table tr:hover td {
-  background: #1f1f1f;
+  background: #f8fafc !important;
+}
+
+/* Clinova Avatar & Tag Helpers */
+.clinova-avatar {
+  width: 34px;
+  height: 34px;
+  border-radius: 50%;
+  background: #eff6ff;
+  color: #2563eb;
+  font-weight: 800;
+  font-size: 0.88rem;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  border: 1.5px solid #bfdbfe;
+}
+
+.clinova-tag {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  padding: 3px 8px;
+  border-radius: 6px;
+  font-size: 0.75rem;
+  font-weight: 600;
+}
+.clinova-tag-danger {
+  background: #fee2e2;
+  color: #b91c1c;
+  border: 1px solid #fca5a5;
+}
+.clinova-tag-warning {
+  background: #fef3c7;
+  color: #b45309;
+  border: 1px solid #fde68a;
+}
+.clinova-tag-success {
+  background: #dcfce7;
+  color: #15803d;
+  border: 1px solid #86efac;
 }
 
 /* --- MODAL SYSTEM --- */
@@ -588,7 +682,7 @@ body {
   left: 0;
   width: 100vw;
   height: 100vh;
-  background: rgba(0, 0, 0, 0.75);
+  background: rgba(0, 0, 0, 0.55);
   backdrop-filter: blur(10px);
   -webkit-backdrop-filter: blur(10px);
   z-index: 9999;
@@ -611,11 +705,11 @@ body {
   overflow-y: auto;
   padding: 2rem;
   position: relative;
-  background: #181818;
+  background: var(--bg-secondary);
   border: 1px solid var(--border-strong);
   border-radius: var(--radius-md);
-  box-shadow: 0 25px 60px rgba(0, 0, 0, 0.8), 0 0 0 1px rgba(216, 86, 39, 0.25);
-  color: #f9fafb;
+  box-shadow: var(--shadow-xl);
+  color: var(--text-primary);
 }
 
 .modal-header {
@@ -630,7 +724,7 @@ body {
 .modal-title {
   font-size: 1.35rem;
   font-weight: 800;
-  color: #ffffff;
+  color: var(--text-primary);
   display: flex;
   align-items: center;
   gap: 8px;
@@ -648,7 +742,7 @@ body {
 }
 
 .btn-close:hover {
-  color: #ffffff;
+  color: var(--text-primary);
 }
 
 /* --- FORM ELEMENTS --- */
@@ -660,17 +754,17 @@ body {
   display: block;
   font-size: 0.85rem;
   font-weight: 600;
-  color: #d1d5db;
+  color: var(--text-secondary);
   margin-bottom: 0.4rem;
 }
 
 .form-control {
   width: 100%;
   padding: 0.75rem 1rem;
-  background: #121212;
+  background: var(--bg-card);
   border: 1px solid var(--border-strong);
   border-radius: var(--radius-sm);
-  color: #f9fafb;
+  color: var(--text-primary);
   font-size: 0.9rem;
   transition: all 0.2s ease;
 }
@@ -678,8 +772,8 @@ body {
 .form-control:focus {
   outline: none;
   border-color: var(--gold-primary);
-  box-shadow: 0 0 0 3px rgba(216, 86, 39, 0.25);
-  background: #161616;
+  box-shadow: 0 0 0 3px var(--gold-bg);
+  background: var(--bg-card-hover);
 }
 
 .form-control::placeholder {
@@ -710,9 +804,9 @@ body {
   min-width: 280px;
 }
 
-.toast-success { background: #181818; color: #34d399; border: 1px solid rgba(52, 211, 153, 0.4); }
-.toast-error { background: #181818; color: #f43f5e; border: 1px solid rgba(244, 63, 94, 0.4); }
-.toast-info { background: #181818; color: #38bdf8; border: 1px solid rgba(56, 189, 248, 0.4); }
+.toast-success { background: #ffffff; color: #059669; border: 1.5px solid #10b981; box-shadow: 0 6px 20px rgba(5, 150, 105, 0.15); font-weight: 600; }
+.toast-error { background: #ffffff; color: #e11d48; border: 1.5px solid #f43f5e; box-shadow: 0 6px 20px rgba(225, 29, 72, 0.15); font-weight: 600; }
+.toast-info { background: #ffffff; color: var(--barber-orange); border: 1.5px solid var(--barber-orange-light); box-shadow: 0 6px 20px rgba(234, 88, 12, 0.15); font-weight: 600; }
 
 @keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }
 @keyframes slideIn { from { transform: translateX(100%); opacity: 0; } to { transform: translateX(0); opacity: 1; } }
@@ -804,26 +898,26 @@ body {
   display: flex;
   align-items: center;
   gap: 12px;
-  background: linear-gradient(135deg, #181818 0%, #242424 100%);
-  color: #ffffff;
+  background: #ffffff;
+  color: var(--text-primary);
   padding: 10px 18px 10px 14px;
   border-radius: 50px;
   font-weight: 700;
   cursor: pointer;
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.6), 0 0 0 1.5px rgba(216, 86, 39, 0.4);
-  border: 1px solid rgba(216, 86, 39, 0.35);
+  box-shadow: 0 10px 30px rgba(234, 88, 12, 0.2), 0 0 0 1.5px var(--border-color);
+  border: 1px solid var(--border-color);
   transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
   user-select: none;
 }
 
 #floating-ai-trigger:hover {
   transform: translateY(-3px) scale(1.02);
-  box-shadow: 0 14px 35px rgba(0, 0, 0, 0.7), 0 0 0 2px var(--gold-primary);
-  background: linear-gradient(135deg, #1f1f1f 0%, #2c2c2c 100%);
+  box-shadow: 0 14px 35px rgba(234, 88, 12, 0.3), 0 0 0 2px var(--barber-orange);
+  background: #fffaf5;
 }
 
 #floating-ai-trigger:focus-visible {
-  outline: 3px solid var(--gold-primary);
+  outline: 3px solid var(--barber-orange);
   outline-offset: 2px;
 }
 
@@ -831,13 +925,13 @@ body {
   width: 40px;
   height: 40px;
   border-radius: 50%;
-  background: linear-gradient(135deg, #d85627 0%, #b84318 100%);
+  background: linear-gradient(135deg, #ea580c 0%, #c2410c 100%);
   display: flex;
   align-items: center;
   justify-content: center;
   font-size: 1.25rem;
   color: #ffffff;
-  box-shadow: 0 4px 12px rgba(216, 86, 39, 0.4);
+  box-shadow: 0 4px 12px rgba(234, 88, 12, 0.4);
   flex-shrink: 0;
 }
 
@@ -850,13 +944,13 @@ body {
 .ai-trigger-title {
   font-size: 0.92rem;
   font-weight: 800;
-  color: #ffffff;
+  color: var(--text-primary);
   letter-spacing: 0.2px;
 }
 
 .ai-trigger-sub {
   font-size: 0.72rem;
-  color: #34d399;
+  color: #059669;
   font-weight: 600;
   display: flex;
   align-items: center;
@@ -890,8 +984,8 @@ body {
   z-index: 1000;
   display: none;
   flex-direction: column;
-  box-shadow: 0 24px 60px rgba(0, 0, 0, 0.8), 0 0 0 1px var(--border-strong);
-  background: #181818;
+  box-shadow: 0 24px 60px rgba(234, 88, 12, 0.18), 0 0 0 1px var(--border-color);
+  background: #ffffff;
   overflow: hidden;
   animation: chatSlideUp 0.28s cubic-bezier(0.16, 1, 0.3, 1);
 }
@@ -909,13 +1003,13 @@ body {
 
 /* Chat Header */
 .ai-chat-header {
-  background: #141414;
+  background: #fffaf5;
   border-bottom: 1px solid var(--border-color);
   padding: 0.85rem 1.15rem;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+  box-shadow: 0 2px 8px rgba(234, 88, 12, 0.06);
 }
 
 .ai-chat-header-info {
@@ -928,20 +1022,20 @@ body {
   width: 38px;
   height: 38px;
   border-radius: 50%;
-  background: linear-gradient(135deg, #d85627, #b84318);
+  background: linear-gradient(135deg, #ea580c, #c2410c);
   display: flex;
   align-items: center;
   justify-content: center;
   font-size: 1.15rem;
   color: #ffffff;
-  box-shadow: 0 3px 10px rgba(216, 86, 39, 0.4);
+  box-shadow: 0 3px 10px rgba(234, 88, 12, 0.35);
   flex-shrink: 0;
 }
 
 .ai-header-name {
   font-weight: 800;
   font-size: 0.95rem;
-  color: #ffffff;
+  color: var(--text-primary);
   line-height: 1.2;
 }
 
@@ -959,9 +1053,9 @@ body {
   width: 7px;
   height: 7px;
   border-radius: 50%;
-  background: #34d399;
+  background: #10b981;
   display: inline-block;
-  box-shadow: 0 0 6px #34d399;
+  box-shadow: 0 0 6px #10b981;
 }
 
 .ai-header-tools {
@@ -971,8 +1065,8 @@ body {
 }
 
 .ai-tool-btn {
-  background: #242424;
-  border: 1px solid var(--border-strong);
+  background: var(--bg-card);
+  border: 1px solid var(--border-color);
   color: var(--text-secondary);
   font-size: 0.78rem;
   font-weight: 600;
@@ -986,9 +1080,9 @@ body {
 }
 
 .ai-tool-btn:hover {
-  background: #2c2c2c;
-  color: #ffffff;
-  border-color: var(--gold-primary);
+  background: #fffaf5;
+  color: var(--barber-orange);
+  border-color: var(--barber-orange);
 }
 
 .ai-tool-btn.close-btn {
@@ -998,14 +1092,14 @@ body {
 }
 
 .ai-tool-btn.close-btn:hover {
-  background: rgba(244, 63, 94, 0.15);
+  background: rgba(225, 29, 72, 0.1);
   color: var(--accent-rose);
   border-color: var(--accent-rose-border);
 }
 
 /* Quick Prompts Chips Bar */
 .ai-quick-prompts-wrapper {
-  background: #141414;
+  background: #fffaf5;
   border-bottom: 1px solid var(--border-color);
   padding: 0.6rem 0.85rem;
 }
@@ -1013,7 +1107,7 @@ body {
 .ai-prompts-label {
   font-size: 0.72rem;
   font-weight: 700;
-  color: var(--gold-light);
+  color: var(--barber-orange);
   text-transform: uppercase;
   letter-spacing: 0.5px;
   margin-bottom: 6px;
@@ -1032,8 +1126,8 @@ body {
 }
 
 .ai-chip {
-  background: #222222;
-  border: 1px solid var(--border-strong);
+  background: #ffffff;
+  border: 1px solid var(--border-color);
   color: var(--text-primary);
   font-size: 0.78rem;
   font-weight: 600;
@@ -1042,16 +1136,16 @@ body {
   cursor: pointer;
   white-space: nowrap;
   transition: all 0.2s ease;
-  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
+  box-shadow: 0 1px 3px rgba(67, 20, 7, 0.05);
   flex-shrink: 0;
 }
 
 .ai-chip:hover {
-  background: rgba(216, 86, 39, 0.2);
-  color: #ff854d;
-  border-color: var(--gold-primary);
+  background: #fff3e6;
+  color: var(--barber-orange);
+  border-color: var(--barber-orange);
   transform: translateY(-1px);
-  box-shadow: 0 4px 10px rgba(216, 86, 39, 0.25);
+  box-shadow: 0 4px 10px rgba(234, 88, 12, 0.15);
 }
 
 /* Chat Messages Container */
@@ -1062,7 +1156,7 @@ body {
   display: flex;
   flex-direction: column;
   gap: 1.1rem;
-  background: #121212;
+  background: #fff7ed;
   scrollbar-width: thin;
 }
 
@@ -1109,14 +1203,14 @@ body {
 }
 
 .chat-avatar.user-avatar {
-  background: #242424;
-  color: #ffffff;
-  border: 1px solid var(--border-strong);
+  background: #fff1e6;
+  color: var(--barber-orange);
+  border: 1px solid #fed7aa;
 }
 
 /* Message Bubbles */
 .chat-bubble-user {
-  background: #d85627;
+  background: linear-gradient(135deg, #ea580c 0%, #c2410c 100%);
   color: #ffffff;
   font-weight: 500;
   padding: 0.75rem 1rem;
@@ -1124,27 +1218,27 @@ body {
   max-width: 82%;
   line-height: 1.5;
   font-size: 0.9rem;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.4);
+  box-shadow: 0 2px 8px rgba(234, 88, 12, 0.25);
   word-break: break-word;
 }
 
 .chat-bubble-ai {
-  background: #1e1e1e;
-  border: 1px solid var(--border-color);
+  background: #ffffff;
+  border: 1px solid #fed7aa;
   color: var(--text-primary);
   border-radius: 4px 16px 16px 16px;
   max-width: 85%;
   line-height: 1.65;
   font-size: 0.9rem;
   padding: 0.85rem 1rem;
-  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+  box-shadow: 0 2px 10px rgba(67, 20, 7, 0.05);
   word-break: break-word;
 }
 
 .chat-sender-tag {
   font-size: 0.72rem;
   font-weight: 700;
-  color: var(--gold-light);
+  color: var(--barber-orange);
   text-transform: uppercase;
   margin-bottom: 4px;
 }
@@ -1154,7 +1248,7 @@ body {
 }
 
 .chat-bubble-body strong {
-  color: #ffffff;
+  color: var(--barber-orange);
   font-weight: 700;
 }
 
@@ -1167,7 +1261,7 @@ body {
 }
 
 .ai-bullet {
-  color: var(--gold-primary);
+  color: var(--barber-orange);
   font-weight: 700;
   font-size: 0.85rem;
   flex-shrink: 0;
@@ -1178,7 +1272,7 @@ body {
   justify-content: flex-end;
   margin-top: 8px;
   padding-top: 6px;
-  border-top: 1px dashed var(--border-subtle);
+  border-top: 1px dashed #fed7aa;
 }
 
 .chat-copy-btn {
@@ -1196,8 +1290,8 @@ body {
 }
 
 .chat-copy-btn:hover {
-  background: #242424;
-  color: var(--text-primary);
+  background: #fff1e6;
+  color: var(--barber-orange);
 }
 
 /* Typing indicator */
@@ -1213,8 +1307,8 @@ body {
   gap: 4px;
   align-items: center;
   padding: 6px 10px;
-  background: #1c1c1c;
-  border: 1px solid var(--border-color);
+  background: #fffaf5;
+  border: 1px solid #fed7aa;
   border-radius: 12px;
 }
 
@@ -1222,7 +1316,7 @@ body {
   width: 6px;
   height: 6px;
   border-radius: 50%;
-  background: var(--gold-primary);
+  background: var(--barber-orange);
   animation: typingBounce 1.4s infinite ease-in-out;
 }
 
@@ -1237,8 +1331,8 @@ body {
 
 /* Chat Input Footer */
 .ai-chat-footer {
-  background: #141414;
-  border-top: 1px solid var(--border-color);
+  background: #fffaf5;
+  border-top: 1px solid #fed7aa;
   padding: 0.75rem 1rem 0.6rem 1rem;
 }
 
@@ -1252,22 +1346,22 @@ body {
   flex: 1;
   font-size: 0.9rem;
   padding: 0.65rem 1rem;
-  border: 1.5px solid var(--border-strong);
+  border: 1.5px solid #fed7aa;
   border-radius: 24px;
-  background: #1c1c1c;
+  background: #ffffff;
   color: var(--text-primary);
   outline: none;
   transition: all 0.2s ease;
 }
 
 .ai-input-field:focus {
-  background: #222222;
-  border-color: var(--gold-primary);
-  box-shadow: 0 0 0 3px var(--gold-glow);
+  background: #ffffff;
+  border-color: var(--barber-orange);
+  box-shadow: 0 0 0 3px var(--barber-orange-glow);
 }
 
 .ai-send-btn {
-  background: linear-gradient(135deg, #d85627 0%, #b84318 100%);
+  background: linear-gradient(135deg, #ea580c 0%, #c2410c 100%);
   color: #ffffff;
   border: none;
   padding: 0.65rem 1.1rem;
@@ -1280,13 +1374,13 @@ body {
   gap: 6px;
   transition: all 0.2s ease;
   flex-shrink: 0;
-  box-shadow: 0 4px 12px rgba(216, 86, 39, 0.4);
+  box-shadow: 0 4px 12px rgba(234, 88, 12, 0.4);
 }
 
 .ai-send-btn:hover {
-  background: linear-gradient(135deg, #ea6332 0%, #c8491a 100%);
+  background: linear-gradient(135deg, #f97316 0%, #ea580c 100%);
   transform: translateY(-1px);
-  box-shadow: 0 6px 16px rgba(216, 86, 39, 0.5);
+  box-shadow: 0 6px 16px rgba(234, 88, 12, 0.5);
 }
 
 .ai-chat-footnote {
@@ -1310,13 +1404,13 @@ body {
   display: flex;
   align-items: center;
   gap: 8px;
-  background: linear-gradient(135deg, rgba(216, 86, 39, 0.16), rgba(52, 211, 153, 0.16));
-  border: 1px solid rgba(216, 86, 39, 0.4);
+  background: #fff1e6;
+  border: 1px solid #fed7aa;
   padding: 6px 14px;
   border-radius: 20px;
   font-size: 0.85rem;
-  color: #ff854d;
-  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
+  color: var(--barber-orange);
+  box-shadow: var(--shadow-xs);
   white-space: nowrap;
 }
 
@@ -1340,7 +1434,7 @@ body {
 .timeline-scheduler {
   display: flex;
   flex-direction: column;
-  background: #181818;
+  background: #ffffff;
   border: 1px solid var(--border-color);
   border-radius: var(--radius-md);
   overflow-x: auto;
@@ -1350,7 +1444,7 @@ body {
 .timeline-header-row {
   display: grid;
   grid-template-columns: 80px repeat(auto-fit, minmax(180px, 1fr));
-  background: #141414;
+  background: #fff1e6;
   border-bottom: 2px solid var(--border-color);
   position: sticky;
   top: 0;
@@ -1362,7 +1456,7 @@ body {
   font-size: 0.85rem;
   font-weight: 700;
   text-align: center;
-  color: #ffffff;
+  color: #431407;
   border-right: 1px solid var(--border-color);
 }
 
@@ -1380,7 +1474,7 @@ body {
   color: var(--text-muted);
   text-align: center;
   border-right: 1px solid var(--border-color);
-  background: #141414;
+  background: #fffaf5;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -1393,16 +1487,17 @@ body {
   display: flex;
   flex-direction: column;
   gap: 4px;
-  background: #181818;
+  background: #ffffff;
 }
 
 .timeline-appt-block {
-  background: rgba(216, 86, 39, 0.2);
-  border-left: 3px solid #d85627;
+  background: #fff1e6;
+  border-left: 3px solid #ea580c;
   border-radius: 6px;
   padding: 6px 8px;
   font-size: 0.78rem;
-  color: #ffad82;
+  color: var(--barber-orange);
+  font-weight: 700;
   cursor: pointer;
   transition: all 0.2s ease;
   box-shadow: var(--shadow-xs);
@@ -1410,15 +1505,16 @@ body {
 
 .timeline-appt-block:hover {
   transform: translateY(-2px);
-  box-shadow: 0 4px 12px rgba(216, 86, 39, 0.35);
-  border-left-color: #ff854d;
+  box-shadow: 0 4px 12px rgba(234, 88, 12, 0.35);
+  border-left-color: #c2410c;
+  background: #ea580c;
   color: #ffffff;
 }
 
 .timeline-appt-block.in-service {
-  background: rgba(56, 189, 248, 0.2);
-  border-left-color: #38bdf8;
-  color: #bae6fd;
+  background: rgba(2, 132, 199, 0.1);
+  border-left-color: #0284c7;
+  color: #0369a1;
 }
 
 /* --- POS SERVICE CATALOG GRID --- */
@@ -1432,7 +1528,7 @@ body {
 }
 
 .pos-svc-card {
-  background: #1c1c1c;
+  background: #ffffff;
   border: 1px solid var(--border-color);
   border-radius: 10px;
   padding: 12px;
@@ -1445,23 +1541,23 @@ body {
 }
 
 .pos-svc-card:hover {
-  border-color: var(--gold-primary);
-  background: #242424;
+  border-color: var(--barber-orange);
+  background: #fffaf5;
   transform: translateY(-2px);
-  box-shadow: var(--shadow-sm);
+  box-shadow: 0 4px 14px rgba(234, 88, 12, 0.15);
 }
 
 .pos-svc-card .pos-svc-title {
   font-size: 0.85rem;
   font-weight: 700;
-  color: #ffffff;
+  color: var(--text-primary);
   margin-bottom: 6px;
 }
 
 .pos-svc-card .pos-svc-price {
   font-size: 0.85rem;
   font-weight: 700;
-  color: #ff854d;
+  color: var(--barber-orange);
 }
 
 .pos-svc-card .pos-svc-dur {
@@ -1480,7 +1576,7 @@ body {
 }
 
 .badge-vip-gold {
-  background: linear-gradient(135deg, #d85627, #f59e0b);
+  background: linear-gradient(135deg, #ea580c, #f59e0b);
   color: #ffffff;
   font-weight: 700;
   font-size: 0.72rem;
@@ -1489,12 +1585,13 @@ body {
 }
 
 .badge-vip-silver {
-  background: #242424;
-  border: 1px solid #3d3d3d;
-  color: #d1d5db;
+  background: #fffaf5;
+  border: 1px solid #fed7aa;
+  color: #78350f;
   font-size: 0.72rem;
   padding: 3px 8px;
   border-radius: 12px;
+  font-weight: 600;
 }
 
 .hair-tag {
@@ -1503,28 +1600,28 @@ body {
   border-radius: 10px;
   font-size: 0.72rem;
   margin: 2px;
-  background: #242424;
+  background: #fffaf5;
   border: 1px solid var(--border-color);
-  color: #d1d5db;
-  font-weight: 500;
+  color: #431407;
+  font-weight: 600;
 }
 
 .hair-tag-danger {
-  background: rgba(244, 63, 94, 0.15);
-  border-color: rgba(244, 63, 94, 0.35);
-  color: #f43f5e;
+  background: rgba(225, 29, 72, 0.1);
+  border-color: rgba(225, 29, 72, 0.3);
+  color: #e11d48;
 }
 
 .hair-tag-warning {
-  background: rgba(251, 191, 36, 0.15);
-  border-color: rgba(251, 191, 36, 0.35);
-  color: #fbbf24;
+  background: rgba(217, 119, 6, 0.1);
+  border-color: rgba(217, 119, 6, 0.3);
+  color: #d97706;
 }
 
 .hair-tag-success {
-  background: rgba(52, 211, 153, 0.15);
-  border-color: rgba(52, 211, 153, 0.35);
-  color: #34d399;
+  background: rgba(5, 150, 105, 0.1);
+  border-color: rgba(5, 150, 105, 0.3);
+  color: #059669;
 }
 
 /* --- VÌ SAO QUESTION LIBRARY & AI HUB STYLING --- */
@@ -1535,7 +1632,7 @@ body {
 }
 
 .why-card {
-  background: #1c1c1c;
+  background: #ffffff;
   border: 1px solid var(--border-color);
   border-radius: 14px;
   padding: 1.25rem;
@@ -1553,15 +1650,15 @@ body {
   position: absolute;
   top: 0; left: 0; right: 0;
   height: 3px;
-  background: linear-gradient(90deg, var(--gold-primary), transparent);
+  background: linear-gradient(90deg, var(--barber-orange), transparent);
   opacity: 0.8;
 }
 
 .why-card:hover {
   transform: translateY(-4px);
-  border-color: var(--gold-primary);
-  box-shadow: 0 8px 25px rgba(216, 86, 39, 0.25);
-  background: #222222;
+  border-color: var(--barber-orange);
+  box-shadow: 0 8px 25px rgba(234, 88, 12, 0.18);
+  background: #fffaf5;
 }
 
 .why-badge {
@@ -1579,33 +1676,33 @@ body {
 }
 
 .why-badge-chemical {
-  background: rgba(168, 85, 247, 0.15);
-  border: 1px solid rgba(168, 85, 247, 0.35);
-  color: #c084fc;
+  background: rgba(124, 58, 237, 0.1);
+  border: 1px solid rgba(124, 58, 237, 0.3);
+  color: #7c3aed;
 }
 
 .why-badge-facial {
-  background: rgba(244, 63, 94, 0.15);
-  border: 1px solid rgba(244, 63, 94, 0.35);
-  color: #f43f5e;
+  background: rgba(225, 29, 72, 0.1);
+  border: 1px solid rgba(225, 29, 72, 0.3);
+  color: #e11d48;
 }
 
 .why-badge-schedule {
-  background: rgba(56, 189, 248, 0.15);
-  border: 1px solid rgba(56, 189, 248, 0.35);
-  color: #38bdf8;
+  background: rgba(2, 132, 199, 0.1);
+  border: 1px solid rgba(2, 132, 199, 0.3);
+  color: #0284c7;
 }
 
 .why-badge-finance {
-  background: rgba(52, 211, 153, 0.15);
-  border: 1px solid rgba(52, 211, 153, 0.35);
-  color: #34d399;
+  background: rgba(5, 150, 105, 0.1);
+  border: 1px solid rgba(5, 150, 105, 0.3);
+  color: #059669;
 }
 
 .why-question {
   font-size: 0.96rem;
   font-weight: 700;
-  color: #ffffff;
+  color: var(--text-primary);
   line-height: 1.45;
   margin-bottom: 0.6rem;
 }
@@ -1624,9 +1721,9 @@ body {
   gap: 6px;
   width: 100%;
   padding: 0.6rem 1rem;
-  background: rgba(216, 86, 39, 0.15);
-  border: 1px solid var(--gold-primary);
-  color: #ff854d;
+  background: #fff1e6;
+  border: 1px solid var(--barber-orange);
+  color: var(--barber-orange);
   border-radius: 8px;
   font-size: 0.84rem;
   font-weight: 700;
@@ -1635,9 +1732,9 @@ body {
 }
 
 .why-btn-ask:hover {
-  background: var(--gold-primary);
+  background: var(--barber-orange);
   color: #ffffff;
-  box-shadow: 0 4px 12px rgba(216, 86, 39, 0.35);
+  box-shadow: 0 4px 12px rgba(234, 88, 12, 0.35);
 }
 
 .why-filter-tab {
@@ -1645,49 +1742,49 @@ body {
   border-radius: 20px;
   font-size: 0.82rem;
   font-weight: 600;
-  border: 1px solid var(--border-strong);
-  background: #1c1c1c;
+  border: 1px solid var(--border-color);
+  background: #ffffff;
   color: var(--text-muted);
   cursor: pointer;
   transition: all 0.2s ease;
 }
 
 .why-filter-tab:hover, .why-filter-tab.active {
-  background: var(--gold-primary);
-  border-color: var(--gold-primary);
+  background: var(--barber-orange);
+  border-color: var(--barber-orange);
   color: #ffffff;
-  box-shadow: 0 2px 8px rgba(216, 86, 39, 0.35);
+  box-shadow: 0 2px 8px rgba(234, 88, 12, 0.35);
 }
 
 #ai-hub-live-response {
-  background: #181818;
-  border: 1px solid var(--gold-primary);
+  background: #ffffff;
+  border: 1.5px solid var(--barber-orange);
   border-radius: 14px;
   padding: 1.5rem;
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+  box-shadow: 0 10px 30px rgba(234, 88, 12, 0.15);
   animation: fadeIn 0.3s ease-out;
 }
 
 /* ====================================================================
-   BARBERSHOP THEME & PUBLIC HOMEPAGE STYLES (MATCHING USER SCREENSHOT)
-   Terracotta Orange, Vintage Charcoal, Champagne Gold & Leather Brown
+   BARBERSHOP THEME & PUBLIC HOMEPAGE STYLES (BRIGHT ORANGE LUXURY)
+   Terracotta Orange, Warm Apricot, Champagne Gold & Cream Pearl
    ==================================================================== */
 #view-guest-home {
-  --barber-orange: #d85627;
-  --barber-orange-hover: #bf4316;
-  --barber-orange-light: #ff7438;
-  --barber-orange-glow: rgba(216, 86, 39, 0.45);
-  --barber-orange-subtle: rgba(216, 86, 39, 0.12);
-  --barber-dark: #121212;
-  --barber-dark-surface: #181818;
-  --barber-dark-card: #202020;
-  --barber-dark-card-hover: #272727;
-  --barber-border: #2e2e2e;
-  --barber-border-light: rgba(255, 255, 255, 0.1);
-  --barber-gold: #cba36b;
-  --barber-gold-light: #f5cf8e;
-  --barber-text: #f3f4f6;
-  --barber-text-muted: #9ca3af;
+  --barber-orange: #ea580c;
+  --barber-orange-hover: #c2410c;
+  --barber-orange-light: #f97316;
+  --barber-orange-glow: rgba(234, 88, 12, 0.35);
+  --barber-orange-subtle: rgba(234, 88, 12, 0.1);
+  --barber-dark: #fff7ed;
+  --barber-dark-surface: #ffffff;
+  --barber-dark-card: #ffffff;
+  --barber-dark-card-hover: #fff3e6;
+  --barber-border: #fed7aa;
+  --barber-border-light: rgba(234, 88, 12, 0.15);
+  --barber-gold: #ea580c;
+  --barber-gold-light: #f97316;
+  --barber-text: #1c1917;
+  --barber-text-muted: #78350f;
   --barber-font-serif: 'Playfair Display', Georgia, serif;
   
   display: block;
@@ -1701,7 +1798,7 @@ body {
 
 /* --- 1. TOPBAR (ORANGE BANNER) --- */
 .barber-topbar {
-  background-color: var(--barber-orange);
+  background: linear-gradient(135deg, #ea580c 0%, #f97316 100%);
   color: #ffffff;
   padding: 0.6rem 2.5rem;
   display: flex;
@@ -1710,7 +1807,7 @@ body {
   font-size: 0.88rem;
   font-weight: 500;
   letter-spacing: 0.3px;
-  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
+  box-shadow: 0 2px 6px rgba(234, 88, 12, 0.2);
   position: relative;
   z-index: 1001;
 }
@@ -1736,7 +1833,7 @@ body {
   position: sticky;
   top: 0;
   z-index: 1000;
-  background: rgba(18, 18, 18, 0.94);
+  background: rgba(255, 255, 255, 0.96);
   backdrop-filter: blur(20px);
   -webkit-backdrop-filter: blur(20px);
   border-bottom: 1px solid var(--barber-border);
@@ -1745,7 +1842,7 @@ body {
   align-items: center;
   justify-content: space-between;
   gap: 1.5rem;
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+  box-shadow: 0 4px 20px rgba(234, 88, 12, 0.08);
   transition: all 0.3s ease;
 }
 
@@ -1902,12 +1999,12 @@ body {
   border-color: var(--barber-gold);
 }
 
-/* --- 3. HERO CAROUSEL SLIDER --- */
+/* --- 3. HERO CAROUSEL SLIDER (PHONG CÁCH NGHỆ THUẬT & SALON TÓC HOÀNG GIA) --- */
 .barber-hero-slider {
   position: relative;
   width: 100%;
-  height: 600px;
-  min-height: 520px;
+  height: 640px;
+  min-height: 540px;
   overflow: hidden;
 }
 
@@ -1938,22 +2035,30 @@ body {
   visibility: visible;
 }
 
-.hero-overlay {
+.hero-overlay-sunny {
   position: absolute;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
-  background: linear-gradient(180deg, rgba(14, 14, 14, 0.65) 0%, rgba(14, 14, 14, 0.45) 50%, rgba(14, 14, 14, 0.85) 100%),
-              radial-gradient(circle at center, transparent 40%, rgba(14, 14, 14, 0.75) 100%);
+  background: linear-gradient(180deg, rgba(28, 25, 23, 0.45) 0%, rgba(28, 25, 23, 0.25) 50%, rgba(28, 25, 23, 0.65) 100%),
+              radial-gradient(circle at center, transparent 35%, rgba(0, 0, 0, 0.4) 100%);
 }
 
 .hero-content {
   position: relative;
   z-index: 2;
-  max-width: 900px;
-  padding: 0 1.5rem;
+  max-width: 920px;
+  width: 90%;
+  margin: 0 auto;
+  padding: 3rem 3.5rem;
   text-align: center;
+  background: rgba(255, 255, 255, 0.9);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border: 2px solid rgba(255, 255, 255, 0.95);
+  border-radius: 28px;
+  box-shadow: 0 25px 60px rgba(67, 20, 7, 0.12), 0 0 0 1px rgba(245, 158, 11, 0.25);
   animation: heroContentFade 0.8s ease-out;
 }
 
@@ -1962,41 +2067,53 @@ body {
   to { opacity: 1; transform: translateY(0); }
 }
 
-.hero-badge {
+/* Nét gạch cọ vẽ tay màu vàng nắng theo mẫu ảnh */
+.hero-brush-tag {
   display: inline-flex;
+  flex-direction: column;
   align-items: center;
-  gap: 8px;
-  padding: 7px 22px;
-  background: rgba(216, 86, 39, 0.2);
-  border: 1px solid var(--barber-orange);
-  border-radius: 9999px;
-  font-size: 0.82rem;
-  font-weight: 700;
-  color: var(--barber-orange-light);
-  letter-spacing: 1.5px;
-  text-transform: uppercase;
-  margin-bottom: 1.5rem;
-  backdrop-filter: blur(8px);
+  margin-bottom: 1.25rem;
 }
 
-.hero-title {
-  font-size: 3.5rem;
+.hero-brush-text {
+  font-size: 0.95rem;
+  font-weight: 800;
+  letter-spacing: 2.5px;
+  text-transform: uppercase;
+  color: #b45309;
+}
+
+.hero-brush-stroke {
+  display: block;
+  height: 6px;
+  background: #f59e0b;
+  border-radius: 4px;
+  margin-top: 5px;
+  width: 100%;
+  min-width: 220px;
+  transform: rotate(-0.8deg);
+  box-shadow: 0 2px 10px rgba(245, 158, 11, 0.5);
+}
+
+/* Tiêu đề chính nghệ thuật cao theo mẫu ảnh */
+.hero-title-artistic {
+  font-family: 'Bebas Neue', 'Outfit', sans-serif;
+  font-size: clamp(3rem, 6.5vw, 5.2rem);
   font-weight: 900;
-  line-height: 1.18;
-  letter-spacing: -0.5px;
-  color: #ffffff;
+  line-height: 1.05;
+  letter-spacing: 3px;
+  color: #1c1917;
   text-transform: uppercase;
   margin-bottom: 1.25rem;
-  text-shadow: 0 4px 20px rgba(0, 0, 0, 0.6);
 }
 
-.hero-subtitle {
-  font-size: 1.18rem;
+.hero-subtitle-artistic {
+  font-size: 1.12rem;
   line-height: 1.65;
-  color: #e5e7eb;
-  max-width: 750px;
-  margin: 0 auto 2.5rem;
-  text-shadow: 0 2px 8px rgba(0, 0, 0, 0.5);
+  color: #44403c;
+  max-width: 780px;
+  margin: 0 auto 2.2rem;
+  font-weight: 500;
 }
 
 .hero-actions {
@@ -2007,72 +2124,74 @@ body {
   flex-wrap: wrap;
 }
 
-.btn-barber-primary {
-  background: var(--barber-orange);
-  color: #ffffff;
+/* Nút CTA màu vàng nắng bo tròn theo đúng mẫu ảnh Discover More */
+.btn-hero-discover {
+  background: #facc15;
+  color: #1c1917 !important;
+  font-weight: 800;
+  padding: 0.9rem 2.4rem;
+  border-radius: 12px;
+  font-size: 1rem;
+  letter-spacing: 0.5px;
   border: none;
-  padding: 0.9rem 2.2rem;
-  border-radius: 8px;
-  font-size: 0.95rem;
-  font-weight: 700;
-  letter-spacing: 1px;
   cursor: pointer;
   transition: all 0.25s ease;
-  box-shadow: 0 6px 20px var(--barber-orange-glow);
+  box-shadow: 0 8px 25px rgba(250, 204, 21, 0.45);
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
   text-decoration: none;
+}
+
+.btn-hero-discover:hover {
+  background: #fde047;
+  transform: translateY(-2px);
+  box-shadow: 0 12px 30px rgba(250, 204, 21, 0.6);
+}
+
+.btn-hero-outline {
+  background: #ffffff;
+  color: #1c1917 !important;
+  border: 2px solid #fed7aa;
+  padding: 0.88rem 2rem;
+  border-radius: 12px;
+  font-size: 0.95rem;
+  font-weight: 700;
+  cursor: pointer;
+  transition: all 0.25s ease;
+  text-decoration: none !important;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  box-shadow: 0 2px 8px rgba(67, 20, 7, 0.05);
+}
+
+.btn-hero-outline:hover {
+  background: #fffaf5;
+  border-color: var(--barber-orange);
+  color: var(--barber-orange) !important;
+  transform: translateY(-2px);
+}
+
+.btn-hero-ai {
+  background: linear-gradient(135deg, #7c3aed 0%, #ea580c 100%);
+  color: #ffffff !important;
+  border: none;
+  padding: 0.88rem 1.8rem;
+  border-radius: 12px;
+  font-size: 0.95rem;
+  font-weight: 700;
+  cursor: pointer;
+  transition: all 0.25s ease;
+  box-shadow: 0 6px 20px rgba(234, 88, 12, 0.35);
   display: inline-flex;
   align-items: center;
   gap: 8px;
 }
 
-.btn-barber-primary:hover {
-  background: var(--barber-orange-hover);
+.btn-hero-ai:hover {
   transform: translateY(-2px);
-  box-shadow: 0 8px 25px rgba(216, 86, 39, 0.6);
-}
-
-.btn-barber-outline {
-  background: rgba(0, 0, 0, 0.5);
-  color: #ffffff;
-  border: 1.5px solid rgba(255, 255, 255, 0.35);
-  padding: 0.9rem 2rem;
-  border-radius: 8px;
-  font-size: 0.95rem;
-  font-weight: 700;
-  letter-spacing: 1px;
-  cursor: pointer;
-  transition: all 0.25s ease;
-  text-decoration: none;
-  display: inline-flex;
-  align-items: center;
-  gap: 8px;
-  backdrop-filter: blur(8px);
-}
-
-.btn-barber-outline:hover {
-  border-color: #ffffff;
-  background: rgba(255, 255, 255, 0.15);
-  transform: translateY(-2px);
-}
-
-.btn-barber-ai {
-  background: rgba(203, 163, 107, 0.15);
-  color: var(--barber-gold-light);
-  border: 1.5px solid var(--barber-gold);
-  padding: 0.9rem 1.8rem;
-  border-radius: 8px;
-  font-size: 0.95rem;
-  font-weight: 700;
-  cursor: pointer;
-  transition: all 0.25s ease;
-  backdrop-filter: blur(8px);
-}
-
-.btn-barber-ai:hover {
-  background: var(--barber-gold);
-  color: #121212;
-  transform: translateY(-2px);
-  box-shadow: 0 6px 20px rgba(203, 163, 107, 0.4);
+  box-shadow: 0 8px 25px rgba(234, 88, 12, 0.5);
 }
 
 .hero-arrow {
@@ -2080,11 +2199,12 @@ body {
   top: 50%;
   transform: translateY(-50%);
   z-index: 10;
-  width: 50px;
-  height: 50px;
+  width: 48px;
+  height: 48px;
   border-radius: 50%;
-  background: rgba(0, 0, 0, 0.45);
-  border: 1px solid rgba(255, 255, 255, 0.2);
+  background: rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(6px);
+  border: 1px solid rgba(255, 255, 255, 0.4);
   color: #ffffff;
   font-size: 2rem;
   display: flex;
@@ -2097,44 +2217,46 @@ body {
 }
 
 .hero-arrow:hover {
-  background: var(--barber-orange);
-  border-color: var(--barber-orange);
+  background: #facc15;
+  border-color: #facc15;
+  color: #1c1917;
   transform: translateY(-50%) scale(1.1);
 }
 
 .hero-arrow.prev { left: 25px; }
-.hero-arrow.next { right: 25px; }
+.hero-arrow.next { right: 75px; }
 
-.hero-dots {
+/* Dải chấm tròn phân trang dọc bên phải màn hình theo đúng mẫu ảnh */
+.hero-dots-vertical {
   position: absolute;
-  bottom: 25px;
-  left: 50%;
-  transform: translateX(-50%);
+  right: 32px;
+  top: 50%;
+  transform: translateY(-50%);
   z-index: 10;
   display: flex;
-  gap: 10px;
+  flex-direction: column;
+  gap: 14px;
 }
 
-.hero-dots .dot,
-.about-dots .dot {
-  width: 11px;
-  height: 11px;
+.hero-dots-vertical .dot {
+  width: 14px;
+  height: 14px;
   border-radius: 50%;
-  background: rgba(255, 255, 255, 0.35);
+  border: 2.5px solid #ffffff;
+  background: transparent;
   cursor: pointer;
   transition: all 0.3s ease;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.4);
 }
 
-.hero-dots .dot.active,
-.about-dots .dot.active {
-  background: var(--barber-orange);
-  transform: scale(1.3);
-  box-shadow: 0 0 10px var(--barber-orange-glow);
+.hero-dots-vertical .dot.active {
+  background: #ffffff;
+  transform: scale(1.15);
 }
 
-/* --- 4. SECTION 1: GIỚI THIỆU VỀ BARBERSHOP (ABOUT US) --- */
+/* --- 4. SECTION 1: GIỚI THIỆU VỀ SALON HAIR HÀ MINH (ABOUT US) --- */
 .barber-about-section {
-  background: #141414;
+  background: #fffaf5;
   padding: 5.5rem 1.5rem;
   position: relative;
   border-top: 1px solid var(--barber-border);
@@ -2433,7 +2555,7 @@ body {
 
 /* --- 6. SECTION 3: MENU BẢNG GIÁ DỊCH VỤ NIÊM YẾT --- */
 .barber-menu-section {
-  background: #181818;
+  background: #fff7ed;
   padding: 5.5rem 1.5rem;
   border-top: 1px solid var(--barber-border);
 }
@@ -2447,7 +2569,7 @@ body {
 .barber-section-tag {
   font-size: 0.82rem;
   font-weight: 800;
-  color: var(--barber-orange-light);
+  color: var(--barber-orange);
   text-transform: uppercase;
   letter-spacing: 2px;
   margin-bottom: 0.6rem;
@@ -2456,13 +2578,13 @@ body {
 .barber-section-title {
   font-size: 2.6rem;
   font-weight: 900;
-  color: #ffffff;
+  color: var(--text-primary);
   margin-bottom: 0.85rem;
   letter-spacing: -0.5px;
 }
 
 .barber-section-desc {
-  color: var(--barber-text-muted);
+  color: var(--text-muted);
   font-size: 1rem;
   line-height: 1.6;
 }
@@ -2476,21 +2598,22 @@ body {
 }
 
 .barber-filter-chips .pos-cat-btn {
-  background: #242424;
-  border: 1px solid #383838;
-  color: #e5e7eb;
+  background: #ffffff;
+  border: 1px solid #fed7aa;
+  color: #431407;
   padding: 0.65rem 1.25rem;
   border-radius: 9999px;
   font-size: 0.88rem;
   font-weight: 700;
   cursor: pointer;
   transition: all 0.25s ease;
+  box-shadow: 0 1px 3px rgba(67, 20, 7, 0.05);
 }
 
 .barber-filter-chips .pos-cat-btn:hover {
-  background: #2e2e2e;
+  background: #fff1e6;
   border-color: var(--barber-orange);
-  color: #ffffff;
+  color: var(--barber-orange);
 }
 
 .barber-filter-chips .pos-cat-btn.active {
@@ -2512,23 +2635,23 @@ body {
   padding: 1.65rem;
   border-radius: 16px;
   border: 1px solid var(--barber-border);
-  background: #202020;
-  box-shadow: 0 4px 18px rgba(0, 0, 0, 0.35);
+  background: #ffffff;
+  box-shadow: 0 6px 20px rgba(67, 20, 7, 0.06);
   transition: all 0.3s ease;
 }
 
 .guest-service-card:hover {
   border-color: var(--barber-orange);
   transform: translateY(-4px);
-  box-shadow: 0 12px 30px rgba(216, 86, 39, 0.2);
+  box-shadow: 0 12px 30px rgba(234, 88, 12, 0.15);
 }
 
 .guest-service-card h3 {
-  color: #ffffff;
+  color: var(--text-primary);
 }
 
 .guest-service-card p {
-  color: #9ca3af;
+  color: var(--text-muted);
 }
 
 .guest-service-card .btn-primary {
@@ -2544,9 +2667,9 @@ body {
   box-shadow: 0 4px 12px var(--barber-orange-glow);
 }
 
-/* --- 7. SECTION 4: ĐỘI NGŨ BARBER TÀI HOA --- */
+/* --- 7. SECTION 4: ĐỘI NGŨ MASTER STYLIST TÀI HOA --- */
 .barber-stylists-section {
-  background: #141414;
+  background: #fffaf5;
   padding: 5.5rem 1.5rem;
   border-top: 1px solid var(--barber-border);
 }
@@ -2565,43 +2688,43 @@ body {
   flex-direction: column;
   align-items: center;
   gap: 0.85rem;
-  background: #1f1f1f;
+  background: #ffffff;
   border: 1px solid var(--barber-border);
-  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.4);
+  box-shadow: 0 6px 20px rgba(67, 20, 7, 0.06);
   transition: all 0.3s ease;
 }
 
 .guest-stylist-card:hover {
   border-color: var(--barber-orange);
   transform: translateY(-5px);
-  box-shadow: 0 15px 35px rgba(216, 86, 39, 0.25);
+  box-shadow: 0 15px 35px rgba(234, 88, 12, 0.18);
 }
 
 .guest-stylist-avatar {
   width: 86px;
   height: 86px;
   border-radius: 50%;
-  background: linear-gradient(135deg, var(--barber-orange), #78350f);
+  background: linear-gradient(135deg, var(--barber-orange), #c2410c);
   display: flex;
   align-items: center;
   justify-content: center;
   font-size: 2.4rem;
   box-shadow: 0 6px 20px var(--barber-orange-glow);
-  border: 3px solid rgba(255, 255, 255, 0.15);
+  border: 3px solid rgba(255, 255, 255, 0.6);
 }
 
 .guest-stylist-card h4,
 .guest-stylist-card div > div:first-child {
-  color: #ffffff !important;
+  color: var(--text-primary) !important;
   font-size: 1.2rem;
   font-weight: 800;
 }
 
 .guest-stylist-card .btn-secondary,
 .guest-stylist-card button {
-  background: rgba(216, 86, 39, 0.15) !important;
+  background: #fff1e6 !important;
   border: 1.5px solid var(--barber-orange) !important;
-  color: #ff9e58 !important;
+  color: var(--barber-orange) !important;
   font-weight: 700 !important;
   border-radius: 8px !important;
   padding: 0.65rem 1rem !important;
@@ -2619,7 +2742,7 @@ body {
 }
 
 #view-guest-home .form-label {
-  color: #f3f4f6 !important;
+  color: #431407 !important;
   font-weight: 700 !important;
   font-size: 0.92rem !important;
   display: block;
@@ -2627,27 +2750,27 @@ body {
 }
 
 #view-guest-home .guest-book-service-option {
-  color: #f3f4f6 !important;
+  color: var(--text-primary) !important;
   display: flex !important;
   align-items: center !important;
   justify-content: space-between !important;
   padding: 8px 4px !important;
-  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+  border-bottom: 1px solid #ffedd5;
 }
 
 #view-guest-home .guest-book-service-option:hover {
-  background: rgba(216, 86, 39, 0.12);
+  background: #fff1e6;
   border-radius: 6px;
 }
 
 #view-guest-home .guest-book-service-option span:last-child {
-  color: #ff9e58 !important;
+  color: var(--barber-orange) !important;
   font-weight: 700 !important;
 }
 
 /* --- 8. SECTION 5: ĐẶT LỊCH HẸN TRỰC TUYẾN --- */
 .barber-booking-section {
-  background: #181818;
+  background: #fff7ed;
   padding: 5.5rem 1.5rem;
   border-top: 1px solid var(--barber-border);
 }
@@ -2655,11 +2778,11 @@ body {
 .barber-booking-card {
   max-width: 860px;
   margin: 0 auto;
-  background: #1f1f1f;
-  border: 1.5px solid rgba(216, 86, 39, 0.4);
+  background: #ffffff;
+  border: 1.5px solid var(--border-color);
   border-radius: 20px;
   padding: 2.75rem;
-  box-shadow: 0 25px 60px rgba(0, 0, 0, 0.6);
+  box-shadow: 0 20px 50px rgba(234, 88, 12, 0.12);
 }
 
 .booking-grid-2 {
@@ -2671,9 +2794,9 @@ body {
 
 .barber-input,
 .barber-select {
-  background: #272727 !important;
-  border: 1px solid #3d3d3d !important;
-  color: #ffffff !important;
+  background: #fffaf5 !important;
+  border: 1px solid #fed7aa !important;
+  color: var(--text-primary) !important;
   border-radius: 10px !important;
   padding: 0.75rem 1rem !important;
   font-size: 0.92rem !important;
@@ -2683,22 +2806,23 @@ body {
 .barber-input:focus,
 .barber-select:focus {
   border-color: var(--barber-orange) !important;
-  box-shadow: 0 0 12px var(--barber-orange-glow) !important;
+  box-shadow: 0 0 0 3px rgba(234, 88, 12, 0.15) !important;
+  background: #ffffff !important;
   outline: none;
 }
 
 .quick-time-section {
   margin-bottom: 1.5rem;
-  background: rgba(255, 255, 255, 0.03);
+  background: #fffaf5;
   padding: 1rem;
   border-radius: 10px;
-  border: 1px solid rgba(255, 255, 255, 0.06);
+  border: 1px solid #fed7aa;
 }
 
 .quick-time-label {
   font-size: 0.85rem;
   font-weight: 700;
-  color: var(--barber-gold-light);
+  color: var(--barber-orange);
   display: block;
   margin-bottom: 0.6rem;
 }
@@ -2710,9 +2834,9 @@ body {
 }
 
 .time-chip {
-  background: #2c2c2c;
-  border: 1px solid #444444;
-  color: #ffffff;
+  background: #ffffff;
+  border: 1px solid #fed7aa;
+  color: #431407;
   padding: 5px 12px;
   border-radius: 6px;
   font-size: 0.82rem;
@@ -2725,6 +2849,7 @@ body {
 .time-chip.active {
   background: var(--barber-orange);
   border-color: var(--barber-orange);
+  color: #ffffff;
 }
 
 .barber-services-scroll-box {
@@ -2734,8 +2859,8 @@ body {
   display: flex;
   flex-direction: column;
   gap: 0.75rem;
-  background: #252525;
-  border: 1px solid #383838;
+  background: #fffaf5;
+  border: 1px solid #fed7aa;
   border-radius: 10px;
 }
 
@@ -2745,10 +2870,10 @@ body {
   align-items: center;
   margin-top: 1rem;
   padding: 1rem 1.25rem;
-  background: rgba(216, 86, 39, 0.1);
+  background: #fff1e6;
   border: 1.5px dashed var(--barber-orange);
   border-radius: 10px;
-  color: #ffffff;
+  color: #431407;
   font-size: 0.92rem;
 }
 
@@ -2758,7 +2883,7 @@ body {
   font-size: 1.1rem;
   font-weight: 800;
   color: #ffffff;
-  background: linear-gradient(135deg, var(--barber-orange) 0%, #b84318 100%);
+  background: linear-gradient(135deg, var(--barber-orange) 0%, #c2410c 100%);
   border: none;
   border-radius: 10px;
   cursor: pointer;
@@ -2768,33 +2893,33 @@ body {
 }
 
 .btn-barber-submit:hover {
-  background: linear-gradient(135deg, var(--barber-orange-hover) 0%, #a03510 100%);
+  background: linear-gradient(135deg, var(--barber-orange-hover) 0%, #a8380a 100%);
   transform: translateY(-2px);
-  box-shadow: 0 8px 30px rgba(216, 86, 39, 0.7);
+  box-shadow: 0 8px 30px rgba(234, 88, 12, 0.5);
 }
 
 /* --- 9. SECTION 6: TRA CỨU LỊCH HẸN --- */
 .barber-lookup-section {
-  background: #141414;
+  background: #fffaf5;
   padding: 4.5rem 1.5rem;
   border-top: 1px solid var(--barber-border);
 }
 
 .barber-lookup-card {
-  background: #1f1f1f;
+  background: #ffffff;
   border: 1px solid var(--barber-border);
   border-radius: 16px;
   padding: 2.5rem;
   text-align: center;
-  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.4);
+  box-shadow: 0 10px 30px rgba(67, 20, 7, 0.06);
 }
 
-/* --- 10. PUBLIC FOOTER (BARBERSHOP LUXURY VINTAGE) --- */
+/* --- 10. PUBLIC FOOTER (SALON HAIR HÀ MINH - LUXURY WARM ESPRESSO & ORANGE) --- */
 .barber-footer {
-  background: #0d0d0d;
-  border-top: 1px solid #242424;
+  background: #231b15;
+  border-top: 3px solid var(--barber-orange);
   padding: 4.5rem 1.5rem 2rem 1.5rem;
-  color: #9ca3af;
+  color: #d6cfc7;
 }
 
 .barber-footer-grid {
@@ -2827,14 +2952,14 @@ body {
 .footer-brand-sub {
   font-size: 0.72rem;
   font-weight: 700;
-  color: var(--barber-gold);
+  color: var(--barber-orange-light);
   letter-spacing: 1.5px;
 }
 
 .footer-about-text {
   font-size: 0.88rem;
   line-height: 1.7;
-  color: #9ca3af;
+  color: #d6cfc7;
   margin-bottom: 1.5rem;
 }
 
@@ -2844,9 +2969,9 @@ body {
 }
 
 .social-badge {
-  background: #1c1c1c;
-  border: 1px solid #333333;
-  color: #d1d5db;
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  color: #f3f4f6;
   padding: 5px 12px;
   border-radius: 6px;
   font-size: 0.75rem;
@@ -2894,17 +3019,18 @@ body {
   gap: 10px;
   font-size: 0.88rem;
   line-height: 1.6;
-  color: #d1d5db;
+  color: #e5e7eb;
 }
 
 .contact-item .c-icon {
   font-size: 1.15rem;
   flex-shrink: 0;
   margin-top: 2px;
+  color: var(--barber-orange-light);
 }
 
 .barber-footer-bottom {
-  border-top: 1px solid #1f1f1f;
+  border-top: 1px solid rgba(255, 255, 255, 0.12);
   padding-top: 2rem;
   display: flex;
   justify-content: space-between;
@@ -2912,25 +3038,25 @@ body {
   flex-wrap: wrap;
   gap: 1rem;
   font-size: 0.82rem;
-  color: #6b7280;
+  color: #a89f91;
 }
 
 .btn-footer-staff-login {
-  background: rgba(255, 255, 255, 0.05);
-  border: 1px solid #333333;
-  color: #9ca3af;
+  background: rgba(234, 88, 12, 0.2);
+  border: 1.5px solid var(--barber-orange);
+  color: #ffedd5;
   padding: 6px 14px;
   border-radius: 6px;
   font-size: 0.78rem;
-  font-weight: 600;
+  font-weight: 700;
   cursor: pointer;
   transition: all 0.2s ease;
 }
 
 .btn-footer-staff-login:hover {
-  background: rgba(203, 163, 107, 0.15);
-  border-color: var(--barber-gold);
-  color: var(--barber-gold-light);
+  background: var(--barber-orange);
+  color: #ffffff;
+  box-shadow: 0 4px 15px var(--barber-orange-glow);
 }
 
 /* Modal Login Styling */
@@ -3011,5 +3137,40 @@ body {
   .barber-booking-card {
     padding: 1.5rem;
   }
+}
+
+/* --- OVERRIDES: KHẮC PHỤC TRIỆT ĐỂ MÀU ĐEN DANH SÁCH DỊCH VỤ & BẢO ĐẢM SÁNG SỦA --- */
+#modal-appt-services-list,
+#guest-book-services-list,
+.barber-services-scroll-box {
+  background: #ffffff !important;
+  border: 1.5px solid #fed7aa !important;
+  border-radius: 10px !important;
+  box-shadow: inset 0 2px 6px rgba(0,0,0,0.02) !important;
+}
+
+.appointment-service-option,
+.guest-book-service-option {
+  background: #ffffff !important;
+  border: 1px solid #fed7aa !important;
+  border-radius: 8px !important;
+  color: #0f172a !important;
+  transition: all 0.2s ease !important;
+}
+
+.appointment-service-option:hover,
+.guest-book-service-option:hover {
+  background: #fff7ed !important;
+  border-color: #ea580c !important;
+}
+
+.appointment-service-option span,
+.guest-book-service-option span {
+  color: #0f172a !important;
+}
+
+.appointment-service-option strong,
+.guest-book-service-option strong {
+  color: #ea580c !important;
 }
 
