@@ -1,0 +1,49 @@
+version: '3.8'
+
+# ====================================================================
+# DOCKER COMPOSE CONFIGURATION
+# Hệ Thống Quản Lý Đặt Lịch Salon Tóc Tích Hợp AI
+# Cơ sở dữ liệu: SQLite (Sử dụng Persistent Volume giữ dữ liệu an toàn)
+# Đọc toàn bộ biến môi trường từ tệp .env (Không viết cứng bí mật)
+# ====================================================================
+
+services:
+  # ------------------------------------------------------------------
+  # Dịch vụ Ứng dụng Web & Trợ lý AI (Python / Uvicorn ASGI Server)
+  # ------------------------------------------------------------------
+  app:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: salon_ai_management_app
+    restart: unless-stopped
+    ports:
+      - "${PORT:-5000}:5000"
+    environment:
+      - PORT=5000
+      - DB_PATH=/app/database/salon_hair.db
+      - SECRET_KEY=${SECRET_KEY}
+      - JWT_SECRET_KEY=${JWT_SECRET_KEY}
+      - GEMINI_API_KEY=${GEMINI_API_KEY}
+      - GEMINI_MODEL=${GEMINI_MODEL:-gemini-flash-lite-latest}
+      - OLLAMA_URL=${OLLAMA_URL:-http://host.docker.internal:11434}
+      - OLLAMA_MODEL=${OLLAMA_MODEL:-qwen2.5:7b}
+      - GMAIL_USER=${GMAIL_USER}
+      - GMAIL_APP_PASSWORD=${GMAIL_APP_PASSWORD}
+    volumes:
+      # Volume ánh xạ thư mục SQLite đảm bảo dữ liệu bền vững khi khởi động lại
+      - salon_sqlite_volume:/app/database
+    healthcheck:
+      test: ["CMD-SHELL", "curl -f http://localhost:5000/health || exit 1"]
+      interval: 20s
+      timeout: 5s
+      retries: 3
+      start_period: 10s
+
+# --------------------------------------------------------------------
+# Định nghĩa Volume lưu trữ dữ liệu bền vững (Data Persistence)
+# --------------------------------------------------------------------
+volumes:
+  salon_sqlite_volume:
+    name: salon_hair_db_volume
+    driver: local

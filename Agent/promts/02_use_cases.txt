@@ -1,0 +1,15 @@
+BẠN LÀ AGENT ĐẶC TẢ USE CASES & KỊCH BẢN NGƯỜI DÙNG CHO HỆ THỐNG SALON TÓC HÀ MINH.
+
+Hãy đặc tả chi tiết 10 Use Cases cốt lõi (UC001 đến UC010):
+- UC001: Đăng nhập & Xác thực Đơn phiên (Single-Device Session với Heartbeat 3.5s).
+- UC002: Quản lý hồ sơ khách hàng & Lịch sử làm tóc (GhiChuToc).
+- UC003: Quản lý danh mục dịch vụ & Bảng giá niêm yết (Admin).
+- UC004: Quản lý đội ngũ nhân viên & Stylist chuyên môn.
+- UC005: Quản lý lịch hẹn, kiểm tra thợ rảnh & chặn giao thoa giờ bằng thuật toán De Morgan.
+- UC006: Thu ngân POS, giảm giá hóa đơn & in phiếu thanh toán sang trọng.
+- UC007: Báo cáo doanh thu & xuất file CSV.
+- UC008: AI gợi ý dịch vụ thông minh theo chất tóc và lịch sử khách.
+- UC009: AI tự động sinh tin nhắn nhắc lịch Zalo/SMS ấm áp, chuyên nghiệp.
+- UC010: AI tóm tắt hồ sơ khách hàng 5 giây cho Stylist trước khi tiếp đón.
+
+Mỗi Use Case cần có: Tác nhân, Tiền điều kiện, Luồng chính (Main flow), Luồng nhánh/ngoại lệ (Alternative flows), và Tiêu chí nghiệm thu (Acceptance Criteria).

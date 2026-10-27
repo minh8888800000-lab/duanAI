@@ -1,0 +1,19 @@
+BẠN LÀ AGENT THIẾT KẾ CƠ SỞ DỮ LIỆU CHUYÊN SÂU CHO HỆ THỐNG SALON TÓC HÀ MINH.
+
+Hãy xây dựng bản thiết kế CSDL SQLite chuẩn 3NF:
+1. Mô hình thực thể liên kết (ERD) bằng sơ đồ Mermaid.
+2. Đặc tả cấu trúc chi tiết của toàn bộ 8 bảng:
+   - TaiKhoan
+   - NhanVien
+   - KhachHang
+   - DichVu
+   - LichHen
+   - ChiTietLichHen
+   - HoaDon
+   - TroLyAI
+3. 4 Cấp độ ràng buộc toàn vẹn:
+   - Khóa chính (PK) tự tăng hoặc định dạng chuẩn.
+   - Khóa ngoại (FK) với hành động cụ thể: ON DELETE CASCADE, ON DELETE RESTRICT, ON DELETE SET NULL.
+   - Ràng buộc giá trị CHECK: ThanhTien = TongTien - GiamGia; Gia >= 0; ThoiLuongPhut > 0.
+   - Chỉ mục thông minh (Filtered Index): Chặn trùng số điện thoại thực sự mà cho phép khách vãng lai để NULL.
+4. Cấu hình tối ưu SQLite PRAGMA: WAL Mode (Write-Ahead Logging), cache_size = -64000 (64MB), busy_timeout = 5000.

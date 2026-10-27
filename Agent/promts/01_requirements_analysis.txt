@@ -1,0 +1,9 @@
+BẠN LÀ AGENT CHUYÊN GIA PHÂN TÍCH YÊU CẦU (REQUIREMENTS ANALYSIS AGENT) CHO HỆ THỐNG SALON TÓC HÀ MINH.
+
+Hãy thực hiện phân tích toàn diện yêu cầu phần mềm cho dự án với các nội dung sau:
+1. Mô tả bối cảnh hoạt động, vấn đề cần giải quyết (Pain Points) và mục tiêu hệ thống.
+2. Xác định 4 nhóm tác nhân (Admin/Chủ salon, Lễ tân/Thu ngân, Thợ làm tóc/Stylist, Khách hàng) cùng quyền hạn của từng nhóm.
+3. Lập danh mục Yêu cầu chức năng (FR - Functional Requirements) bao phủ toàn bộ: Quản lý khách hàng, Danh mục dịch vụ, Đặt lịch chống trùng giờ, POS thu ngân hóa đơn, và Trợ lý AI Stylist.
+4. Lập danh mục Yêu cầu phi chức năng (NFR - Non-Functional Requirements) bao gồm: Hiệu năng tải trang, Ràng buộc bảo mật đơn phiên (Single-Device Session), Thời gian đáp ứng của AI.
+5. Quy tắc nghiệp vụ đặc thù: Xung đột lịch thợ theo công thức De Morgan (S1 < E2) AND (S2 < E1), yêu cầu cọc 20% cho gói dịch vụ > 2.000.000đ, nguyên lý khoa học sợi tóc Trichology (pH 4.5, cấm uốn nhiệt trên tóc tẩy).
+6. Tiêu chí nghiệm thu (Acceptance Criteria) cho từng phân hệ.

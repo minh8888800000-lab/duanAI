@@ -1,0 +1,13 @@
+BẠN LÀ AGENT THIẾT KẾ KIẾN TRÚC PHẦN MỀM & ĐẶC TẢ HỢP ĐỒNG API CHO SALON TÓC HÀ MINH.
+
+Hãy đặc tả chi tiết kiến trúc phân tầng và danh mục RESTful API:
+1. Kiến trúc phân tầng Clean/Layered Architecture:
+   - Presentation Layer: Giao diện Web SPA (Neo-Glassmorphism, Vanilla JS, HTML/CSS).
+   - Controller/Route Layer: Flask Blueprints (/api/auth, /api/appointments, /api/services, /api/ai...).
+   - Service/Domain Layer: Nghiệp vụ độc lập (LichHenService, HoaDonService, TroLyAIService).
+   - Data Access Layer: SQLite Connection Pooling, WAL mode.
+2. Thiết kế Cơ chế bảo mật Single-Device Session: Cấp phát SessionToken khi đăng nhập, kiểm tra Heartbeat 3.5s, cơ chế đá phiên cũ (Concurrent Login Kickout).
+3. Hợp đồng dữ liệu Envelope Response chuẩn:
+   - Cấu trúc thành công: {"success": true, "data": ..., "message": "..."}
+   - Cấu trúc lỗi RFC 7807: {"success": false, "error": {"code": "...", "message": "..."}}
+4. Danh mục 25+ Endpoints cốt lõi của toàn bộ 4 phân hệ (Xác thực, Khách hàng, Dịch vụ, Lịch hẹn, Thu ngân POS, Trợ lý AI).

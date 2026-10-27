@@ -1,0 +1,46 @@
+# ====================================================================
+# GITIGNORE - Danh sách loại trừ khi commit lên Git
+# Tuyệt đối không commit khóa bảo mật, database hoặc tệp rác
+# ====================================================================
+
+# Environment Variables & Secrets
+.env
+.env.*
+!.env.example
+Agent/.env
+
+# Python Bytecode & Cache
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.pytest_cache/
+.coverage
+htmlcov/
+*.egg-info/
+dist/
+build/
+
+# Virtual Environments
+venv/
+.venv/
+env/
+ENV/
+
+# Database Files (SQLite)
+*.db
+*.sqlite
+*.sqlite3
+database/*.db
+database/*.sqlite
+
+# Scratch, Testing & Temporary Logs
+scratch/
+tests/chrome_test_profile*
+*.log
+
+# Operating System & IDE Artifacts
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/

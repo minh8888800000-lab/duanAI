@@ -1,0 +1,2368 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SALON HAIR HÀ MINH - Hệ Thống Chăm Sóc & Tạo Mẫu Tóc Đẳng Cấp</title>
+  
+  <!-- Modern Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,600;0,700;1,400;1,600;1,700&family=Outfit:wght@300;400;500;600;700;800;900&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  
+  <!-- CSS Stylesheet -->
+  <link rel="stylesheet" href="/static/css/style.css?v=20260929_barber">
+</head>
+<body>
+
+  <!-- ==================================================================== -->
+  <!-- PHÂN HỆ 1: TRANG CHỦ DÀNH CHO KHÁCH HÀNG (GUEST VIEW - SALON HAIR HÀ MINH) -->
+  <!-- ==================================================================== -->
+  <div id="view-guest-home">
+    
+    <!-- TOP ANNOUNCEMENT & CONTACT BAR -->
+    <div class="barber-topbar">
+      <div class="barber-topbar-left">
+        <span class="topbar-icon">📍</span>
+        <span>188 Thái Hà, Đống Đa, Hà Nội</span>
+      </div>
+      <div class="barber-topbar-right">
+        <span class="topbar-icon">📞</span>
+        <span>Hotline VIP: <strong>090.123.4567</strong></span>
+      </div>
+    </div>
+
+    <!-- MAIN SALON HAIR HÀ MINH NAVIGATION -->
+    <header class="barber-header">
+      <div class="barber-brand" onclick="window.scrollTo({top: 0, behavior: 'smooth'})">
+        <img src="/static/images/barber_logo.svg" alt="Salon Hair Hà Minh Logo" class="barber-logo-img">
+        <div class="barber-brand-text">
+          <div class="barber-brand-title">SALON HAIR HÀ MINH</div>
+          <div class="barber-brand-sub">HỆ THỐNG TẠO MẪU TÓC CAO CẤP • MASTER STYLIST HÀ MINH</div>
+        </div>
+      </div>
+
+      <nav class="barber-nav">
+        <ul class="barber-nav-links">
+          <li><a href="#guest-hero" class="active">TRANG CHỦ</a></li>
+          <li><a href="#guest-about-section">VỀ CHÚNG TÔI</a></li>
+          <li><a href="#guest-services-highlight-section">SẢN PHẨM & DỊCH VỤ</a></li>
+          <li><a href="#guest-stylists-section">ĐÀO TẠO HỌC VIÊN</a></li>
+          <li><a href="#guest-services-section">BẢNG GIÁ</a></li>
+          <li><a href="#guest-footer">LIÊN HỆ</a></li>
+        </ul>
+      </nav>
+
+      <div class="barber-header-actions">
+        <button type="button" class="barber-search-btn" onclick="scrollToGuestServicesSearch()" title="Tìm kiếm dịch vụ">
+          🔍
+        </button>
+        <button type="button" class="btn-barber-book" onclick="scrollToGuestBooking()">
+          ĐẶT LỊCH HẸN
+        </button>
+        <button type="button" class="btn-barber-staff" onclick="openLoginModal()" title="Cổng đăng nhập nhân sự nội bộ">
+          🔐 Đăng Nhập
+        </button>
+      </div>
+    </header>
+
+    <!-- HERO CAROUSEL BANNER SECTION -->
+    <section id="guest-hero" class="barber-hero-slider">
+      <!-- Slide items -->
+      <div class="hero-slides-wrapper" id="hero-slides-wrapper">
+        <div class="hero-slide active" style="background-image: url('/static/images/hero_barbershop.jpg');">
+          <div class="hero-overlay"></div>
+          <div class="hero-content">
+            <div class="hero-badge">
+              <span>✂️ ĐẲNG CẤP • CHUYÊN NGHIỆP • ĐỘC BẢN</span>
+            </div>
+            <h1 class="hero-title">
+              Kiến Tạo Phong Cách Tóc Hoàn Hảo
+            </h1>
+            <p class="hero-subtitle">
+              Không gian Salon Hair Hà Minh sang trọng đẳng cấp kết hợp công nghệ Trợ lý AI tư vấn phom tóc cá nhân hóa chuẩn nhân trắc học khuôn mặt.
+            </p>
+            <div class="hero-actions">
+              <button type="button" class="btn-barber-primary" onclick="scrollToGuestBooking()">
+                📅 ĐẶT LỊCH HẸN NGAY
+              </button>
+              <a href="#guest-services-section" class="btn-barber-outline">
+                ✂️ BẢNG GIÁ DỊCH VỤ
+              </a>
+              <button type="button" class="btn-barber-ai" onclick="toggleAIChatDrawer()">
+                🤖 TRỢ LÝ AI TƯ VẤN
+              </button>
+            </div>
+          </div>
+        </div>
+        <div class="hero-slide" style="background-image: url('/static/images/hero_slide2.jpg');">
+          <div class="hero-overlay"></div>
+          <div class="hero-content">
+            <div class="hero-badge">
+              <span>💈 MASTER STYLIST HÀ MINH 12+ NĂM KINH NGHIỆM</span>
+            </div>
+            <h1 class="hero-title">
+              Nâng Tầm Đẳng Cấp & Vẻ Đẹp Hoàn Mỹ
+            </h1>
+            <p class="hero-subtitle">
+              Tạo mẫu tóc thiết kế chuyên sâu, Nhuộm Balayage Pháp, Uốn phục hồi Nano Keratin & Bọc Protein tơ tằm độc quyền tại 188 Thái Hà, Hà Nội.
+            </p>
+            <div class="hero-actions">
+              <button type="button" class="btn-barber-primary" onclick="scrollToGuestBooking()">
+                📅 ĐẶT LỊCH HẸN NGAY
+              </button>
+              <a href="#guest-about-section" class="btn-barber-outline">
+                🌟 KHÁM PHÁ SALON
+              </a>
+              <button type="button" class="btn-barber-ai" onclick="toggleAIChatDrawer()">
+                🤖 TRỢ LÝ AI TƯ VẤN
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Carousel Navigation Arrows -->
+      <button type="button" class="hero-arrow prev" onclick="prevHeroSlide()" aria-label="Slide trước">‹</button>
+      <button type="button" class="hero-arrow next" onclick="nextHeroSlide()" aria-label="Slide kế tiếp">›</button>
+
+      <!-- Carousel Dots Indicator -->
+      <div class="hero-dots" id="hero-dots">
+        <span class="dot active" onclick="setHeroSlide(0)"></span>
+        <span class="dot" onclick="setHeroSlide(1)"></span>
+      </div>
+    </section>
+
+    <!-- SECTION 1: GIỚI THIỆU VỀ SALON HAIR HÀ MINH -->
+    <section id="guest-about-section" class="barber-about-section">
+      <div class="barber-container">
+        <div class="barber-about-grid">
+          
+          <!-- Left: Big Featured Portrait Image -->
+          <div class="about-img-col">
+            <div class="about-featured-frame">
+              <img src="/static/images/about_barber.jpg" alt="Master Stylist Hà Minh" class="about-featured-img">
+              <div class="about-frame-badge">
+                <span class="badge-num">12+</span>
+                <span class="badge-lbl">Năm Kinh Nghiệm</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Right: Content & Thumbnails -->
+          <div class="about-text-col">
+            <div class="about-cursive-sub">Giới thiệu về</div>
+            <h2 class="about-main-title">SALON HAIR HÀ MINH</h2>
+            
+            <p class="about-paragraph">
+              Chào mừng đến với <strong>Salon Hair Hà Minh</strong> - Nơi kiến tạo vẻ đẹp hoàn hảo cho mái tóc của bạn! Tọa lạc tại 188 Thái Hà, Đống Đa, Hà Nội, dưới sự dẫn dắt chuyên môn của Master Stylist Hà Minh, chúng tôi cam kết mang đến những tác phẩm tóc thiết kế độc bản, liệu trình phục hồi khoa học (Trichology) và dịch vụ chăm sóc tận tâm nhất.
+            </p>
+
+            <div class="about-action-wrap">
+              <button type="button" class="btn-orange-pill" onclick="scrollToGuestBooking()">
+                XEM THÊM
+              </button>
+            </div>
+
+            <!-- 3 Thumbnails Row with slider dots matching screenshot -->
+            <div class="about-thumbs-container">
+              <div class="about-thumbs-row" id="about-thumbs-row">
+                <div class="about-thumb-card">
+                  <img src="/static/images/barber_thumb1.jpg" alt="Salon Hair Hà Minh 1" class="about-thumb-img">
+                </div>
+                <div class="about-thumb-card">
+                  <img src="/static/images/barber_thumb2.jpg" alt="Salon Hair Hà Minh 2" class="about-thumb-img">
+                </div>
+                <div class="about-thumb-card">
+                  <img src="/static/images/barber_thumb3.jpg" alt="Salon Hair Hà Minh 3" class="about-thumb-img">
+                </div>
+              </div>
+              <div class="about-dots">
+                <span class="dot active"></span>
+                <span class="dot"></span>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 2: DỊCH VỤ CỦA CHÚNG TÔI (ORANGE BANNER & 4 FEATURED CARDS) -->
+    <section id="guest-services-highlight-section" class="barber-services-highlight-banner">
+      <div class="barber-container">
+        
+        <div class="highlight-header">
+          <h2 class="highlight-title">Dịch Vụ Của Chúng Tôi</h2>
+          <p class="highlight-subtitle">Salon Hair Hà Minh tự hào là hệ thống chăm sóc & tạo mẫu tóc hàng đầu tại Đống Đa - Hà Nội</p>
+        </div>
+
+        <div class="highlight-cards-grid">
+          <!-- Card 1: Cắt tóc kéo vàng -->
+          <div class="highlight-card" onclick="scrollToGuestBooking()">
+            <div class="highlight-card-img-wrap">
+              <img src="/static/images/service_cut.jpg" alt="Cắt Tóc & Cạo Viền Kéo Vàng" class="highlight-card-img">
+              <span class="highlight-card-tag">Hot Choice</span>
+            </div>
+            <div class="highlight-card-body">
+              <h3 class="highlight-card-title">Cắt Tóc & Cạo Viền Kéo Vàng</h3>
+              <p class="highlight-card-desc">Fade, Taper, Pompadour sắc nét định hình góc cạnh khuôn mặt chuẩn tỷ lệ vàng.</p>
+              <div class="highlight-card-footer">
+                <span class="highlight-card-price">120.000 đ</span>
+                <span class="highlight-card-btn">Đặt Ngay ➔</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Card 2: Cạo mặt khăn nóng -->
+          <div class="highlight-card" onclick="scrollToGuestBooking()">
+            <div class="highlight-card-img-wrap">
+              <img src="/static/images/service_shave.jpg" alt="Cạo Mặt Khăn Nóng Hoàng Gia" class="highlight-card-img">
+              <span class="highlight-card-tag">VIP Care</span>
+            </div>
+            <div class="highlight-card-body">
+              <h3 class="highlight-card-title">Cạo Mặt Khăn Nóng Hoàng Gia</h3>
+              <p class="highlight-card-desc">Ủ khăn nóng thảo mộc 100%, bọt cạo mịn màng và cạo lưỡi lam êm ái thư giãn.</p>
+              <div class="highlight-card-footer">
+                <span class="highlight-card-price">80.000 đ</span>
+                <span class="highlight-card-btn">Đặt Ngay ➔</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Card 3: Tạo kiểu vuốt sáp -->
+          <div class="highlight-card" onclick="scrollToGuestBooking()">
+            <div class="highlight-card-img-wrap">
+              <img src="/static/images/service_styling.jpg" alt="Tạo Kiểu & Vuốt Pomade Cao Cấp" class="highlight-card-img">
+              <span class="highlight-card-tag">Styling</span>
+            </div>
+            <div class="highlight-card-body">
+              <h3 class="highlight-card-title">Tạo Kiểu & Vuốt Pomade Cao Cấp</h3>
+              <p class="highlight-card-desc">Sấy phồng tạo phom tự nhiên, vuốt pomade/clay chính hãng giữ nếp bền đẹp 24h.</p>
+              <div class="highlight-card-footer">
+                <span class="highlight-card-price">50.000 đ</span>
+                <span class="highlight-card-btn">Đặt Ngay ➔</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Card 4: Gội thảo dược massage -->
+          <div class="highlight-card" onclick="scrollToGuestBooking()">
+            <div class="highlight-card-img-wrap">
+              <img src="/static/images/service_wash.jpg" alt="Gội Thảo Dược & Massage Đầu" class="highlight-card-img">
+              <span class="highlight-card-tag">Relaxation</span>
+            </div>
+            <div class="highlight-card-body">
+              <h3 class="highlight-card-title">Gội Thảo Dược & Massage Đầu</h3>
+              <p class="highlight-card-desc">Gội dưỡng sinh tinh dầu bạc hà bưởi, bấm huyệt vai gáy thư thái sảng khoái.</p>
+              <div class="highlight-card-footer">
+                <span class="highlight-card-price">70.000 đ</span>
+                <span class="highlight-card-btn">Đặt Ngay ➔</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- SECTION 3: BẢNG GIÁ DỊCH VỤ NIÊM YẾT MINH BẠCH -->
+    <section id="guest-services-section" class="barber-menu-section">
+      <div class="barber-container">
+        
+        <div class="barber-section-header">
+          <div class="barber-section-tag">MENU DỊCH VỤ CHUẨN QUÝ ÔNG</div>
+          <h2 class="barber-section-title">Bảng Giá Dịch Vụ Niêm Yết Minh Bạch</h2>
+          <p class="barber-section-desc">Cam kết niêm yết giá công khai, không phát sinh chi phí phụ, tư vấn kỹ lưỡng phom tóc và chất tóc trước khi thực hiện.</p>
+        </div>
+
+        <!-- Service Filter Chips -->
+        <div class="barber-filter-chips">
+          <button type="button" class="pos-cat-btn active" onclick="filterGuestServices('', this)">🌟 Tất Cả Dịch Vụ</button>
+          <button type="button" class="pos-cat-btn" onclick="filterGuestServices('Cắt', this)">✂️ Cắt & Cạo Viền</button>
+          <button type="button" class="pos-cat-btn" onclick="filterGuestServices('Uốn', this)">🌀 Uốn Texture & Phồng</button>
+          <button type="button" class="pos-cat-btn" onclick="filterGuestServices('Nhuộm', this)">🎨 Nhuộm & Tẩy Màu</button>
+          <button type="button" class="pos-cat-btn" onclick="filterGuestServices('Phục hồi', this)">🧬 Phục Hồi Keratin</button>
+          <button type="button" class="pos-cat-btn" onclick="filterGuestServices('Gội', this)">💆 Gội & Massage</button>
+        </div>
+
+        <!-- Guest Services Catalog Grid (Dynamic) -->
+        <div id="guest-services-catalog-grid" class="barber-services-catalog-grid">
+          <div style="text-align: center; grid-column: 1/-1; color: var(--barber-text-muted); padding: 3rem;">Đang tải danh mục dịch vụ...</div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- SECTION 4: ĐỘI NGŨ THỢ KÉO VÀNG / BARBER PRO -->
+    <section id="guest-stylists-section" class="barber-stylists-section">
+      <div class="barber-container">
+        
+        <div class="barber-section-header">
+          <div class="barber-section-tag">BÀN TAY VÀNG TẠO MẪU</div>
+          <h2 class="barber-section-title">Đội Ngũ Master Stylist & Chuyên Gia Tóc</h2>
+          <p class="barber-section-desc">Mỗi nhà tạo mẫu tóc tại Salon Hair Hà Minh đều sở hữu gu thẩm mỹ đỉnh cao, dày dặn kinh nghiệm và thấu hiểu góc cạnh từng khuôn mặt.</p>
+        </div>
+
+        <!-- Dynamic stylists loaded here -->
+        <div id="guest-stylists-grid" class="barber-stylists-grid">
+        </div>
+
+      </div>
+    </section>
+
+    <!-- SECTION 5: FORM ĐẶT LỊCH HẸN TRỰC TUYẾN -->
+    <section id="guest-booking-section" class="barber-booking-section">
+      <div class="barber-container">
+        
+        <div class="barber-section-header">
+          <div class="barber-section-tag">GIỮ CHỖ NHANH CHÓNG</div>
+          <h2 class="barber-section-title">Đặt Lịch Hẹn Trực Tuyến Salon Hair Hà Minh</h2>
+          <p class="barber-section-desc">Quý khách vui lòng chọn dịch vụ và khung giờ mong muốn. Salon sẽ xác nhận lịch hẹn và giữ thợ tức thì.</p>
+        </div>
+
+        <div class="barber-booking-card">
+          <form id="form-guest-booking" onsubmit="handleGuestBookingSubmit(event)">
+            
+            <div class="booking-grid-2">
+              <div class="form-group">
+                <label class="form-label">👤 Họ và Tên Quý Khách (*):</label>
+                <input type="text" id="guest-book-name" class="form-control barber-input" placeholder="Ví dụ: Nguyễn Văn Nam" required>
+              </div>
+              <div class="form-group">
+                <label class="form-label">📞 Số Điện Thoại Nhận Tin Nhắc Lịch (*):</label>
+                <input type="tel" id="guest-book-phone" class="form-control barber-input" placeholder="Ví dụ: 0909123456" required>
+              </div>
+            </div>
+
+            <div class="booking-grid-2">
+              <div class="form-group">
+                <label class="form-label">✂️ Stylist / Thợ Phụ Trách Mong Muốn:</label>
+                <select id="guest-book-stylist" class="form-control barber-select">
+                  <option value="auto">✨ Salon Tự Động Xếp Thợ Đang Rảnh</option>
+                </select>
+              </div>
+              <div class="form-group">
+                <label class="form-label">🕒 Ngày & Giờ Hẹn Đến Tiệm (*):</label>
+                <input type="datetime-local" id="guest-book-datetime" class="form-control barber-input" required>
+              </div>
+            </div>
+
+            <!-- Quick Time Slot Chips for convenience -->
+            <div class="quick-time-section">
+              <span class="quick-time-label">⚡ Chọn nhanh khung giờ hôm nay:</span>
+              <div class="quick-time-chips">
+                <button type="button" class="time-chip" onclick="setQuickTimeSlot('09:00')">09:00</button>
+                <button type="button" class="time-chip" onclick="setQuickTimeSlot('10:30')">10:30</button>
+                <button type="button" class="time-chip" onclick="setQuickTimeSlot('11:30')">11:30</button>
+                <button type="button" class="time-chip" onclick="setQuickTimeSlot('14:00')">14:00</button>
+                <button type="button" class="time-chip" onclick="setQuickTimeSlot('15:30')">15:30</button>
+                <button type="button" class="time-chip" onclick="setQuickTimeSlot('17:00')">17:00</button>
+                <button type="button" class="time-chip" onclick="setQuickTimeSlot('18:30')">18:30</button>
+                <button type="button" class="time-chip" onclick="setQuickTimeSlot('20:00')">20:00</button>
+              </div>
+            </div>
+
+            <!-- Services Checkboxes for Guest -->
+            <div class="form-group" style="margin-bottom: 1.5rem;">
+              <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 0.6rem;">
+                <label class="form-label" style="margin: 0;">💈 Chọn Các Dịch Vụ Muốn Làm (*):</label>
+                <span style="font-size: 0.8rem; color: #ff9e58; font-weight: 600;">Hệ thống tự động tính thời gian & giá</span>
+              </div>
+              
+              <div style="display: flex; gap: 0.75rem; margin-bottom: 0.75rem; flex-wrap: wrap;">
+                <input type="search" id="guest-book-service-search" class="form-control barber-input" placeholder="Tìm dịch vụ (ví dụ: cắt fade, cạo râu, uốn...)" oninput="filterGuestBookingServices()" style="flex: 1; min-width: 220px;">
+                <select id="guest-book-service-category" class="form-control barber-select" onchange="filterGuestBookingServices()" style="width: 180px;">
+                  <option value="">Tất cả nhóm</option>
+                  <option value="cắt">Cắt / Cạo viền</option>
+                  <option value="uốn">Uốn Texture</option>
+                  <option value="nhuộm">Nhuộm / Tẩy</option>
+                  <option value="phục hồi">Phục hồi</option>
+                  <option value="gội">Gội / Massage</option>
+                </select>
+              </div>
+
+              <div id="guest-book-service-result-count" style="font-size: 0.75rem; color: #9ca3af; margin-bottom: 0.4rem;"></div>
+              
+              <div id="guest-book-services-list" class="barber-services-scroll-box">
+                <!-- Checkboxes dynamically loaded -->
+              </div>
+              
+              <div class="barber-calc-box">
+                <div>⏱️ Thời gian dự kiến: <strong id="guest-book-calc-time" style="color: #38bdf8; font-size: 1.1rem;">0 phút</strong></div>
+                <div>💰 Chi phí niêm yết: <strong id="guest-book-calc-price" style="color: #ff9e58; font-size: 1.25rem;">0 đ</strong></div>
+              </div>
+            </div>
+
+            <div class="form-group" style="margin-bottom: 1.5rem;">
+              <label class="form-label">📝 Ghi Chú Riêng (Yêu cầu kiểu tóc, độ phồng, cạo râu...):</label>
+              <textarea id="guest-book-notes" class="form-control barber-input" rows="2" placeholder="Ví dụ: Cắt High Fade sát chân, tỉa râu quai nón, da đầu nhạy cảm..."></textarea>
+            </div>
+
+            <div id="guest-book-alert" style="display: none; padding: 0.9rem; border-radius: 8px; margin-bottom: 1.25rem; font-size: 0.9rem;"></div>
+
+            <button type="submit" class="btn-barber-submit">
+              🚀 XÁC NHẬN ĐẶT LỊCH HẸN TRỰC TUYẾN
+            </button>
+          </form>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- SECTION 6: TRA CỨU LỊCH HẸN DÀNH CHO KHÁCH -->
+    <section id="guest-lookup-section" class="barber-lookup-section">
+      <div class="barber-container" style="max-width: 720px;">
+        <div class="barber-lookup-card">
+          <div style="font-size: 2rem; margin-bottom: 0.5rem;">🔍</div>
+          <h3 style="font-size: 1.4rem; font-weight: 800; color: #ffffff; margin-bottom: 0.5rem;">Tra Cứu Lịch Hẹn Của Bạn</h3>
+          <p style="color: #9ca3af; font-size: 0.88rem; margin-bottom: 1.25rem;">Nhập số điện thoại đã đăng ký để kiểm tra trạng thái lịch hẹn và thợ phụ trách.</p>
+          <div style="display: flex; gap: 0.5rem; justify-content: center; flex-wrap: wrap;">
+            <input type="tel" id="guest-lookup-phone" class="form-control barber-input" placeholder="Nhập số điện thoại (ví dụ: 0909123456)" style="max-width: 320px;">
+            <button type="button" class="btn-orange-pill" onclick="handleGuestLookupAppointment()">Tra Cứu Ngay</button>
+          </div>
+          <div id="guest-lookup-result" style="margin-top: 1rem; text-align: left; display: none;"></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- PUBLIC FOOTER (SALON HAIR HÀ MINH LUXURY) -->
+    <footer id="guest-footer" class="barber-footer">
+      <div class="barber-container">
+        
+        <div class="barber-footer-grid">
+          <!-- Col 1: Brand Info -->
+          <div>
+            <div class="footer-brand">
+              <img src="/static/images/barber_logo.svg" alt="Salon Hair Hà Minh Logo" class="footer-logo-img">
+              <div>
+                <div class="footer-brand-title">SALON HAIR HÀ MINH</div>
+                <div class="footer-brand-sub">HỆ THỐNG TẠO MẪU TÓC CAO CẤP</div>
+              </div>
+            </div>
+            <p class="footer-about-text">
+              Điểm đến lý tưởng cho vẻ đẹp hoàn mỹ của mái tóc. Trải nghiệm dịch vụ cắt tạo kiểu, uốn phục hồi, nhuộm Balayage chuẩn học viện quốc tế và tích hợp Trợ lý AI Stylist 24/7.
+            </p>
+            <div class="footer-social-links">
+              <span class="social-badge">Facebook</span>
+              <span class="social-badge">Instagram</span>
+              <span class="social-badge">Tiktok</span>
+              <span class="social-badge">Youtube</span>
+            </div>
+          </div>
+
+          <!-- Col 2: Addresses -->
+          <div>
+            <div class="footer-heading">Hệ Thống Trụ Sở & Cơ Sở</div>
+            <div class="footer-contact-list">
+              <div class="contact-item">
+                <span class="c-icon">📍</span>
+                <div>
+                  <strong>Trụ Sở Chính (Hà Nội):</strong><br>
+                  188 Thái Hà, Đống Đa, TP. Hà Nội
+                </div>
+              </div>
+              <div class="contact-item">
+                <span class="c-icon">📍</span>
+                <div>
+                  <strong>Cơ sở 2 (Cầu Giấy):</strong><br>
+                  26 Trần Thái Tông, Cầu Giấy, TP. Hà Nội
+                </div>
+              </div>
+              <div class="contact-item">
+                <span class="c-icon">📍</span>
+                <div>
+                  <strong>Cơ sở 3 (TP.HCM):</strong><br>
+                  188 Võ Văn Ngân, TP. Thủ Đức, TP. Hồ Chí Minh
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Col 3: Hotline & Hours -->
+          <div>
+            <div class="footer-heading">Hotline & Giờ Mở Cửa</div>
+            <div class="footer-contact-list">
+              <div class="contact-item">
+                <span class="c-icon">📞</span>
+                <div>
+                  <strong>Hotline Đặt Hẹn VIP:</strong><br>
+                  <span style="color: #ff9e58; font-size: 1.25rem; font-weight: 800;">090.123.4567</span><br>
+                </div>
+              </div>
+              <div class="contact-item">
+                <span class="c-icon">🕒</span>
+                <div>
+                  <strong>Giờ Làm Việc:</strong><br>
+                  Thứ 2 - Chủ Nhật: <strong style="color: #ffffff;">08:30 - 21:30</strong><br>
+                  <span style="color: #34d399; font-size: 0.82rem;">● Phục vụ xuyên trưa cả ngày Lễ & Tết</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Bottom bar -->
+        <div class="barber-footer-bottom">
+          <div>© 2026 SALON HAIR HÀ MINH. Bản quyền thuộc về Hệ Thống Quản Lý Đặt Lịch Salon Tóc Tích Hợp AI.</div>
+          <div>
+            <button type="button" class="btn-footer-staff-login" onclick="openLoginModal()">
+              🔐 Cổng Đăng Nhập Nhân Sự Nội Bộ (Admin / Lễ Tân / Thợ)
+            </button>
+          </div>
+        </div>
+
+      </div>
+    </footer>
+
+  </div>
+  <!-- KẾT THÚC PHÂN HỆ GUEST -->
+
+  <!-- ==================================================================== -->
+  <!-- PHÂN HỆ 2: NỘI BỘ SALON (STAFF APP - DÀNH CHO ADMIN, LỄ TÂN, THỢ CHÍNH) -->
+  <!-- ==================================================================== -->
+  <div id="view-staff-app" style="display: none;">
+
+    <!-- TOP NAVIGATION HEADER FOR STAFF -->
+    <header class="header">
+      <div class="brand" style="cursor: pointer;" onclick="switchTab('dashboard')" title="Quay về bảng điều khiển">
+        <img src="/static/images/barber_logo.svg" alt="Salon Hair Hà Minh Logo" class="barber-logo-img" style="width: 42px; height: 42px;">
+        <div>
+          <div class="brand-title">SALON HAIR HÀ MINH</div>
+          <div class="brand-subtitle">📍 188 Thái Hà, Đống Đa, Hà Nội • ☎️ 090.123.4567</div>
+        </div>
+      </div>
+
+      <!-- Real-time Revenue Display Directly on Header (Visible ONLY to Admin) -->
+      <div id="staff-header-revenue-pill" class="header-revenue-pill" title="Doanh số trực tiếp hệ thống (Dành riêng cho Quản lý)">
+        <span class="pulse-dot"></span>
+        <span><strong>Hôm nay:</strong> <span id="header-today-rev">{{ "{:,.0f}".format(summary.kpi.doanh_thu_hom_nay).replace(",", ".") }} đ</span></span>
+        <span style="opacity: 0.35;">|</span>
+        <span><strong>Tổng DT:</strong> <span id="header-total-rev">{{ "{:,.0f}".format(summary.kpi.tong_doanh_thu).replace(",", ".") }} đ</span></span>
+      </div>
+
+      <!-- Logged in User Profile & Quick Actions -->
+      <div class="header-actions">
+        <div class="user-pill">
+          <span id="current-user-name" style="font-weight: 600;">Hà Minh Giám Đốc</span>
+          <span id="current-user-role" class="badge badge-warning" style="margin-left: 4px;">Admin</span>
+        </div>
+
+
+
+        <button class="btn btn-secondary btn-sm" onclick="handleLogout()" title="Đăng xuất quay về trang chủ khách" style="border-color: rgba(244, 63, 94, 0.4); color: #fb7185; background: rgba(244, 63, 94, 0.12);">
+          🚪 Đăng Xuất
+        </button>
+
+        <button class="btn btn-ai btn-sm" onclick="openAIModal()">
+          ✨ Trợ Lý AI
+        </button>
+
+        <button id="header-btn-new-appt" class="btn btn-primary btn-sm admin-letan-only" onclick="openNewAppointmentModal()">
+          + Đặt Lịch (F2)
+        </button>
+
+        <button id="header-btn-pos" class="btn btn-emerald btn-sm admin-letan-only" onclick="switchTab('billing')">
+          ⚡ Thu Ngân POS (F4)
+        </button>
+      </div>
+    </header>
+
+  <!-- MAIN LAYOUT -->
+  <div class="main-layout">
+    
+    <!-- SIDEBAR NAVIGATION -->
+    <aside class="sidebar">
+      <nav style="display: flex; flex-direction: column; gap: 0.4rem;">
+        <a class="nav-item admin-only" data-tab="dashboard" onclick="switchTab('dashboard')">
+          <span class="nav-icon">📊</span>
+          <span>Tổng Quan (Dashboard)</span>
+        </a>
+        <a class="nav-item active" data-tab="appointments" onclick="switchTab('appointments')">
+          <span class="nav-icon">📅</span>
+          <span id="nav-text-appointments">Lịch Hẹn & Ghế Làm Tóc</span>
+        </a>
+        <a class="nav-item admin-letan-only" data-tab="billing" onclick="switchTab('billing')">
+          <span class="nav-icon">💳</span>
+          <span>Thu Ngân & POS Bán Hàng</span>
+        </a>
+        <a class="nav-item admin-letan-only" data-tab="customers" onclick="switchTab('customers')">
+          <span class="nav-icon">👥</span>
+          <span>Khách Hàng & Chất Tóc</span>
+        </a>
+        <a class="nav-item admin-letan-only" data-tab="services" onclick="switchTab('services')">
+          <span class="nav-icon">✂️</span>
+          <span>Dịch Vụ & Bảng Giá</span>
+        </a>
+        <a class="nav-item admin-only" data-tab="staff" onclick="switchTab('staff')">
+          <span class="nav-icon">👔</span>
+          <span>Quản Lý Thợ & Nhân Sự</span>
+        </a>
+        <a class="nav-item admin-only" data-tab="accounts" onclick="switchTab('accounts')">
+          <span class="nav-icon">🔐</span>
+          <span>Quản Lý Tài Khoản</span>
+        </a>
+        <a class="nav-item admin-only" data-tab="reports" onclick="switchTab('reports')">
+          <span class="nav-icon">📈</span>
+          <span>Báo Cáo & Sổ Quỹ Doanh Thu</span>
+        </a>
+        <a class="nav-item admin-letan-only" data-tab="ai-hub" onclick="switchTab('ai-hub')">
+          <span class="nav-icon">🤖</span>
+          <span>Trung Tâm Trợ Lý AI</span>
+        </a>
+      </nav>
+
+      <!-- Stylist Quick Status Card -->
+      <div class="glass" style="margin-top: 1.5rem; padding: 1rem;">
+        <div style="font-size: 0.8rem; font-weight: 700; color: var(--gold-light); text-transform: uppercase; margin-bottom: 0.75rem; letter-spacing: 0.5px;">
+          Đội Ngũ Thợ Làm Tóc
+        </div>
+        <div id="stylist-sidebar-list" style="display: flex; flex-direction: column; gap: 0.6rem;">
+          <!-- Loaded dynamically -->
+          <div style="color: var(--text-muted); font-size: 0.8rem;">Đang tải danh sách...</div>
+        </div>
+      </div>
+    </aside>
+
+    <!-- CONTENT DISPLAY AREA -->
+    <main class="content-area">
+
+      <!-- ==================================================================== -->
+      <!-- TAB 1: DASHBOARD & KPI (UC007) -->
+      <!-- ==================================================================== -->
+      <section id="tab-dashboard" class="tab-pane active">
+        <div style="display: flex; align-items: center; justify-content: space-between; margin-bottom: 1.5rem; flex-wrap: wrap; gap: 1rem;">
+          <div>
+            <h2 style="font-size: 1.6rem; font-weight: 700;">Bảng Điều Khiển Tổng Quan</h2>
+            <p style="color: var(--text-secondary); font-size: 0.875rem;">Theo dõi hiệu suất doanh thu và hoạt động salon theo thời gian thực (UC007)</p>
+          </div>
+          
+          <!-- Date Filter and Export for UC007 -->
+          <div style="display: flex; align-items: center; gap: 0.5rem; flex-wrap: wrap;">
+            <span style="font-size: 0.85rem; color: var(--text-muted);">Từ ngày:</span>
+            <input type="date" id="report-start-date" class="form-control" style="width: 140px; padding: 0.4rem 0.6rem;">
+            <span style="font-size: 0.85rem; color: var(--text-muted);">Đến:</span>
+            <input type="date" id="report-end-date" class="form-control" style="width: 140px; padding: 0.4rem 0.6rem;">
+            <button class="btn btn-secondary btn-sm" onclick="exportReportCSV()">📥 Xuất Báo Cáo (CSV)</button>
+            <button class="btn btn-secondary btn-sm" onclick="loadDashboard()">🔄 Làm mới</button>
+          </div>
+        </div>
+
+        <div class="kpi-grid" style="grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));">
+          <div class="kpi-card glass-gold">
+            <div>
+              <div class="kpi-label">Doanh Thu Hôm Nay</div>
+              <div class="kpi-value" id="kpi-today-rev">{{ "{:,.0f}".format(summary.kpi.doanh_thu_hom_nay).replace(",", ".") }} đ</div>
+              <div style="font-size: 0.75rem; color: var(--gold-light); margin-top: 4px;" id="kpi-today-orders">{{ summary.kpi.so_don_hom_nay }} đơn hoàn thành</div>
+            </div>
+            <div class="kpi-icon-box">💵</div>
+          </div>
+
+          <div class="kpi-card glass">
+            <div>
+              <div class="kpi-label">Doanh Thu 7 Ngày Qua</div>
+              <div class="kpi-value" id="kpi-week-rev" style="color: var(--accent-cyan);">{{ "{:,.0f}".format(summary.kpi.doanh_thu_tuan_nay).replace(",", ".") }} đ</div>
+              <div style="font-size: 0.75rem; color: var(--text-muted); margin-top: 4px;">Tuần hiện tại</div>
+            </div>
+            <div class="kpi-icon-box">📅</div>
+          </div>
+
+          <div class="kpi-card glass">
+            <div>
+              <div class="kpi-label">Tổng Doanh Thu Tích Lũy</div>
+              <div class="kpi-value" id="kpi-total-rev">{{ "{:,.0f}".format(summary.kpi.tong_doanh_thu).replace(",", ".") }} đ</div>
+              <div style="font-size: 0.75rem; color: var(--text-muted); margin-top: 4px;" id="kpi-total-invoices">{{ summary.kpi.tong_hoa_don }} hóa đơn</div>
+            </div>
+            <div class="kpi-icon-box">📈</div>
+          </div>
+
+          <div class="kpi-card glass">
+            <div>
+              <div class="kpi-label">Doanh Thu TB / Đơn (AOV)</div>
+              <div class="kpi-value" id="kpi-aov" style="color: var(--accent-emerald);">{{ "{:,.0f}".format(summary.kpi.aov).replace(",", ".") }} đ</div>
+              <div style="font-size: 0.75rem; color: var(--text-muted); margin-top: 4px;">Mức chi tiêu trung bình</div>
+            </div>
+            <div class="kpi-icon-box">🎯</div>
+          </div>
+
+          <div class="kpi-card glass">
+            <div>
+              <div class="kpi-label">Lịch Hẹn Hôm Nay</div>
+              <div class="kpi-value" id="kpi-today-appts">{{ summary.kpi.lich_hen_hom_nay }}</div>
+              <div style="font-size: 0.75rem; color: var(--text-muted); margin-top: 4px;">Lượt phục vụ</div>
+            </div>
+            <div class="kpi-icon-box">✂️</div>
+          </div>
+
+          <div class="kpi-card glass">
+            <div>
+              <div class="kpi-label">Tổng Số Khách Hàng</div>
+              <div class="kpi-value" id="kpi-total-customers">{{ summary.kpi.tong_khach }}</div>
+              <div style="font-size: 0.75rem; color: var(--text-muted); margin-top: 4px;">Đang hoạt động</div>
+            </div>
+            <div class="kpi-icon-box">👥</div>
+          </div>
+        </div>
+
+        <!-- Middle Row: Daily Revenue Chart & Payment Method Breakdown -->
+        <div style="display: grid; grid-template-columns: 2fr 1fr; gap: 1.5rem; margin-bottom: 1.5rem;">
+          
+          <!-- Daily Revenue Bar Visualization -->
+          <div class="glass" style="padding: 1.25rem; display: flex; flex-direction: column;">
+            <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 1rem;">
+              <div style="font-weight: 700; font-size: 1.1rem; color: var(--gold-light);">
+                📊 Biểu Đồ Doanh Thu Theo Ngày (7 Ngày Gần Nhất)
+              </div>
+              <span class="badge badge-info">Doanh thu VNĐ</span>
+            </div>
+            <div id="revenue-chart-bars" style="display: flex; align-items: flex-end; justify-content: space-between; height: 160px; gap: 12px; padding-top: 1.5rem; border-bottom: 1px solid var(--border-subtle);">
+              <!-- Bars loaded dynamically -->
+            </div>
+          </div>
+
+          <!-- Payment Methods Breakdown -->
+          <div class="glass" style="padding: 1.25rem;">
+            <div style="font-weight: 700; font-size: 1.1rem; margin-bottom: 1rem; color: var(--gold-light);">
+              💳 Cơ Cấu Phương Thức Thanh Toán
+            </div>
+            <div id="payment-methods-container" style="display: flex; flex-direction: column; gap: 0.85rem;">
+              <!-- Loaded dynamically -->
+            </div>
+          </div>
+
+        </div>
+
+        <!-- Bottom Row: Top Services & Stylist Revenue Leaderboard -->
+        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1.5rem;">
+          <div class="glass" style="padding: 1.25rem;">
+            <div style="font-weight: 700; font-size: 1.1rem; margin-bottom: 1rem; color: var(--gold-light);">
+              🔥 Dịch Vụ Đem Lại Doanh Thu Cao Nhất
+            </div>
+            <div class="table-responsive">
+              <table class="custom-table">
+                <thead>
+                  <tr>
+                    <th>Tên Dịch Vụ</th>
+                    <th>Lượt Đặt</th>
+                    <th>Doanh Số</th>
+                  </tr>
+                </thead>
+                <tbody id="top-services-tbody">
+                  <tr><td colspan="3" style="text-align: center; color: var(--text-muted);">Đang tải...</td></tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+
+          <div class="glass" style="padding: 1.25rem;">
+            <div style="font-weight: 700; font-size: 1.1rem; margin-bottom: 1rem; color: var(--gold-light);">
+              🏆 Năng Suất & Doanh Thu Theo Thợ Làm Tóc
+            </div>
+            <div class="table-responsive">
+              <table class="custom-table">
+                <thead>
+                  <tr>
+                    <th>Thợ Làm Tóc</th>
+                    <th>Chức Vụ</th>
+                    <th>Lượt Khách</th>
+                    <th>Doanh Thu</th>
+                  </tr>
+                </thead>
+                <tbody id="stylist-leaderboard-tbody">
+                  <tr><td colspan="4" style="text-align: center; color: var(--text-muted);">Đang tải...</td></tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ==================================================================== -->
+      <!-- TAB 2: APPOINTMENTS & SCHEDULING (UC005 & Screen Flow Luồng 2) -->
+      <!-- ==================================================================== -->
+      <section id="tab-appointments" class="tab-pane" style="display: none;">
+        <div style="display: flex; align-items: center; justify-content: space-between; margin-bottom: 1.25rem; flex-wrap: wrap; gap: 1rem;">
+          <div>
+            <h2 id="appointments-tab-heading" style="font-size: 1.6rem; font-weight: 700;">Quản Lý Lịch Hẹn & Điều Phối Thợ</h2>
+            <p id="appointments-tab-subheading" style="color: var(--text-secondary); font-size: 0.875rem;">Sơ đồ ghế salon thời gian thực & Chống trùng lịch thợ tự động</p>
+          </div>
+          <div style="display: flex; gap: 0.5rem; align-items: center; flex-wrap: wrap;">
+            <div style="background: #f1f5f9; border: 1px solid var(--border-color); padding: 3px; border-radius: 8px; display: flex; gap: 2px;">
+              <button id="btn-view-grid" class="btn btn-secondary btn-sm active" onclick="switchApptView('grid')">📅 Sơ Đồ Ghế (Timeline)</button>
+              <button id="btn-view-list" class="btn btn-secondary btn-sm" onclick="switchApptView('list')">📋 Thẻ Lịch Hẹn</button>
+            </div>
+            <button class="btn btn-secondary btn-sm" onclick="loadAppointments()">🔄 Làm Mới</button>
+            <button class="btn btn-primary btn-sm admin-letan-only" onclick="openNewAppointmentModal()">+ Thêm Lịch Mới</button>
+          </div>
+        </div>
+
+        <!-- THỢ CHÍNH WELCOME BANNER (Chỉ hiển thị khi Thợ Chính đăng nhập) -->
+        <div id="tho-welcome-banner" style="display: none; background: linear-gradient(135deg, rgba(180,138,40,0.08), rgba(5,150,105,0.08)); border: 1px solid var(--gold-border); border-radius: 12px; padding: 1.15rem 1.4rem; margin-bottom: 1.25rem;">
+          <div style="display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 1rem;">
+            <div>
+              <div style="font-size: 1.15rem; font-weight: 700; color: var(--gold-light); display: flex; align-items: center; gap: 8px;">
+                <span>✂️</span> <span>Chào Stylist: <strong id="tho-banner-name" style="color: var(--text-primary);"></strong></span>
+                <span class="badge badge-primary">Thợ Phụ Trách</span>
+              </div>
+              <div style="font-size: 0.85rem; color: var(--text-secondary); margin-top: 4px;">
+                Hệ thống tự động lọc danh sách khách hàng & ca làm việc dành riêng cho bạn. Bấm <strong>"Bắt đầu làm"</strong> khi đón khách và <strong>"Hoàn thành"</strong> khi kết thúc phục vụ.
+              </div>
+            </div>
+            <div>
+              <button id="btn-tho-toggle-status" class="btn btn-sm btn-emerald" onclick="toggleCurrentStylistAvailability()">
+                ● Đang Rảnh
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Filter Bar -->
+        <div class="glass" style="padding: 1rem; display: flex; gap: 1rem; align-items: center; flex-wrap: wrap; margin-bottom: 1.25rem;">
+          <!-- Date Filter -->
+          <div style="display: flex; align-items: center; gap: 0.5rem;">
+            <span style="font-size: 0.85rem; color: var(--text-muted);">📅 Ngày:</span>
+            <select id="filter-date" class="form-control" style="width: 175px; padding: 0.4rem 0.75rem;" onchange="onDateFilterChanged()">
+              <option value="2026-09-19" selected>Hôm nay (19/09)</option>
+              <option value="2026-09-20">Ngày mai (20/09)</option>
+              <option value="2026-09-18">Hôm qua (18/09)</option>
+              <option value="">Tất cả các ngày</option>
+              <option value="custom">Chọn ngày khác...</option>
+            </select>
+            <input type="date" id="filter-custom-date" class="form-control" style="width: 135px; padding: 0.4rem 0.6rem; display: none;" onchange="loadAppointments()">
+          </div>
+
+          <!-- Status Filter -->
+          <div style="display: flex; align-items: center; gap: 0.5rem;">
+            <span style="font-size: 0.85rem; color: var(--text-muted);">Trạng thái:</span>
+            <select id="filter-status" class="form-control" style="width: 170px; padding: 0.4rem 0.75rem;" onchange="loadAppointments()">
+              <option value="">Tất cả trạng thái</option>
+              <option value="Chờ xác nhận">Chờ xác nhận</option>
+              <option value="Đã xác nhận">Đã xác nhận</option>
+              <option value="Đang phục vụ">Đang phục vụ</option>
+              <option value="Hoàn thành">Hoàn thành</option>
+              <option value="Đã hủy">Đã hủy</option>
+            </select>
+          </div>
+
+          <!-- Stylist Filter (Hidden for Tho) -->
+          <div id="filter-stylist-wrapper" style="display: flex; align-items: center; gap: 0.5rem;">
+            <span style="font-size: 0.85rem; color: var(--text-muted);">Lọc theo Thợ:</span>
+            <select id="filter-stylist" class="form-control" style="width: 190px; padding: 0.4rem 0.75rem;" onchange="loadAppointments()">
+              <option value="">Tất cả nhân sự</option>
+            </select>
+          </div>
+
+          <!-- Sort Options (Sắp xếp theo giờ, giá, trạng thái) -->
+          <div style="display: flex; align-items: center; gap: 0.5rem;">
+            <span style="font-size: 0.85rem; color: var(--text-muted);">↕️ Sắp xếp:</span>
+            <select id="filter-sort" class="form-control" style="width: 195px; padding: 0.4rem 0.75rem;" onchange="renderAppointments()">
+              <option value="time-asc" selected>🕒 Giờ: Sớm nhất trước</option>
+              <option value="time-desc">🕒 Giờ: Muộn nhất trước</option>
+              <option value="status">🏷️ Trạng thái phục vụ</option>
+              <option value="price-desc">💰 Giá tiền: Cao ➔ Thấp</option>
+              <option value="price-asc">💰 Giá tiền: Thấp ➔ Cao</option>
+            </select>
+          </div>
+
+          <!-- Quick Text Search Filter -->
+          <div style="display: flex; align-items: center; gap: 0.5rem; margin-left: auto;">
+            <span style="font-size: 0.85rem; color: var(--text-muted);">🔍 Tìm thẻ hẹn:</span>
+            <input type="text" id="filter-appt-search" class="form-control" placeholder="Tên khách, SĐT, mã hẹn..." oninput="onApptSearchChanged()" style="width: 220px; padding: 0.4rem 0.75rem;">
+          </div>
+        </div>
+
+        <!-- 1. Timeline View (Schedule by Stylist & Chair) -->
+        <div id="appointments-timeline-view" style="margin-bottom: 1.5rem;">
+          <!-- Loaded dynamically -->
+          <div style="color: var(--text-muted); padding: 2rem; text-align: center;">Đang nạp sơ đồ ghế phục vụ theo thợ...</div>
+        </div>
+
+        <!-- 2. Cards Grid View (Filtered List) -->
+        <div id="appointments-list-view" style="display: none;">
+          <div id="appointments-container" class="appt-grid">
+            <!-- Loaded dynamically -->
+            <div style="color: var(--text-muted); padding: 2rem;">Đang tải danh sách lịch hẹn...</div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ==================================================================== -->
+      <!-- TAB 3: CUSTOMERS & HAIR PROFILE (UC002 & Screen Flow Luồng 4) -->
+      <!-- ==================================================================== -->
+      <section id="tab-customers" class="tab-pane" style="display: none;">
+        <div style="display: flex; align-items: center; justify-content: space-between; margin-bottom: 1.25rem;">
+          <div>
+            <h2 style="font-size: 1.6rem; font-weight: 700;">Hồ Sơ Khách Hàng & Lịch Sử Tóc</h2>
+            <p style="color: var(--text-secondary); font-size: 0.875rem;">Tra cứu nhanh theo SĐT, lưu công thức hóa chất và kích hoạt AI tư vấn</p>
+          </div>
+          <button class="btn btn-primary btn-sm" onclick="openNewCustomerModal()">+ Thêm Khách Hàng</button>
+        </div>
+
+        <!-- Search Bar -->
+        <div class="glass" style="padding: 1rem; margin-bottom: 1.25rem; display: flex; gap: 1rem;">
+          <input type="text" id="customer-search-input" class="form-control" placeholder="🔍 Nhập số điện thoại hoặc tên khách hàng để tra cứu..." oninput="debounceSearchCustomers()">
+          <button class="btn btn-secondary" onclick="loadCustomers()">Tìm Kiếm</button>
+        </div>
+
+        <div id="customers-list-container" style="display: grid; grid-template-columns: repeat(auto-fill, minmax(350px, 1fr)); gap: 1.25rem;">
+          <!-- Loaded dynamically -->
+        </div>
+      </section>
+
+      <!-- ==================================================================== -->
+      <!-- TAB 4: SERVICES & PRICING (UC004) -->
+      <!-- ==================================================================== -->
+      <section id="tab-services" class="tab-pane" style="display: none;">
+        <div style="display: flex; align-items: center; justify-content: space-between; margin-bottom: 1.25rem;">
+          <div>
+            <h2 style="font-size: 1.6rem; font-weight: 700;">Danh Mục Dịch Vụ & Bảng Giá</h2>
+            <p style="color: var(--text-secondary); font-size: 0.875rem;">Menu dịch vụ chuẩn hóa với thời lượng thực hiện và giá niêm yết</p>
+          </div>
+          <button class="btn btn-primary btn-sm" onclick="openNewServiceModal()">+ Thêm Dịch Vụ Mới</button>
+        </div>
+
+        <div id="services-grid" style="display: grid; grid-template-columns: repeat(auto-fill, minmax(320px, 1fr)); gap: 1.25rem;">
+          <!-- Loaded dynamically -->
+        </div>
+      </section>
+
+      <!-- ==================================================================== -->
+      <!-- TAB STAFF: QUẢN LÝ NHÂN VIÊN & THỢ (UC003 & Screen Flow Luồng 4) -->
+      <!-- ==================================================================== -->
+      <section id="tab-staff" class="tab-pane" style="display: none;">
+        <div style="display: flex; align-items: center; justify-content: space-between; margin-bottom: 1.25rem; flex-wrap: wrap; gap: 0.75rem;">
+          <div>
+            <h2 style="font-size: 1.6rem; font-weight: 700;">Quản Lý Đội Ngũ Thợ Làm Tóc & Nhân Sự</h2>
+            <p style="color: var(--text-secondary); font-size: 0.875rem;">Phân công chức vụ, số điện thoại liên hệ và điều phối trạng thái rảnh/bận</p>
+          </div>
+          <div style="display: flex; gap: 0.5rem; flex-wrap: wrap;">
+            <button class="btn btn-ai btn-sm" onclick="openNewAccountModal()">🔑 + Thêm Tài Khoản</button>
+            <button class="btn btn-secondary btn-sm" onclick="openSwapStaffRolesModal()">🔄 Hoán Đổi Vị Trí</button>
+            <button class="btn btn-primary btn-sm" onclick="openNewStaffModal()">+ Thêm Nhân Viên Mới</button>
+          </div>
+        </div>
+
+        <div class="glass" style="padding: 1.25rem;">
+          <div class="table-responsive">
+            <table class="custom-table">
+              <thead>
+                <tr>
+                  <th>Mã NV</th>
+                  <th>Họ và Tên</th>
+                  <th>Số Điện Thoại</th>
+                  <th>Chức Vụ</th>
+                  <th>Trạng Thái Thợ</th>
+                  <th>Tài Khoản Đăng Nhập</th>
+                  <th style="text-align: right;">Hành Động</th>
+                </tr>
+              </thead>
+              <tbody id="staff-table-tbody">
+                <!-- Loaded dynamically -->
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </section>
+
+      <!-- ==================================================================== -->
+      <!-- TAB ACCOUNTS: QUẢN LÝ TÀI KHOẢN & PHÂN QUYỀN HỆ THỐNG (ADMIN) -->
+      <!-- ==================================================================== -->
+      <section id="tab-accounts" class="tab-pane" style="display: none;">
+        <div style="display: flex; align-items: center; justify-content: space-between; margin-bottom: 1.25rem; flex-wrap: wrap; gap: 1rem;">
+          <div>
+            <h2 style="font-size: 1.6rem; font-weight: 700; display: flex; align-items: center; gap: 10px;">
+              <span>🔐</span> Quản Lý Tài Khoản Đăng Nhập & Phân Quyền
+            </h2>
+            <p style="color: var(--text-secondary); font-size: 0.875rem; margin: 4px 0 0 0;">
+              Cấp mới tài khoản, phân quyền truy cập (Admin / Lễ tân / Thợ) và liên kết nhân sự salon
+            </p>
+          </div>
+          <div style="display: flex; gap: 0.5rem; flex-wrap: wrap;">
+            <button class="btn btn-secondary btn-sm" onclick="loadAccounts()">🔄 Làm Mới</button>
+            <button class="btn btn-primary btn-sm" onclick="openNewAccountModal()">+ Thêm Tài Khoản Mới</button>
+          </div>
+        </div>
+
+        <!-- Quick Account Stats -->
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1rem; margin-bottom: 1.25rem;">
+          <div class="glass" style="padding: 1rem 1.25rem; border-left: 4px solid var(--gold-primary);">
+            <div style="font-size: 0.75rem; color: var(--text-muted); font-weight: 700; text-transform: uppercase;">Tổng Tài Khoản</div>
+            <div id="stat-total-accounts" style="font-size: 1.5rem; font-weight: 800; color: var(--gold-light); margin-top: 4px;">--</div>
+          </div>
+          <div class="glass" style="padding: 1rem 1.25rem; border-left: 4px solid #ef4444;">
+            <div style="font-size: 0.75rem; color: var(--text-muted); font-weight: 700; text-transform: uppercase;">Quản Trị Viên (Admin)</div>
+            <div id="stat-admin-accounts" style="font-size: 1.5rem; font-weight: 800; color: #ef4444; margin-top: 4px;">--</div>
+          </div>
+          <div class="glass" style="padding: 1rem 1.25rem; border-left: 4px solid #10b981;">
+            <div style="font-size: 0.75rem; color: var(--text-muted); font-weight: 700; text-transform: uppercase;">Lễ Tân & Thu Ngân</div>
+            <div id="stat-letan-accounts" style="font-size: 1.5rem; font-weight: 800; color: #10b981; margin-top: 4px;">--</div>
+          </div>
+          <div class="glass" style="padding: 1rem 1.25rem; border-left: 4px solid #3b82f6;">
+            <div style="font-size: 0.75rem; color: var(--text-muted); font-weight: 700; text-transform: uppercase;">Thợ Làm Tóc</div>
+            <div id="stat-tho-accounts" style="font-size: 1.5rem; font-weight: 800; color: #3b82f6; margin-top: 4px;">--</div>
+          </div>
+        </div>
+
+        <div class="glass" style="padding: 1.25rem;">
+          <div class="table-responsive">
+            <table class="custom-table">
+              <thead>
+                <tr>
+                  <th>Mã TK</th>
+                  <th>Tên Đăng Nhập</th>
+                  <th>Phân Quyền / Vai Trò</th>
+                  <th>Nhân Viên Sở Hữu</th>
+                  <th>Số Điện Thoại</th>
+                  <th style="text-align: right;">Hành Động</th>
+                </tr>
+              </thead>
+              <tbody id="accounts-table-tbody">
+                <!-- Loaded dynamically -->
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </section>
+
+      <!-- ==================================================================== -->
+      <!-- TAB 3: THU NGÂN & POS BÁN HÀNG (UC006 & Screen Flow Luồng 3) -->
+      <!-- ==================================================================== -->
+      <section id="tab-billing" class="tab-pane" style="display: none;">
+        <div style="display: flex; align-items: center; justify-content: space-between; margin-bottom: 1.25rem; flex-wrap: wrap; gap: 1rem;">
+          <div>
+            <h2 style="font-size: 1.6rem; font-weight: 700;">Thu Ngân & Điểm Bán Lẻ (POS Salon)</h2>
+            <p style="color: var(--text-secondary); font-size: 0.875rem;">Menu dịch vụ chọn nhanh 1-chạm, Quét mã VietQR động & In hóa đơn nhiệt</p>
+          </div>
+          <div style="display: flex; gap: 0.5rem;">
+            <button class="btn btn-secondary btn-sm" onclick="loadBillingQueue(); renderPOSServiceCatalog();">🔄 Làm Mới</button>
+            <button class="btn btn-primary btn-sm" onclick="clearPOSCart()">+ Đơn Mới (F3)</button>
+          </div>
+        </div>
+
+        <!-- POS 2-Column Workspace -->
+        <div style="display: grid; grid-template-columns: 1.25fr 1fr; gap: 1.5rem; align-items: start;">
+          
+          <!-- Left Column: Service Menu Catalog & Queue Tabs -->
+          <div style="display: flex; flex-direction: column; gap: 1.25rem;">
+            
+            <!-- Quick Service Selector Header -->
+            <div class="glass" style="padding: 1.25rem;">
+              <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 0.85rem; flex-wrap: wrap; gap: 0.5rem;">
+                <div style="font-weight: 700; font-size: 1.1rem; color: var(--gold-light);">
+                  ✂️ Menu Dịch Vụ Salon (Click Chọn Nhanh)
+                </div>
+                <!-- Category Filter Pills -->
+                <div style="display: flex; gap: 6px; overflow-x: auto; padding-bottom: 4px;">
+                  <button type="button" class="ai-chip pos-cat-btn active" onclick="filterPOSCatalog('', this)">Tất cả</button>
+                  <button type="button" class="ai-chip pos-cat-btn" onclick="filterPOSCatalog('Cắt', this)">Cắt tạo kiểu</button>
+                  <button type="button" class="ai-chip pos-cat-btn" onclick="filterPOSCatalog('Nhuộm', this)">Nhuộm Balayage</button>
+                  <button type="button" class="ai-chip pos-cat-btn" onclick="filterPOSCatalog('Uốn', this)">Uốn Collagen</button>
+                  <button type="button" class="ai-chip pos-cat-btn" onclick="filterPOSCatalog('Phục hồi', this)">Phục hồi Keratin</button>
+                  <button type="button" class="ai-chip pos-cat-btn" onclick="filterPOSCatalog('Dưỡng sinh', this)">Dưỡng sinh Spa</button>
+                </div>
+              </div>
+
+              <!-- Catalog Grid -->
+              <div id="pos-service-catalog" class="pos-catalog-grid">
+                <!-- Loaded dynamically -->
+                <div style="color: var(--text-muted); padding: 1.5rem; text-align: center;">Đang nạp menu dịch vụ...</div>
+              </div>
+            </div>
+
+            <!-- Pending Appointments Waiting For Checkout -->
+            <div class="glass" style="padding: 1.25rem;">
+              <div style="font-weight: 700; font-size: 1.05rem; color: var(--accent-cyan); margin-bottom: 0.85rem; display: flex; justify-content: space-between; align-items: center;">
+                <span>⏳ Khách Đặt Hẹn Đang Chờ Thanh Toán</span>
+                <span class="badge badge-info" id="billing-queue-badge">Tự động đồng bộ</span>
+              </div>
+              <div id="billing-queue-list" style="display: flex; flex-direction: column; gap: 0.75rem; max-height: 240px; overflow-y: auto;">
+                <!-- Loaded dynamically -->
+              </div>
+            </div>
+
+          </div>
+
+          <!-- Right Column: Active POS Billing Ticket & Calculator -->
+          <div class="glass-gold" style="padding: 1.5rem; position: sticky; top: 85px;">
+            <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 1rem; border-bottom: 1px solid var(--border-subtle); padding-bottom: 0.75rem;">
+              <div style="font-weight: 700; font-size: 1.25rem; color: var(--gold-light);">
+                🧾 Phiếu Tính Tiền POS
+              </div>
+              <span class="badge badge-success">Sẵn sàng Check-out</span>
+            </div>
+
+            <!-- Customer & Stylist Selectors for Walk-in -->
+            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 0.75rem; margin-bottom: 1rem;">
+              <div>
+                <label class="form-label" style="font-size: 0.8rem;">Khách Hàng:</label>
+                <select id="pos-direct-customer" class="form-control" style="font-size: 0.85rem; padding: 0.4rem;" onchange="onPOSCustomerChanged()"></select>
+              </div>
+              <div>
+                <label class="form-label" style="font-size: 0.8rem;">Thợ Làm Chính:</label>
+                <select id="pos-direct-stylist" class="form-control" style="font-size: 0.85rem; padding: 0.4rem;"></select>
+              </div>
+            </div>
+
+            <!-- Selected Services Cart Items -->
+            <div style="background: #141414; border-radius: var(--radius-sm); padding: 0.85rem; margin-bottom: 1rem; border: 1px solid var(--border-color);">
+              <div style="font-size: 0.8rem; font-weight: 700; color: var(--gold-light); margin-bottom: 6px; text-transform: uppercase;">
+                Dịch Vụ Đã Chọn:
+              </div>
+              <div id="pos-direct-cart-items" style="max-height: 180px; overflow-y: auto;">
+                <div style="color: var(--text-muted); text-align: center; padding: 1.5rem; font-size: 0.85rem;">
+                  Chưa có dịch vụ nào trong phiếu.<br>👈 Bấm chọn từ Menu dịch vụ bên trái để thêm.
+                </div>
+              </div>
+            </div>
+
+            <!-- Discount Input -->
+            <div class="form-group" style="margin-bottom: 0.85rem;">
+              <label class="form-label" style="font-size: 0.82rem;">Chiết Khấu / Giảm Giá Ưu Đãi (VNĐ):</label>
+              <input type="number" id="pos-direct-discount" class="form-control" value="0" min="0" step="10000" oninput="renderPOSCart()">
+            </div>
+
+            <!-- Payment Method Selector -->
+            <div class="form-group" style="margin-bottom: 0.85rem;">
+              <label class="form-label" style="font-size: 0.82rem;">Phương Thức Thanh Toán:</label>
+              <select id="pos-direct-method" class="form-control" onchange="onPOSDirectMethodChanged()">
+                <option value="Tiền mặt">💵 Tiền mặt tại quầy</option>
+                <option value="Chuyển khoản" selected>📱 Quét mã VietQR (MB Bank)</option>
+                <option value="Thẻ">💳 Quẹt thẻ POS (Visa/Mastercard)</option>
+              </select>
+            </div>
+
+            <!-- VietQR Box -->
+            <div id="pos-direct-vietqr-box" style="display: none; background: var(--accent-cyan-bg); border: 1px dashed var(--accent-cyan); border-radius: var(--radius-sm); padding: 0.85rem; text-align: center; margin-bottom: 1rem;">
+              <div style="font-size: 0.8rem; color: var(--accent-cyan); font-weight: 700; margin-bottom: 6px;">📱 MÃ VIETQR THANH TOÁN TỰ ĐỘNG</div>
+              <img id="pos-direct-vietqr-img" src="" alt="VietQR" style="max-width: 140px; border-radius: 6px; border: 2px solid #ffffff; background: white; margin: 0 auto; display: block;">
+              <div style="font-size: 0.75rem; color: var(--text-muted); margin-top: 6px;">
+                Ngân hàng: <strong>MB Bank</strong> | STK: <strong>0901234567</strong><br>
+                Chủ TK: <strong>SALON HAIR HÀ MINH</strong>
+              </div>
+            </div>
+
+            <!-- Summary Totals Box -->
+            <div style="background: #141414; border: 1px solid var(--border-color); padding: 1rem; border-radius: var(--radius-sm); margin-bottom: 1.25rem;">
+              <div style="display: flex; justify-content: space-between; font-size: 0.9rem; margin-bottom: 4px; color: var(--text-secondary);">
+                <span>Tổng tiền dịch vụ:</span>
+                <strong id="pos-direct-total" style="color: var(--text-primary);">0 đ</strong>
+              </div>
+              <div style="display: flex; justify-content: space-between; font-size: 1.2rem; color: var(--accent-emerald); font-weight: 800; border-top: 1px solid var(--border-color); padding-top: 6px;">
+                <span>THỰC THU:</span>
+                <span id="pos-direct-final">0 đ</span>
+              </div>
+            </div>
+
+            <button class="btn btn-primary" style="width: 100%; font-size: 1.05rem; padding: 0.9rem;" onclick="submitPOSDirectCheckout()">
+              ✓ Xác Nhận Thanh Toán & In Hóa Đơn (F9)
+            </button>
+          </div>
+
+        </div>
+      </section>
+
+      <!-- ==================================================================== -->
+      <!-- TAB 7: BÁO CÁO & SỔ QUỸ DOANH THU (UC007 FINANCIAL LEDGER) -->
+      <!-- ==================================================================== -->
+      <section id="tab-reports" class="tab-pane" style="display: none;">
+        <div style="display: flex; align-items: center; justify-content: space-between; margin-bottom: 1.5rem; flex-wrap: wrap; gap: 1rem;">
+          <div>
+            <h2 style="font-size: 1.6rem; font-weight: 700;">Báo Cáo Doanh Thu & Sổ Quỹ Hóa Đơn</h2>
+            <p style="color: var(--text-secondary); font-size: 0.875rem;">Sổ cái 27 hóa đơn VIP, cơ cấu nguồn thu và đối soát ngân quỹ (UC007)</p>
+          </div>
+          <div style="display: flex; gap: 0.5rem; flex-wrap: wrap;">
+            <button class="btn btn-secondary btn-sm" onclick="exportReportCSV()">📥 Xuất Báo Cáo (CSV/Excel)</button>
+            <button class="btn btn-secondary btn-sm" onclick="loadReportsPage()">🔄 Làm Mới Sổ Quỹ</button>
+          </div>
+        </div>
+
+        <!-- 4 Financial Summary KPI Cards -->
+        <div class="kpi-grid" style="grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); margin-bottom: 1.5rem;">
+          <div class="kpi-card glass-gold">
+            <div>
+              <div class="kpi-label">Tổng Doanh Thu Tích Lũy</div>
+              <div class="kpi-value" style="color: var(--gold-light);">{{ "{:,.0f}".format(summary.kpi.tong_doanh_thu).replace(",", ".") }} đ</div>
+              <div style="font-size: 0.75rem; color: var(--gold-light); margin-top: 4px;">{{ summary.kpi.tong_hoa_don }} hóa đơn thanh toán</div>
+            </div>
+            <div class="kpi-icon-box">💰</div>
+          </div>
+
+          <div class="kpi-card glass">
+            <div>
+              <div class="kpi-label">Doanh Thu Hôm Nay</div>
+              <div class="kpi-value" style="color: var(--accent-emerald);">{{ "{:,.0f}".format(summary.kpi.doanh_thu_hom_nay).replace(",", ".") }} đ</div>
+              <div style="font-size: 0.75rem; color: var(--text-muted); margin-top: 4px;">{{ summary.kpi.so_don_hom_nay }} lượt thanh toán</div>
+            </div>
+            <div class="kpi-icon-box">💵</div>
+          </div>
+
+          <div class="kpi-card glass">
+            <div>
+              <div class="kpi-label">Doanh Thu 7 Ngày Qua</div>
+              <div class="kpi-value" style="color: var(--accent-cyan);">{{ "{:,.0f}".format(summary.kpi.doanh_thu_tuan_nay).replace(",", ".") }} đ</div>
+              <div style="font-size: 0.75rem; color: var(--text-muted); margin-top: 4px;">Tăng trưởng mạnh mẽ</div>
+            </div>
+            <div class="kpi-icon-box">📈</div>
+          </div>
+
+          <div class="kpi-card glass">
+            <div>
+              <div class="kpi-label">Chi Tiêu TB / Khách (AOV)</div>
+              <div class="kpi-value" style="color: #a855f7;">{{ "{:,.0f}".format(summary.kpi.aov).replace(",", ".") }} đ</div>
+              <div style="font-size: 0.75rem; color: var(--text-muted); margin-top: 4px;">Phân khúc dịch vụ VIP</div>
+            </div>
+            <div class="kpi-icon-box">💎</div>
+          </div>
+        </div>
+
+        <!-- Ledger Filter Bar -->
+        <div class="glass" style="padding: 1.25rem; display: flex; gap: 1rem; align-items: center; flex-wrap: wrap; margin-bottom: 1.5rem;">
+          <div style="display: flex; align-items: center; gap: 0.5rem;">
+            <span style="font-size: 0.85rem; color: var(--text-muted);">Từ ngày:</span>
+            <input type="date" id="report-page-start-date" class="form-control" style="width: 140px; padding: 0.4rem;" onchange="loadReportsPage()">
+          </div>
+
+          <div style="display: flex; align-items: center; gap: 0.5rem;">
+            <span style="font-size: 0.85rem; color: var(--text-muted);">Đến ngày:</span>
+            <input type="date" id="report-page-end-date" class="form-control" style="width: 140px; padding: 0.4rem;" onchange="loadReportsPage()">
+          </div>
+
+          <div style="display: flex; align-items: center; gap: 0.5rem;">
+            <span style="font-size: 0.85rem; color: var(--text-muted);">Hình thức:</span>
+            <select id="report-page-method" class="form-control" style="width: 160px; padding: 0.4rem;" onchange="loadReportsPage()">
+              <option value="">Tất cả hình thức</option>
+              <option value="Chuyển khoản">📱 Chuyển khoản VietQR</option>
+              <option value="Thẻ">💳 Quẹt thẻ POS</option>
+              <option value="Tiền mặt">💵 Tiền mặt</option>
+            </select>
+          </div>
+
+          <div style="display: flex; align-items: center; gap: 0.5rem;">
+            <span style="font-size: 0.85rem; color: var(--text-muted);">Stylist:</span>
+            <select id="report-page-stylist" class="form-control" style="width: 180px; padding: 0.4rem;" onchange="loadReportsPage()">
+              <option value="">Tất cả Stylist</option>
+            </select>
+          </div>
+
+          <div style="margin-left: auto; font-size: 0.9rem; color: var(--gold-light);">
+            Hiển thị: <strong id="report-invoices-count">27 hóa đơn</strong>
+          </div>
+        </div>
+
+        <!-- Full Invoices Accounting Ledger Table -->
+        <div class="glass" style="padding: 1.25rem;">
+          <div class="table-responsive">
+            <table class="custom-table">
+              <thead>
+                <tr>
+                  <th>Mã Hóa Đơn</th>
+                  <th>Mã Hẹn</th>
+                  <th>Thời Gian Lập</th>
+                  <th>Khách Hàng</th>
+                  <th>Thợ Thực Hiện</th>
+                  <th>Hình Thức</th>
+                  <th>Tổng Chi Phí</th>
+                  <th>Thực Thu</th>
+                  <th style="text-align: center;">Thao Tác</th>
+                </tr>
+              </thead>
+              <tbody id="report-invoices-tbody">
+                <tr><td colspan="9" style="text-align: center; color: var(--text-muted); padding: 2rem;">Đang tải sổ quỹ hóa đơn...</td></tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </section>
+
+      <!-- ==================================================================== -->
+      <!-- ==================================================================== -->
+      <!-- TAB: TRUNG TÂM TRỢ LÝ & CỐ VẤN AI SALON HÀ MINH (GROUNDED SQLITE) -->
+      <!-- ==================================================================== -->
+      <section id="tab-ai-hub" class="tab-pane" style="display: none;">
+        
+        <!-- Header Banner & Live Status -->
+        <div class="glass" style="padding: 1.5rem 1.75rem; margin-bottom: 1.5rem; border-left: 4px solid var(--gold-primary); display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 1rem;">
+          <div>
+            <div style="display: flex; align-items: center; gap: 10px; margin-bottom: 6px;">
+              <span style="font-size: 2rem;">🤖</span>
+              <h2 style="font-size: 1.6rem; font-weight: 800; color: var(--text-primary);">Trung Tâm Trợ Lý AI Salon Hair Hà Minh</h2>
+              <span class="badge badge-success" style="font-size: 0.75rem; padding: 4px 10px;">🟢 Live SQLite Grounded</span>
+            </div>
+            <p style="color: var(--text-secondary); font-size: 0.88rem; margin: 0;">
+              Cố vấn khoa học râu tóc Men's Grooming & Trichology • Giải đáp logic chuyên sâu • Kiểm tra xung đột lịch & Phân tích doanh thu thời gian thực
+            </p>
+          </div>
+          <div style="display: flex; gap: 10px; flex-wrap: wrap; align-items: center;">
+            <div style="background: #1c1c1c; border: 1px solid var(--border-color); border-radius: 10px; padding: 6px 14px; text-align: center;">
+              <div style="font-size: 0.7rem; color: var(--text-muted); font-weight: 600;">Tốc Độ Xử Lý</div>
+              <div style="font-size: 0.95rem; font-weight: 700; color: var(--accent-emerald);">~120 ms</div>
+            </div>
+            <div style="background: #1c1c1c; border: 1px solid var(--border-color); border-radius: 10px; padding: 6px 14px; text-align: center;">
+              <div style="font-size: 0.7rem; color: var(--text-muted); font-weight: 600;">CSDL Đồng Bộ</div>
+              <div style="font-size: 0.95rem; font-weight: 700; color: var(--gold-light);">22 DV • 25 Khách</div>
+            </div>
+            <div style="background: #1c1c1c; border: 1px solid var(--border-color); border-radius: 10px; padding: 6px 14px; text-align: center;">
+              <div style="font-size: 0.7rem; color: var(--text-muted); font-weight: 600;">Doanh Thu Tích Lũy</div>
+              <div style="font-size: 0.95rem; font-weight: 700; color: var(--accent-cyan);">187.500.000 đ</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Section A: Interactive Live AI Response Box (Anchor for answers) -->
+        <div id="ai-hub-live-response-container" style="margin-bottom: 1.75rem; display: none;">
+          <div id="ai-hub-live-response" class="glass">
+            <div style="display: flex; align-items: center; justify-content: space-between; border-bottom: 1px solid var(--border-subtle); padding-bottom: 0.75rem; margin-bottom: 1rem;">
+              <div style="display: flex; align-items: center; gap: 10px;">
+                <span style="font-size: 1.4rem;">✨</span>
+                <div>
+                  <div style="font-size: 0.75rem; color: var(--gold-light); font-weight: 700; text-transform: uppercase;" id="ai-response-badge">CÂU TRẢ LỜI TỪ CHUYÊN GIA AI</div>
+                  <div style="font-size: 1.05rem; font-weight: 700; color: var(--text-primary);" id="ai-response-query">Câu hỏi đang được xử lý...</div>
+                </div>
+              </div>
+              <div style="display: flex; gap: 8px;">
+                <button class="btn btn-secondary btn-sm" onclick="copyAIHubResponse()">📋 Sao chép</button>
+                <button class="btn btn-secondary btn-sm" onclick="closeAIHubResponse()">&times; Đóng</button>
+              </div>
+            </div>
+            <div id="ai-response-content" style="font-size: 0.92rem; line-height: 1.7; color: var(--text-primary); white-space: pre-line; max-height: 400px; overflow-y: auto; padding-right: 8px;"></div>
+          </div>
+        </div>
+
+        <!-- Section B: Direct Ask Input Box -->
+        <div class="glass" style="padding: 1.25rem 1.5rem; margin-bottom: 2rem;">
+          <form id="ai-hub-search-form" onsubmit="handleAIHubDirectSubmit(event)" style="display: flex; gap: 10px; align-items: center;">
+            <div style="position: relative; flex: 1;">
+              <input type="text" id="ai-hub-custom-input" class="form-control" placeholder="💬 Nhập câu hỏi bất kỳ (Ví dụ: Vì sao tóc tẩy không uốn nóng? Vì sao 14:30 trùng lịch? Bảng giá niêm yết?)" style="padding-left: 2.75rem; font-size: 0.95rem;">
+              <span style="position: absolute; left: 1rem; top: 50%; transform: translateY(-50%); font-size: 1.1rem; color: var(--gold-light);">🔍</span>
+            </div>
+            <button type="submit" class="btn btn-ai" style="padding: 0.75rem 1.5rem; font-size: 0.95rem; font-weight: 700; flex-shrink: 0;">
+              ✨ Hỏi AI Ngay
+            </button>
+          </form>
+        </div>
+
+        <!-- Section C: THƯ VIỆN CÂU HỎI VÌ SAO CHUYÊN SÂU -->
+        <div style="margin-bottom: 2rem;">
+          <div style="display: flex; align-items: center; justify-content: space-between; margin-bottom: 1.25rem; flex-wrap: wrap; gap: 1rem;">
+            <div>
+              <h3 style="font-size: 1.35rem; font-weight: 700; color: var(--gold-light); display: flex; align-items: center; gap: 8px;">
+                <span>📚</span> Thư Viện Câu Hỏi "Vì Sao...?" Chuyên Sâu (16 Chủ Đề Logic Thực Tế)
+              </h3>
+              <p style="color: var(--text-secondary); font-size: 0.85rem; margin: 4px 0 0 0;">
+                Bấm trực tiếp vào bất kỳ câu hỏi nào để AI kết nối API xử lý logic và trích xuất dữ liệu CSDL ngay lập tức
+              </p>
+            </div>
+
+            <!-- Filter Tabs -->
+            <div style="display: flex; gap: 6px; flex-wrap: wrap;">
+              <button type="button" class="why-filter-tab active" onclick="filterWhyQuestions('all', this)">🌟 Tất Cả (16)</button>
+              <button type="button" class="why-filter-tab" onclick="filterWhyQuestions('chemical', this)">🔬 Hóa Chất & Phục Hồi (5)</button>
+              <button type="button" class="why-filter-tab" onclick="filterWhyQuestions('facial', this)">💇‍♀️ Dáng Mặt & Kiểu (4)</button>
+              <button type="button" class="why-filter-tab" onclick="filterWhyQuestions('schedule', this)">🛡️ Lịch & Xung Đột (4)</button>
+              <button type="button" class="why-filter-tab" onclick="filterWhyQuestions('finance', this)">💰 Doanh Thu CSDL (3)</button>
+            </div>
+          </div>
+
+          <!-- Cards Grid -->
+          <div class="why-grid" id="why-cards-grid">
+            
+            <!-- Card 1 -->
+            <div class="why-card" data-category="chemical">
+              <div>
+                <span class="why-badge why-badge-chemical">🔬 Hóa Chất & Phục Hồi</span>
+                <div class="why-question">Vì sao tóc tẩy cấp độ 8-9 không được uốn nóng Collagen (1.850.000đ)?</div>
+                <div class="why-preview">Tẩy tóc phá vỡ 70% liên kết lưu huỳnh trong lõi cortex. Nhiệt độ máy uốn 140°C sẽ làm biến tính polypeptide gây mủn và cháy tóc...</div>
+              </div>
+              <button type="button" class="why-btn-ask" onclick="askAIQuestionDirect('Vì sao tóc tẩy cấp 8 không được uốn nóng Collagen?')">
+                ✨ Bấm Để AI Trả Lời Ngay
+              </button>
+            </div>
+
+            <!-- Card 2 -->
+            <div class="why-card" data-category="chemical">
+              <div>
+                <span class="why-badge why-badge-chemical">🔬 Hóa Chất & Phục Hồi</span>
+                <div class="why-question">Vì sao sau khi nhuộm Balayage VIP (2.8Tr) nên bọc Protein tơ tằm (3.2Tr)?</div>
+                <div class="why-preview">Nâng sáng làm mở toang biểu bì và rỗng xốp lõi tóc. Protein tơ tằm thủy phân lấp kín vi khoang rỗng và khóa chặt hạt màu ở pH 4.5...</div>
+              </div>
+              <button type="button" class="why-btn-ask" onclick="askAIQuestionDirect('Vì sao sau khi nhuộm Balayage VIP nên bọc Protein tơ tằm?')">
+                ✨ Bấm Để AI Trả Lời Ngay
+              </button>
+            </div>
+
+            <!-- Card 3 -->
+            <div class="why-card" data-category="chemical">
+              <div>
+                <span class="why-badge why-badge-chemical">🔬 Hóa Chất & Phục Hồi</span>
+                <div class="why-question">Vì sao phục hồi Nano Keratin VIP (2.2Tr) duy trì độ bóng khỏe được 3-5 tháng?</div>
+                <div class="why-preview">Khác với hấp dầu silicon tạm thời, phân tử nanomet thẩm thấu tận tủy tóc; công nghệ nhiệt kẹp hồng ngoại tạo màng bọc chống UV bền lâu...</div>
+              </div>
+              <button type="button" class="why-btn-ask" onclick="askAIQuestionDirect('Vì sao phục hồi Nano Keratin VIP giữ nếp được 3-5 tháng?')">
+                ✨ Bấm Để AI Trả Lời Ngay
+              </button>
+            </div>
+
+            <!-- Card 4 -->
+            <div class="why-card" data-category="chemical">
+              <div>
+                <span class="why-badge why-badge-chemical">🔬 Hóa Chất & Phục Hồi</span>
+                <div class="why-question">Vì sao uốn Collagen Nano VIP tại Salon Hair Hà Minh hoàn toàn không có mùi amoniac?</div>
+                <div class="why-preview">Sử dụng công thức Zero-Ammonia hữu cơ chiết xuất từ mầm lúa mạch Đức kết hợp Collagen tươi và tinh dầu Argan Morocco dịu nhẹ...</div>
+              </div>
+              <button type="button" class="why-btn-ask" onclick="askAIQuestionDirect('Vì sao uốn Collagen tại Salon Hair Hà Minh không bị mùi amoniac?')">
+                ✨ Bấm Để AI Trả Lời Ngay
+              </button>
+            </div>
+
+            <!-- Card 5 -->
+            <div class="why-card" data-category="chemical">
+              <div>
+                <span class="why-badge why-badge-chemical">🔬 Hóa Chất & Phục Hồi</span>
+                <div class="why-question">Vì sao da đầu bết ngứa, gàu và rụng tóc bắt buộc phải dùng Scalp Detox (1.2Tr)?</div>
+                <div class="why-preview">Bã nhờn oxy hóa tạo màng biofilm nuôi dưỡng nấm Malassezia gây ngứa và teo nang tóc; AHA/BHA và sóng siêu âm giải phóng chân tóc...</div>
+              </div>
+              <button type="button" class="why-btn-ask" onclick="askAIQuestionDirect('Vì sao da đầu bết gàu ngứa rụng tóc cần Scalp Detox?')">
+                ✨ Bấm Để AI Trả Lời Ngay
+              </button>
+            </div>
+
+            <!-- Card 6 -->
+            <div class="why-card" data-category="facial">
+              <div>
+                <span class="why-badge why-badge-facial">💇‍♀️ Dáng Mặt & Tạo Kiểu</span>
+                <div class="why-question">Vì sao khuôn mặt tròn nên cắt layer bay mái Curtain thay vì mái bằng?</div>
+                <div class="why-preview">Mái bằng cắt ngang làm ngắn tỉ lệ chiều dọc khuôn mặt; mái rèm Curtain vát nghiêng 45° tạo đường dẫn thị giác thon gọn dáng oval...</div>
+              </div>
+              <button type="button" class="why-btn-ask" onclick="askAIQuestionDirect('Vì sao mặt tròn nên cắt layer bay mái Curtain thay vì mái bằng?')">
+                ✨ Bấm Để AI Trả Lời Ngay
+              </button>
+            </div>
+
+            <!-- Card 7 -->
+            <div class="why-card" data-category="facial">
+              <div>
+                <span class="why-badge why-badge-facial">💇‍♀️ Dáng Mặt & Tạo Kiểu</span>
+                <div class="why-question">Vì sao da ngăm undertone ấm nên nhuộm Nâu Tây Balayage thay vì Vàng Bạch Kim?</div>
+                <div class="why-preview">Vàng bạch kim chọi sắc độ lạnh làm da ngăm bị xỉn màu và nhợt nhạt; Nâu Tây ánh mật ong tạo độ tương phản ấm tôn sáng 2 tone da...</div>
+              </div>
+              <button type="button" class="why-btn-ask" onclick="askAIQuestionDirect('Vì sao da ngăm undertone ấm nên nhuộm Nâu Tây Balayage thay vì Vàng Bạch Kim?')">
+                ✨ Bấm Để AI Trả Lời Ngay
+              </button>
+            </div>
+
+            <!-- Card 8 -->
+            <div class="why-card" data-category="facial">
+              <div>
+                <span class="why-badge why-badge-facial">💇‍♀️ Dáng Mặt & Tạo Kiểu</span>
+                <div class="why-question">Vì sao nam giới mặt vuông nên uốn Texture phồng (850k) thay vì ép sát da đầu?</div>
+                <div class="why-preview">Ép tóc thẳng sát đầu làm lộ đường quai hàm bạnh thô; sóng xoăn Texture tăng thể tích đỉnh đầu, làm mềm góc cạnh và hài hòa nam tính...</div>
+              </div>
+              <button type="button" class="why-btn-ask" onclick="askAIQuestionDirect('Vì sao nam giới mặt vuông nên uốn Texture phồng thay vì ép sát?')">
+                ✨ Bấm Để AI Trả Lời Ngay
+              </button>
+            </div>
+
+            <!-- Card 9 -->
+            <div class="why-card" data-category="facial">
+              <div>
+                <span class="why-badge why-badge-facial">💇‍♀️ Dáng Mặt & Tạo Kiểu</span>
+                <div class="why-question">Vì sao tóc mỏng xẹp nên chọn Duỗi phồng chân tóc Volume Perm Hàn Quốc (950k)?</div>
+                <div class="why-preview">Kỹ thuật tạo sóng vi điểm sát da đầu nâng sợi tóc đứng tự nhiên 3cm, khắc phục triệt để tình trạng đầu bẹp hoặc tóc dính sát sọ...</div>
+              </div>
+              <button type="button" class="why-btn-ask" onclick="askAIQuestionDirect('Vì sao tóc mỏng xẹp nên chọn duỗi phồng chân tóc Volume Perm?')">
+                ✨ Bấm Để AI Trả Lời Ngay
+              </button>
+            </div>
+
+            <!-- Card 10 -->
+            <div class="why-card" data-category="schedule">
+              <div>
+                <span class="why-badge why-badge-schedule">🛡️ Lịch Hẹn & Xung Đột</span>
+                <div class="why-question">Vì sao hệ thống từ chối đặt lịch lúc 14:30 ngày 19/09/2026 cho Stylist Kéo Vàng?</div>
+                <div class="why-preview">Thợ Kéo Vàng đang trong ca hẹn LH005 từ 14:00 đến 16:20. Thuật toán (S1 &lt; E2) AND (S2 &lt; E1) tự động chặn để chống overbooking...</div>
+              </div>
+              <button type="button" class="why-btn-ask" onclick="askAIQuestionDirect('Vì sao không thể đặt lịch hẹn với thợ Kéo Vàng lúc 14:30?')">
+                ✨ Bấm Để AI Trả Lời Ngay
+              </button>
+            </div>
+
+            <!-- Card 11 -->
+            <div class="why-card" data-category="schedule">
+              <div>
+                <span class="why-badge why-badge-schedule">🛡️ Lịch Hẹn & Xung Đột</span>
+                <div class="why-question">Vì sao thuật toán chống trùng lịch áp dụng công thức (S1 &lt; E2) AND (S2 &lt; E1)?</div>
+                <div class="why-preview">Công thức chuẩn toán học giao tập hợp thời gian bao quát 4 kịch bản chồng chéo, loại bỏ 100% lỗi xung đột ghế và thợ làm tóc...</div>
+              </div>
+              <button type="button" class="why-btn-ask" onclick="askAIQuestionDirect('Vì sao thuật toán chống trùng lịch áp dụng công thức (S1 < E2) AND (S2 < E1)?')">
+                ✨ Bấm Để AI Trả Lời Ngay
+              </button>
+            </div>
+
+            <!-- Card 12 -->
+            <div class="why-card" data-category="schedule">
+              <div>
+                <span class="why-badge why-badge-schedule">🛡️ Lịch Hẹn & Xung Đột</span>
+                <div class="why-question">Vì sao Salon Hair Hà Minh áp dụng quy tắc đặt cọc 20% cho hóa chất trên 2.000.000đ?</div>
+                <div class="why-preview">Các ca VIP kéo dài 2-3 tiếng của Master Stylist và hóa chất hữu cơ pha chế riêng; tiền cọc bảo đảm giữ chỗ và giảm tỷ lệ No-show...</div>
+              </div>
+              <button type="button" class="why-btn-ask" onclick="askAIQuestionDirect('Vì sao Salon Hair Hà Minh áp dụng quy tắc đặt cọc 20% cho hóa chất trên 2 triệu?')">
+                ✨ Bấm Để AI Trả Lời Ngay
+              </button>
+            </div>
+
+            <!-- Card 13 -->
+            <div class="why-card" data-category="schedule">
+              <div>
+                <span class="why-badge why-badge-schedule">🛡️ Lịch Hẹn & Xung Đột</span>
+                <div class="why-question">Vì sao dịch vụ Nhuộm French Airtouch Highlight được thiết lập thời lượng 180 phút?</div>
+                <div class="why-preview">Kỹ thuật Pháp 6 bước tinh vi: sấy tách sợi tơ vi điểm, nâng tone đa tầng, khử vàng rêu, vào màu Glossy và ủ dưỡng khóa màu...</div>
+              </div>
+              <button type="button" class="why-btn-ask" onclick="askAIQuestionDirect('Vì sao dịch vụ Nhuộm French Airtouch Highlight được thiết lập 180 phút?')">
+                ✨ Bấm Để AI Trả Lời Ngay
+              </button>
+            </div>
+
+            <!-- Card 14 -->
+            <div class="why-card" data-category="finance">
+              <div>
+                <span class="why-badge why-badge-finance">💰 Doanh Thu CSDL</span>
+                <div class="why-question">Vì sao tổng doanh thu salon đạt 187.500.000đ từ 27 hóa đơn đã thanh toán?</div>
+                <div class="why-preview">Số liệu thực tế trích xuất từ bảng HoaDon SQLite; AOV đạt ~6.94Tr/đơn nhờ các combo Balayage VIP, Protein và Nano Keratin...</div>
+              </div>
+              <button type="button" class="why-btn-ask" onclick="askAIQuestionDirect('Vì sao doanh thu salon đạt 187.500.000đ?')">
+                ✨ Bấm Để AI Trả Lời Ngay
+              </button>
+            </div>
+
+            <!-- Card 15 -->
+            <div class="why-card" data-category="finance">
+              <div>
+                <span class="why-badge why-badge-finance">💰 Doanh Thu CSDL</span>
+                <div class="why-question">Vì sao doanh thu hôm nay (19/09/2026) đạt đúng 41.000.000đ từ 5 hóa đơn?</div>
+                <div class="why-preview">Trích xuất bảng HoaDon với ngày tạo 19/09/2026: 5 hóa đơn hoàn thành của các khách VIP, ghi nhận thanh toán VietQR và thẻ...</div>
+              </div>
+              <button type="button" class="why-btn-ask" onclick="askAIQuestionDirect('Vì sao doanh thu hôm nay đạt 41.000.000đ?')">
+                ✨ Bấm Để AI Trả Lời Ngay
+              </button>
+            </div>
+
+            <!-- Card 16 -->
+            <div class="why-card" data-category="finance">
+              <div>
+                <span class="why-badge why-badge-finance">💰 Doanh Thu CSDL</span>
+                <div class="why-question">Vì sao dịch vụ Bọc Protein tơ tằm (3.2Tr) đóng góp doanh thu lớn nhất salon?</div>
+                <div class="why-preview">Liệu trình hồi sinh tóc hư tổn cao cấp nhất được đa số khách VIP lựa chọn kèm sau nhuộm/uốn, mang lại tỷ suất doanh thu vượt trội...</div>
+              </div>
+              <button type="button" class="why-btn-ask" onclick="askAIQuestionDirect('Vì sao gói Bọc Protein tơ tằm đóng góp doanh thu cao nhất salon?')">
+                ✨ Bấm Để AI Trả Lời Ngay
+              </button>
+            </div>
+
+          </div>
+        </div>
+
+        <!-- Section D: 3 Công Cụ Nghiệp Vụ Tự Động Hóa Salon -->
+        <div>
+          <h3 style="font-size: 1.35rem; font-weight: 700; color: var(--gold-light); margin-bottom: 1rem; display: flex; align-items: center; gap: 8px;">
+            <span>⚡</span> 3 Công Cụ AI Nghiệp Vụ Hỗ Trợ Lễ Tân & Thợ Làm Tóc
+          </h3>
+
+          <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 1.5rem;">
+            
+            <!-- Tool 1: Suggest Services -->
+            <div class="glass" style="padding: 1.5rem; display: flex; flex-direction: column; gap: 1rem;">
+              <div style="display: flex; align-items: center; gap: 0.75rem;">
+                <span style="font-size: 1.8rem;">💡</span>
+                <div>
+                  <div style="font-weight: 700; font-size: 1.1rem; color: var(--gold-light);">AI Gợi Ý Dịch Vụ Theo Chất Tóc (UC008)</div>
+                  <div style="font-size: 0.75rem; color: var(--text-muted);">Phân tích chất tóc & lịch sử để upsell combo VIP</div>
+                </div>
+              </div>
+              <div class="form-group">
+                <label class="form-label">Chọn Khách Hàng (25 Khách VIP):</label>
+                <select id="ai-suggest-customer" class="form-control" onchange="onAISuggestCustomerChange()"></select>
+                <div id="ai-suggest-cust-info" style="margin-top: 6px; font-size: 0.78rem; color: var(--text-muted);"></div>
+              </div>
+              <div class="form-group">
+                <label class="form-label">Ghi chú tình trạng tóc bổ sung (tùy chọn):</label>
+                <textarea id="ai-suggest-notes" class="form-control" rows="2" placeholder="Ví dụ: Khách muốn uốn nhưng tóc mới tẩy 1 tháng..."></textarea>
+              </div>
+              <button class="btn btn-ai" onclick="runAISuggest()">✨ Phân Tích & Gợi Ý Combo</button>
+              <div id="ai-suggest-result" class="glass" style="padding: 1rem; font-size: 0.85rem; line-height: 1.6; white-space: pre-line; display: none; background: #141414; border: 1px solid var(--border-color); color: var(--text-primary);"></div>
+            </div>
+
+            <!-- Tool 2: Generate Reminder Message -->
+            <div class="glass" style="padding: 1.5rem; display: flex; flex-direction: column; gap: 1rem;">
+              <div style="display: flex; align-items: center; gap: 0.75rem;">
+                <span style="font-size: 1.8rem;">📲</span>
+                <div>
+                  <div style="font-weight: 700; font-size: 1.1rem; color: var(--gold-light);">AI Sinh Tin Nhắn Nhắc Lịch (UC009)</div>
+                  <div style="font-size: 0.75rem; color: var(--text-muted);">Tạo tin nhắn Zalo/SMS chuẩn mực, ấm áp, cá nhân hóa</div>
+                </div>
+              </div>
+              <div class="form-group">
+                <label class="form-label">Chọn Lịch Hẹn Cần Nhắc:</label>
+                <select id="ai-reminder-appt" class="form-control"></select>
+              </div>
+              <button class="btn btn-ai" onclick="runAIReminder()">✨ Soạn Tin Nhắn Tự Động</button>
+              <div id="ai-reminder-result-box" style="display: none;">
+                <textarea id="ai-reminder-text" class="form-control" rows="6" style="margin-bottom: 0.75rem; font-size: 0.85rem;"></textarea>
+                <button class="btn btn-secondary btn-sm" onclick="copyReminderText()">📋 Sao chép tin nhắn</button>
+              </div>
+            </div>
+
+            <!-- Tool 3: Stylist Quick Briefing -->
+            <div class="glass" style="padding: 1.5rem; display: flex; flex-direction: column; gap: 1rem;">
+              <div style="display: flex; align-items: center; gap: 0.75rem;">
+                <span style="font-size: 1.8rem;">⚡</span>
+                <div>
+                  <div style="font-weight: 700; font-size: 1.1rem; color: var(--gold-light);">AI Tóm Tắt 5 Giây Cho Thợ (UC010)</div>
+                  <div style="font-size: 0.75rem; color: var(--text-muted);">Cô đọng thói quen & lưu ý kỹ thuật trước khi làm tóc</div>
+                </div>
+              </div>
+              <div class="form-group">
+                <label class="form-label">Chọn Khách Hàng:</label>
+                <select id="ai-summary-customer" class="form-control"></select>
+              </div>
+              <button class="btn btn-ai" onclick="runAISummary()">✨ Tóm Tắt Hồ Sơ Tức Thì</button>
+              <div id="ai-summary-result" class="glass" style="padding: 1rem; font-size: 0.85rem; line-height: 1.6; white-space: pre-line; display: none; background: #141414; border: 1px solid var(--border-color); color: var(--text-primary);"></div>
+            </div>
+
+          </div>
+        </div>
+
+      </section>
+
+
+    </main>
+  </div>
+</div> <!-- END OF #view-staff-app -->
+
+  <!-- ==================================================================== -->
+  <!-- MODAL: CẢNH BÁO TÀI KHOẢN ĐĂNG NHẬP Ở THIẾT BỊ KHÁC (SINGLE DEVICE) -->
+  <!-- ==================================================================== -->
+  <div id="modal-session-kicked" class="modal-overlay" style="display: none; z-index: 999999; background: rgba(0,0,0,0.8); backdrop-filter: blur(10px);">
+    <div class="glass" style="max-width: 480px; width: 92%; padding: 2.2rem; border-radius: 18px; position: relative; box-shadow: 0 25px 50px rgba(239, 68, 68, 0.25); border: 2px solid #ef4444; background: #181818; color: #f9fafb; text-align: center; animation: fadeIn 0.25s ease;">
+      <div style="font-size: 3rem; margin-bottom: 0.5rem;">⚠️</div>
+      <h3 style="font-size: 1.35rem; font-weight: 800; color: #ef4444; margin-bottom: 0.75rem;">
+        Phiên Làm Việc Đã Hết Hiệu Lực
+      </h3>
+      <div id="session-kicked-msg" style="color: #fca5a5; font-size: 0.92rem; line-height: 1.6; margin-bottom: 1.5rem; background: rgba(239, 68, 68, 0.12); border: 1px solid rgba(239, 68, 68, 0.35); border-radius: 8px; padding: 0.85rem; text-align: left;">
+        Tài khoản của bạn vừa được đăng nhập trên một thiết bị khác. Để đảm bảo an toàn, hệ thống chỉ cho phép duy nhất 1 thiết bị đăng nhập đồng thời.
+      </div>
+      <div style="display: flex; gap: 0.75rem; justify-content: center; flex-wrap: wrap;">
+        <button type="button" class="btn btn-secondary" onclick="closeModal('modal-session-kicked'); applyAuthState();">
+          Về Trang Chủ
+        </button>
+        <button type="button" class="btn btn-primary" onclick="closeModal('modal-session-kicked'); openLoginModal();">
+          🔑 Đăng Nhập Lại
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- ==================================================================== -->
+  <!-- MODAL: LOGIN DÀNH CHO CÁC TÁC NHÂN (Admin, Lễ Tân, Thợ Chính) -->
+  <!-- ==================================================================== -->
+  <div id="modal-login" style="display: none;">
+    <div class="glass" style="max-width: 460px; width: 90%; padding: 2.2rem; border-radius: 18px; position: relative; box-shadow: var(--shadow-xl); border: 1px solid var(--border-strong); background: #181818; color: #f9fafb; animation: fadeIn 0.25s ease;">
+      <button class="btn-close" style="position: absolute; top: 1.25rem; right: 1.25rem; background: none; border: none; font-size: 1.5rem; color: var(--text-muted); cursor: pointer;" onclick="closeModal('modal-login')">&times;</button>
+      
+      <div style="text-align: center; margin-bottom: 1.5rem;">
+        <img src="/static/images/barber_logo.svg" alt="Salon Hair Hà Minh Logo" class="barber-logo-img" style="width: 48px; height: 48px; margin-bottom: 8px;">
+        <h3 style="font-size: 1.35rem; font-weight: 800; color: #ffffff;">SALON HAIR HÀ MINH</h3>
+        <p style="font-size: 0.82rem; color: var(--text-muted); margin-top: 4px;">Cổng Đăng Nhập Quản Lý (Admin), Lễ Tân & Stylist Team</p>
+      </div>
+
+      <form id="form-login" onsubmit="handleLoginFormSubmit(event)">
+        <div class="form-group" style="margin-bottom: 1rem;">
+          <label class="form-label" style="font-size: 0.85rem;">Tên Đăng Nhập:</label>
+          <input type="text" id="login-username" class="form-control" placeholder="admin / letan01 / tho01..." required>
+        </div>
+
+        <div class="form-group" style="margin-bottom: 1.25rem;">
+          <label class="form-label" style="font-size: 0.85rem;">Mật Khẩu:</label>
+          <div style="position: relative;">
+            <input type="password" id="login-password" class="form-control" placeholder="Nhập mật khẩu..." required style="padding-right: 40px;">
+            <button type="button" onclick="togglePasswordVisibility('login-password', this)" style="position: absolute; right: 8px; top: 50%; transform: translateY(-50%); background: none; border: none; cursor: pointer; font-size: 1.15rem; padding: 4px;" title="Hiện/Ẩn mật khẩu">👁️</button>
+          </div>
+        </div>
+
+        <div id="login-error-msg" style="display: none; padding: 8px 12px; border-radius: 6px; background: rgba(244, 63, 94, 0.15); border: 1px solid var(--accent-rose); color: #fca5a5; font-size: 0.85rem; margin-bottom: 1rem;"></div>
+
+        <button type="submit" class="btn btn-primary" style="width: 100%; padding: 0.75rem; font-size: 1rem; font-weight: 700; justify-content: center; box-shadow: var(--shadow-gold);">
+          Đăng Nhập Hệ Thống
+        </button>
+      </form>
+
+      <!-- QUICK 1-TOUCH TEST LOGINS -->
+      <div style="margin-top: 1.5rem; padding-top: 1.25rem; border-top: 1px solid var(--border-color);">
+        <div style="font-size: 0.75rem; font-weight: 700; color: var(--gold-light); text-transform: uppercase; letter-spacing: 0.5px; margin-bottom: 0.75rem; text-align: center;">
+          ⚡ Đăng Nhập Nhanh 1-Chạm (Kiểm Thử Phân Quyền)
+        </div>
+        <div style="display: flex; flex-direction: column; gap: 8px;">
+          <button type="button" class="btn btn-secondary btn-sm" onclick="quickLogin('admin', 'admin123')" style="justify-content: space-between; background: rgba(216, 86, 39, 0.15); border-color: rgba(216, 86, 39, 0.4); color: #ff854d; padding: 8px 12px;">
+            <span>👑 <strong>Quản Lý (Admin)</strong> - Master Stylist Hà Minh</span>
+            <span style="font-family: monospace; font-size: 0.75rem; color: #ff854d; font-weight: 700;">admin / admin123</span>
+          </button>
+          <button type="button" class="btn btn-secondary btn-sm" onclick="quickLogin('letan01', 'letan123')" style="justify-content: space-between; background: rgba(56, 189, 248, 0.12); border-color: rgba(56, 189, 248, 0.3); color: #38bdf8; padding: 8px 12px;">
+            <span>💁 <strong>Lễ Tân</strong> - Lịch hẹn & POS Thu ngân</span>
+            <span style="font-family: monospace; font-size: 0.75rem; color: #38bdf8; font-weight: 700;">letan01</span>
+          </button>
+          <button type="button" class="btn btn-secondary btn-sm" onclick="quickLogin('tho01', 'tho123')" style="justify-content: space-between; background: rgba(52, 211, 153, 0.12); border-color: rgba(52, 211, 153, 0.3); color: #34d399; padding: 8px 12px;">
+            <span>✂️ <strong>Thợ Chính</strong> - Stylist Kéo Vàng</span>
+            <span style="font-family: monospace; font-size: 0.75rem; color: #34d399; font-weight: 700;">tho01</span>
+          </button>
+          <button type="button" class="btn btn-secondary btn-sm" onclick="quickLogin('tho02', 'tho123')" style="justify-content: space-between; background: rgba(168, 85, 247, 0.12); border-color: rgba(168, 85, 247, 0.3); color: #c084fc; padding: 8px 12px;">
+            <span>✂️ <strong>Thợ Chính 2</strong> - Phạm Minh Tóc Mây</span>
+            <span style="font-family: monospace; font-size: 0.75rem; color: #c084fc; font-weight: 700;">tho02</span>
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ==================================================================== -->
+  <!-- MODALS -->
+  <!-- ==================================================================== -->
+
+  <!-- Modal 1: Đặt Lịch Hẹn Mới (Screen Flow Luồng 2) -->
+  <div id="modal-appointment" class="modal-overlay">
+    <div class="modal-content glass">
+      <div class="modal-header">
+        <div class="modal-title">📅 Đặt Lịch Hẹn Salon Mới</div>
+        <button class="btn-close" onclick="closeModal('modal-appointment')">&times;</button>
+      </div>
+      <form id="form-appointment" onsubmit="handleCreateAppointment(event)">
+        
+        <!-- Bước 2.1: Chọn / Tìm Khách Hàng -->
+        <div class="form-group">
+          <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 0.4rem;">
+            <label class="form-label" style="margin: 0;">1. Khách Hàng:</label>
+            <div style="display: flex; gap: 6px;">
+              <button type="button" class="btn btn-ai btn-sm" onclick="triggerBookingAISuggest()" style="padding: 2px 8px; font-size: 0.75rem;">✨ Bước 2.2: AI Gợi Ý</button>
+              <button type="button" class="btn btn-secondary btn-sm" onclick="openNewCustomerModal()" style="padding: 2px 8px; font-size: 0.75rem;">+ Khách mới</button>
+            </div>
+          </div>
+          <select id="modal-appt-customer" class="form-control" required onchange="onBookingCustomerChanged()"></select>
+        </div>
+
+        <!-- Popup / Box Gợi Ý AI tức thì trong lúc đặt lịch (Screen Flow Bước 2.2) -->
+        <div id="modal-appt-ai-box" style="display: none; padding: 0.85rem; background: var(--accent-purple-bg); border: 1px solid var(--accent-purple-border); border-radius: var(--radius-sm); margin-bottom: 1rem; font-size: 0.85rem; line-height: 1.5; color: var(--text-primary);">
+          <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 4px;">
+            <strong style="color: #6d28d9;">🤖 Trợ Lý AI Tư Vấn (Screen Flow Bước 2.2):</strong>
+            <button type="button" class="btn-close" style="font-size: 1rem;" onclick="document.getElementById('modal-appt-ai-box').style.display='none'">&times;</button>
+          </div>
+          <div id="modal-appt-ai-text">Đang phân tích...</div>
+        </div>
+
+        <!-- Bước 2.3: Phân công Thợ làm tóc (có checkbox lọc chỉ hiển thị thợ rảnh) -->
+        <div class="form-group">
+          <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 0.4rem;">
+            <label class="form-label" style="margin: 0;">2. Thợ Làm Tóc Phụ Trách:</label>
+            <label style="font-size: 0.78rem; color: var(--accent-emerald); cursor: pointer; display: flex; align-items: center; gap: 4px; font-weight: 600;">
+              <input type="checkbox" id="modal-appt-only-free-stylist" onchange="filterStylistsByAvailability()">
+              Chỉ thợ đang "Rảnh" (Bước 2.3)
+            </label>
+          </div>
+          <select id="modal-appt-stylist" class="form-control" required></select>
+        </div>
+
+        <div class="form-group">
+          <label class="form-label">3. Thời Gian Hẹn:</label>
+          <input type="datetime-local" id="modal-appt-datetime" class="form-control" required>
+        </div>
+
+        <div class="form-group">
+          <label class="form-label">4. Chọn Các Dịch Vụ Sử Dụng (Cộng dồn tự động):</label>
+          <div style="display: flex; gap: 0.5rem; margin-bottom: 0.5rem; flex-wrap: wrap;">
+            <input type="search" id="modal-appt-service-search" class="form-control" placeholder="Tìm tên dịch vụ, mã DV hoặc từ khóa..." oninput="filterAppointmentServices()" style="flex: 1; min-width: 220px;">
+            <select id="modal-appt-service-category" class="form-control" onchange="filterAppointmentServices()" style="width: 170px;">
+              <option value="">Tất cả nhóm</option>
+              <option value="cắt">Cắt / Tạo kiểu</option>
+              <option value="uốn">Uốn</option>
+              <option value="nhuộm">Nhuộm / Tẩy</option>
+              <option value="phục hồi">Phục hồi</option>
+              <option value="gội">Gội / Da đầu</option>
+            </select>
+          </div>
+          <div id="modal-appt-service-result-count" style="font-size: 0.75rem; color: var(--text-muted); margin-bottom: 0.35rem;"></div>
+          <div id="modal-appt-services-list" class="glass" style="max-height: 150px; overflow-y: auto; padding: 0.75rem; display: flex; flex-direction: column; gap: 0.5rem; background: #141414; border: 1px solid var(--border-color);">
+            <!-- Service checkboxes loaded dynamically -->
+          </div>
+          <div style="margin-top: 0.5rem; display: flex; justify-content: space-between; font-size: 0.85rem;">
+            <span>Tổng thời lượng: <strong id="modal-appt-calc-time" style="color: var(--accent-cyan); font-weight: 700;">0 phút</strong></span>
+            <span>Tổng chi phí: <strong id="modal-appt-calc-price" style="color: var(--gold-light); font-weight: 700;">0 đ</strong></span>
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label class="form-label">5. Ghi Chú Yêu Cầu / Tình Trạng Tóc:</label>
+          <input type="text" id="modal-appt-notes" class="form-control" placeholder="Yêu cầu riêng của khách...">
+        </div>
+
+        <div id="modal-appt-conflict-alert" style="display: none; padding: 0.75rem; background: rgba(244, 63, 94, 0.15); border: 1px solid var(--accent-rose); border-radius: var(--radius-sm); color: #fca5a5; font-size: 0.85rem; font-weight: 600; margin-bottom: 1rem;">
+        </div>
+
+        <div style="display: flex; justify-content: flex-end; gap: 0.75rem; margin-top: 1.5rem;">
+          <button type="button" class="btn btn-secondary" onclick="closeModal('modal-appointment')">Đóng</button>
+          <button type="submit" class="btn btn-primary">Xác Nhận Đặt Lịch</button>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <!-- Modal Đổi Giờ Hẹn (Reschedule - UC005) -->
+  <div id="modal-reschedule" class="modal-overlay">
+    <div class="modal-content glass">
+      <div class="modal-header">
+        <div class="modal-title">⏱️ Đổi Giờ / Chuyển Thợ Lịch Hẹn</div>
+        <button class="btn-close" onclick="closeModal('modal-reschedule')">&times;</button>
+      </div>
+      <form id="form-reschedule" onsubmit="handleRescheduleAppointment(event)">
+        <input type="hidden" id="reschedule-appt-id">
+        <div class="form-group">
+          <label class="form-label">Khách Hàng:</label>
+          <input type="text" id="reschedule-customer-name" class="form-control" disabled>
+        </div>
+        <div class="form-group">
+          <label class="form-label">Thợ Làm Tóc:</label>
+          <select id="reschedule-stylist-select" class="form-control" required></select>
+        </div>
+        <div class="form-group">
+          <label class="form-label">Thời Gian Hẹn Mới:</label>
+          <input type="datetime-local" id="reschedule-datetime" class="form-control" required>
+        </div>
+        <div id="reschedule-conflict-alert" style="display: none; padding: 0.75rem; background: rgba(244, 63, 94, 0.15); border: 1px solid var(--accent-rose); border-radius: var(--radius-sm); color: #fca5a5; font-size: 0.85rem; font-weight: 600; margin-bottom: 1rem;">
+        </div>
+        <div style="display: flex; justify-content: flex-end; gap: 0.75rem; margin-top: 1.5rem;">
+          <button type="button" class="btn btn-secondary" onclick="closeModal('modal-reschedule')">Hủy</button>
+          <button type="submit" class="btn btn-primary">Lưu Thay Đổi</button>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <!-- Modal Thêm Nhân Viên Mới (UC003) -->
+  <div id="modal-staff" class="modal-overlay">
+    <div class="modal-content glass">
+      <div class="modal-header">
+        <div class="modal-title">👔 Thêm / Cập Nhật Nhân Viên</div>
+        <button class="btn-close" onclick="closeModal('modal-staff')">&times;</button>
+      </div>
+      <form id="form-staff" onsubmit="handleCreateStaff(event)">
+        <input type="hidden" id="staff-edit-id">
+        <div class="form-group">
+          <label class="form-label">Họ và Tên Nhân Viên:</label>
+          <input type="text" id="modal-staff-name" class="form-control" required placeholder="Nguyễn Văn A">
+        </div>
+        <div class="form-group">
+          <label class="form-label">Số Điện Thoại:</label>
+          <input type="tel" id="modal-staff-phone" class="form-control" required placeholder="09xxxxxxxx">
+        </div>
+        <div class="form-group">
+          <label class="form-label">Chức Vụ:</label>
+          <select id="modal-staff-role" class="form-control" required>
+            <option value="Thợ chính">Thợ chính</option>
+            <option value="Thợ phụ">Thợ phụ</option>
+            <option value="Lễ tân">Lễ tân</option>
+            <option value="Quản lý">Quản lý</option>
+          </select>
+        </div>
+
+        <!-- Optional inline account creation -->
+        <div id="staff-account-toggle-wrap" style="margin-top: 1rem; padding: 0.85rem; background: #141414; border-radius: 8px; border: 1px dashed var(--border-color);">
+          <label style="display: flex; align-items: center; gap: 8px; cursor: pointer; font-size: 0.88rem; font-weight: 600; color: var(--gold-light); margin: 0;">
+            <input type="checkbox" id="modal-staff-create-acc" onchange="toggleStaffAccountFields(this.checked)">
+            <span>🔐 Cấp tài khoản đăng nhập hệ thống cho nhân sự này</span>
+          </label>
+          <div id="staff-acc-fields" style="display: none; margin-top: 0.85rem; padding-top: 0.65rem; border-top: 1px solid var(--border-color);">
+            <div class="form-group" style="margin-bottom: 0.65rem;">
+              <label class="form-label" style="font-size: 0.82rem;">Tên đăng nhập:</label>
+              <input type="text" id="modal-staff-acc-user" class="form-control" placeholder="Ví dụ: tho_tuananh" autocomplete="off">
+            </div>
+            <div class="form-group" style="margin-bottom: 0.25rem;">
+              <label class="form-label" style="font-size: 0.82rem;">Mật khẩu khởi tạo:</label>
+              <input type="password" id="modal-staff-acc-pass" class="form-control" placeholder="Tối thiểu 4 ký tự..." autocomplete="off">
+            </div>
+          </div>
+        </div>
+
+        <div style="display: flex; justify-content: flex-end; gap: 0.75rem; margin-top: 1.5rem;">
+          <button type="button" class="btn btn-secondary" onclick="closeModal('modal-staff')">Hủy</button>
+          <button type="submit" class="btn btn-primary">Lưu Thông Tin</button>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <!-- Modal Hoán Đổi Vị Trí Nhân Sự (Swap Roles) -->
+  <div id="modal-swap-staff" class="modal-overlay">
+    <div class="modal-content glass" style="max-width: 520px;">
+      <div class="modal-header">
+        <div class="modal-title">🔄 Hoán Đổi Vị Trí 2 Nhân Sự</div>
+        <button class="btn-close" onclick="closeModal('modal-swap-staff')">&times;</button>
+      </div>
+      <form id="form-swap-staff" onsubmit="handleSwapStaffRolesSubmit(event)">
+        <p style="color: var(--text-secondary); font-size: 0.85rem; margin-bottom: 1.25rem;">
+          Tính năng dành riêng cho <strong>Admin</strong>: Chọn 2 nhân sự để hoán đổi chức vụ cho nhau (ví dụ: Thợ chính ⇄ Thợ phụ, hoặc Thợ ⇄ Lễ tân).
+        </p>
+        
+        <div class="form-group">
+          <label class="form-label">Nhân sự thứ nhất (Người A):</label>
+          <select id="swap-staff-1" class="form-control" required onchange="updateSwapPreview()">
+            <!-- Populated dynamically -->
+          </select>
+        </div>
+
+        <div style="text-align: center; margin: 0.5rem 0; font-size: 1.3rem; color: var(--gold-light);">
+          ⇅
+        </div>
+
+        <div class="form-group">
+          <label class="form-label">Nhân sự thứ hai (Người B):</label>
+          <select id="swap-staff-2" class="form-control" required onchange="updateSwapPreview()">
+            <!-- Populated dynamically -->
+          </select>
+        </div>
+
+        <div id="swap-preview-box" class="glass" style="padding: 0.85rem; margin: 1rem 0; font-size: 0.85rem; border-color: rgba(212,175,55,0.3); background: rgba(212,175,55,0.06); display: none;">
+          <!-- Preview after swap -->
+        </div>
+
+        <div style="display: flex; justify-content: flex-end; gap: 0.75rem; margin-top: 1.5rem;">
+          <button type="button" class="btn btn-secondary" onclick="closeModal('modal-swap-staff')">Hủy</button>
+          <button type="submit" class="btn btn-primary">Xác Nhận Hoán Đổi</button>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <!-- Modal Thêm Tài Khoản Mới (Admin) -->
+  <div id="modal-account" class="modal-overlay">
+    <div class="modal-content glass" style="max-width: 520px; width: 92%;">
+      <div class="modal-header">
+        <div class="modal-title">🔐 Thêm Tài Khoản Đăng Nhập Mới</div>
+        <button class="btn-close" onclick="closeModal('modal-account')">&times;</button>
+      </div>
+      <form id="form-account" onsubmit="handleCreateAccount(event)">
+        <p style="color: var(--text-secondary); font-size: 0.85rem; margin-bottom: 1.25rem;">
+          Cấp thông tin tài khoản đăng nhập salon để phân quyền truy cập hệ thống theo đúng vai trò nghiệp vụ.
+        </p>
+        
+        <div class="form-group">
+          <label class="form-label">Tên Đăng Nhập: <span style="color: #ef4444;">*</span></label>
+          <input type="text" id="modal-acc-username" class="form-control" required placeholder="Ví dụ: letan_mai, tho_tuananh..." autocomplete="off">
+          <small style="color: var(--text-muted); font-size: 0.75rem;">Ít nhất 3 ký tự, viết liền không dấu.</small>
+        </div>
+
+        <div class="form-group">
+          <label class="form-label">Mật Khẩu: <span style="color: #ef4444;">*</span></label>
+          <div style="position: relative;">
+            <input type="password" id="modal-acc-password" class="form-control" required placeholder="Mật khẩu tối thiểu 4 ký tự..." autocomplete="off" style="padding-right: 40px;">
+            <button type="button" onclick="togglePasswordVisibility('modal-acc-password', this)" style="position: absolute; right: 8px; top: 50%; transform: translateY(-50%); background: none; border: none; cursor: pointer; font-size: 1.15rem; padding: 4px;" title="Hiện/Ẩn mật khẩu">👁️</button>
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label class="form-label">Phân Quyền / Vai Trò: <span style="color: #ef4444;">*</span></label>
+          <select id="modal-acc-role" class="form-control" required onchange="handleAccRoleChange(this.value)">
+            <option value="Tho">✂️ Thợ Làm Tóc (Tho) - Xem lịch hẹn & trạng thái</option>
+            <option value="LeTan">💁 Lễ Tân & Thu Ngân (LeTan) - Đặt lịch, thanh toán POS & khách hàng</option>
+            <option value="Admin">👑 Quản Trị Viên (Admin) - Toàn quyền quản lý, báo cáo & nhân sự</option>
+          </select>
+        </div>
+
+        <div class="form-group">
+          <label class="form-label">Nhân Viên Liên Kết (Tùy chọn):</label>
+          <select id="modal-acc-staff" class="form-control" onchange="handleAccStaffSelect(this.value)">
+            <option value="">-- Không liên kết (Tài khoản quản trị độc lập) --</option>
+            <!-- Populated dynamically -->
+          </select>
+          <small style="color: var(--text-muted); font-size: 0.75rem;">Gán tài khoản này cho nhân sự để tự động liên kết hồ sơ.</small>
+        </div>
+
+        <div style="display: flex; justify-content: flex-end; gap: 0.75rem; margin-top: 1.5rem;">
+          <button type="button" class="btn btn-secondary" onclick="closeModal('modal-account')">Hủy</button>
+          <button type="submit" class="btn btn-primary">Xác Nhận Tạo Tài Khoản</button>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <!-- Modal Đổi Mật Khẩu Tài Khoản (Admin) -->
+  <div id="modal-account-password" class="modal-overlay">
+    <div class="modal-content glass" style="max-width: 440px; width: 92%;">
+      <div class="modal-header">
+        <div class="modal-title">🔑 Đổi Mật Khẩu Tài Khoản</div>
+        <button class="btn-close" onclick="closeModal('modal-account-password')">&times;</button>
+      </div>
+      <form id="form-account-password" onsubmit="handleChangePasswordSubmit(event)">
+        <input type="hidden" id="modal-pwd-account-id">
+        <div class="form-group">
+          <label class="form-label">Tài Khoản:</label>
+          <input type="text" id="modal-pwd-username" class="form-control" disabled style="background: #f1f5f9; font-weight: 700; color: var(--gold-light);">
+        </div>
+        <div class="form-group">
+          <label class="form-label">Mật Khẩu Mới: <span style="color: #ef4444;">*</span></label>
+          <div style="position: relative;">
+            <input type="password" id="modal-pwd-new-pass" class="form-control" required placeholder="Nhập mật khẩu mới (tối thiểu 4 ký tự)..." autocomplete="off" style="padding-right: 40px;">
+            <button type="button" onclick="togglePasswordVisibility('modal-pwd-new-pass', this)" style="position: absolute; right: 8px; top: 50%; transform: translateY(-50%); background: none; border: none; cursor: pointer; font-size: 1.15rem; padding: 4px;" title="Hiện/Ẩn mật khẩu">👁️</button>
+          </div>
+        </div>
+        <div style="display: flex; justify-content: flex-end; gap: 0.75rem; margin-top: 1.5rem;">
+          <button type="button" class="btn btn-secondary" onclick="closeModal('modal-account-password')">Hủy</button>
+          <button type="submit" class="btn btn-primary">Cập Nhật Mật Khẩu</button>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <!-- Modal Xem Chi Tiết Lịch Sử Khách Hàng (UC002) -->
+  <div id="modal-history" class="modal-overlay">
+    <div class="modal-content glass" style="max-width: 700px;">
+      <div class="modal-header">
+        <div class="modal-title">📜 Lịch Sử Sử Dụng Dịch Vụ Khách Hàng</div>
+        <button class="btn-close" onclick="closeModal('modal-history')">&times;</button>
+      </div>
+      <div id="modal-history-content">
+        <!-- Loaded dynamically -->
+      </div>
+      <div style="display: flex; justify-content: flex-end; margin-top: 1.5rem;">
+        <button type="button" class="btn btn-secondary" onclick="closeModal('modal-history')">Đóng</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Modal 2: Thêm Khách Hàng Mới -->
+  <div id="modal-customer" class="modal-overlay">
+    <div class="modal-content glass">
+      <div class="modal-header">
+        <div class="modal-title">👤 Thêm Hồ Sơ Khách Hàng</div>
+        <button class="btn-close" onclick="closeModal('modal-customer')">&times;</button>
+      </div>
+      <form id="form-customer" onsubmit="handleCreateCustomer(event)">
+        <div class="form-group">
+          <label class="form-label">Họ và Tên:</label>
+          <input type="text" id="modal-cust-name" class="form-control" placeholder="Nguyễn Văn A (để trống nếu khách vãng lai)">
+        </div>
+        <div class="form-group">
+          <label class="form-label">Số Điện Thoại:</label>
+          <input type="tel" id="modal-cust-phone" class="form-control" placeholder="09xxxx (khách vãng lai có thể để trống)">
+        </div>
+        <div class="form-group">
+          <label class="form-label">Ghi Chú Tình Trạng Tóc / Da Đầu / Công Thức Thuốc:</label>
+          <textarea id="modal-cust-notes" class="form-control" rows="3" placeholder="Chất tóc mỏng, đã qua tẩy 2 lần, dị ứng mùi amoniac..."></textarea>
+        </div>
+        <div style="display: flex; justify-content: flex-end; gap: 0.75rem; margin-top: 1.5rem;">
+          <button type="button" class="btn btn-secondary" onclick="closeModal('modal-customer')">Hủy</button>
+          <button type="submit" class="btn btn-primary">Lưu Hồ Sơ</button>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <!-- Modal 3: Thêm Dịch Vụ Mới -->
+  <div id="modal-service" class="modal-overlay">
+    <div class="modal-content glass">
+      <div class="modal-header">
+        <div class="modal-title">✂️ Thêm Dịch Vụ Salon</div>
+        <button class="btn-close" onclick="closeModal('modal-service')">&times;</button>
+      </div>
+      <form id="form-service" onsubmit="handleCreateService(event)">
+        <div class="form-group">
+          <label class="form-label">Tên Dịch Vụ:</label>
+          <input type="text" id="modal-svc-name" class="form-control" required placeholder="Uốn tóc phục hồi Collagen...">
+        </div>
+        <div class="form-group">
+          <label class="form-label">Đơn Giá Niêm Yết (VNĐ):</label>
+          <input type="number" id="modal-svc-price" class="form-control" required min="0" step="5000" placeholder="500000">
+        </div>
+        <div class="form-group">
+          <label class="form-label">Thời Gian Thực Hiện (Phút):</label>
+          <input type="number" id="modal-svc-duration" class="form-control" required min="5" step="5" placeholder="60">
+        </div>
+        <div class="form-group">
+          <label class="form-label">Mô Tả Kỹ Thuật:</label>
+          <textarea id="modal-svc-desc" class="form-control" rows="2" placeholder="Quy trình, dưỡng chất sử dụng..."></textarea>
+        </div>
+        <div style="display: flex; justify-content: flex-end; gap: 0.75rem; margin-top: 1.5rem;">
+          <button type="button" class="btn btn-secondary" onclick="closeModal('modal-service')">Hủy</button>
+          <button type="submit" class="btn btn-primary">Lưu Dịch Vụ</button>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <!-- Modal 4: In Phiếu Hóa Đơn (Printable Receipt) -->
+  <div id="modal-receipt" class="modal-overlay">
+    <div class="modal-content glass" style="max-width: 460px; width: 92%; background: #ffffff; color: #1e293b; border-radius: 12px; padding: 1.25rem;">
+      <div id="print-receipt-section" style="font-family: 'Courier New', Courier, monospace; color: #000;">
+        <div style="text-align: center; border-bottom: 2px dashed #94a3b8; padding-bottom: 0.85rem; margin-bottom: 0.85rem;">
+          <h2 style="font-size: 1.35rem; font-weight: 800; color: #0f172a; margin: 0 0 4px 0; text-transform: uppercase; letter-spacing: 0.5px;">SALON HAIR HÀ MINH</h2>
+          <p style="font-size: 0.78rem; color: #475569; margin: 2px 0;">📍 188 Thái Hà, Đống Đa, Hà Nội</p>
+          <p style="font-size: 0.78rem; color: #475569; margin: 2px 0;">☎ Hotline đặt lịch: <strong>090.123.4567</strong></p>
+          <div style="border-top: 1px dashed #cbd5e1; margin: 8px 0 6px 0;"></div>
+          <h3 style="font-size: 1.05rem; font-weight: 800; color: #0f172a; margin: 4px 0; text-transform: uppercase;">PHIẾU THANH TOÁN (RECEIPT)</h3>
+          <p id="receipt-date" style="font-size: 0.75rem; color: #64748b; margin: 2px 0;"></p>
+        </div>
+
+        <div style="font-size: 0.82rem; line-height: 1.7; margin-bottom: 0.75rem; border-bottom: 1px dashed #cbd5e1; padding-bottom: 0.6rem;">
+          <div style="display: flex; justify-content: space-between;">
+            <span><strong>Mã HĐ:</strong> <span id="receipt-code" style="font-weight: 800; color: #0f172a;"></span></span>
+            <span><strong>Lịch hẹn:</strong> <span id="receipt-appt-code" style="font-weight: 700;"></span></span>
+          </div>
+          <div>
+            <strong>Khách hàng:</strong> <span id="receipt-customer" style="font-weight: 700; color: #0f172a;"></span>
+            <span id="receipt-customer-phone" style="color: #64748b; font-size: 0.8rem; margin-left: 4px;"></span>
+          </div>
+          <div style="display: flex; justify-content: space-between;">
+            <span><strong>Stylist chính:</strong> <span id="receipt-stylist" style="font-weight: 600;"></span></span>
+            <span><strong>Thu ngân:</strong> <span id="receipt-cashier">Lễ tân</span></span>
+          </div>
+        </div>
+
+        <table style="width: 100%; border-collapse: collapse; font-size: 0.82rem; margin-bottom: 0.75rem;">
+          <thead>
+            <tr style="border-bottom: 1.5px solid #0f172a; text-align: left;">
+              <th style="padding: 5px 0; width: 62%;">Tên Dịch Vụ</th>
+              <th style="text-align: center; padding: 5px 0; width: 10%;">SL</th>
+              <th style="text-align: right; padding: 5px 0; width: 28%;">Đơn Giá</th>
+            </tr>
+          </thead>
+          <tbody id="receipt-items-tbody"></tbody>
+        </table>
+
+        <div style="border-top: 1.5px solid #0f172a; padding-top: 0.5rem; font-size: 0.85rem; line-height: 1.8;">
+          <div style="display: flex; justify-content: space-between;">
+            <span>Tổng tiền dịch vụ:</span>
+            <strong id="receipt-total">0 đ</strong>
+          </div>
+          <div style="display: flex; justify-content: space-between; color: #dc2626;">
+            <span>Chiết khấu / Giảm giá:</span>
+            <strong id="receipt-discount">-0 đ</strong>
+          </div>
+          <div style="display: flex; justify-content: space-between; font-size: 1.15rem; font-weight: 800; border-top: 2px solid #0f172a; border-bottom: 2px solid #0f172a; padding: 5px 0; margin: 6px 0; color: #0f172a;">
+            <span>THÀNH TIỀN:</span>
+            <span id="receipt-final" style="color: #047857;">0 đ</span>
+          </div>
+          <div style="display: flex; justify-content: space-between; font-size: 0.82rem; margin-top: 4px;">
+            <span>Phương thức:</span>
+            <strong id="receipt-method">Tiền mặt</strong>
+          </div>
+          <div id="receipt-bank-info" style="display: none; font-size: 0.75rem; background: #f8fafc; border: 1px dashed #94a3b8; border-radius: 6px; padding: 6px 8px; margin-top: 6px; color: #334155;">
+            💳 MB Bank: <strong>0901234567</strong> • <em>HA MINH HAIR SALON</em>
+          </div>
+        </div>
+
+        <div style="text-align: center; margin-top: 1rem; border-top: 1px dashed #94a3b8; padding-top: 0.75rem; font-size: 0.75rem; color: #64748b;">
+          <div>✨ <em>Quý khách vui lòng kiểm tra hóa đơn trước khi thanh toán</em> ✨</div>
+          <div style="font-weight: 700; margin-top: 4px; color: #0f172a;">Xin cảm ơn & Hẹn gặp lại Quý khách!</div>
+        </div>
+      </div>
+
+      <div class="receipt-modal-actions" style="display: flex; justify-content: flex-end; gap: 0.75rem; margin-top: 1rem; border-top: 1px solid #e2e8f0; padding-top: 1rem;">
+        <button type="button" class="btn btn-secondary" onclick="closeModal('modal-receipt')">Đóng</button>
+        <button type="button" class="btn btn-primary" onclick="printReceiptSlip()">🖨️ In Phiếu Hóa Đơn</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- ==================================================================== -->
+  <!-- MODAL: AI TÓM TẮT HỒ SƠ 5S CHO THỢ (UC010) & GỢI Ý DỊCH VỤ (UC008) -->
+  <!-- ==================================================================== -->
+  <div id="modal-ai-summary" class="modal-overlay" style="display: none;">
+    <div class="modal-content glass" style="max-width: 640px; width: 92%; padding: 2rem; border-radius: 18px; border: 1px solid var(--border-strong); box-shadow: var(--shadow-xl); background: #161616; max-height: 90vh; display: flex; flex-direction: column;">
+      
+      <!-- Modal Header -->
+      <div style="display: flex; justify-content: space-between; align-items: flex-start; border-bottom: 1px solid var(--border-color); padding-bottom: 1rem; margin-bottom: 1.25rem;">
+        <div style="display: flex; align-items: center; gap: 12px;">
+          <div id="ai-modal-icon" style="width: 44px; height: 44px; border-radius: 12px; background: rgba(216, 86, 39, 0.2); border: 1px solid var(--gold-primary); display: flex; align-items: center; justify-content: center; font-size: 1.5rem;">
+            ⚡
+          </div>
+          <div>
+            <h3 id="ai-modal-title" style="margin: 0; font-size: 1.25rem; font-weight: 800; color: #ffffff;">AI Tóm Tắt 5 Giây Cho Thợ</h3>
+            <div id="ai-modal-subtitle" style="font-size: 0.8rem; color: var(--gold-light); margin-top: 3px;">Hồ Sơ Khách Hàng</div>
+          </div>
+        </div>
+        <button class="btn-close" onclick="closeModal('modal-ai-summary')">&times;</button>
+      </div>
+
+      <!-- Engine & Execution Badge -->
+      <div style="display: flex; justify-content: space-between; align-items: center; background: #1f1f1f; border: 1px solid var(--border-color); border-radius: 8px; padding: 6px 12px; margin-bottom: 1rem; font-size: 0.78rem;">
+        <span id="ai-modal-engine-badge" style="color: var(--accent-emerald); font-weight: 700;">🟢 Live Grounded SQLite & Gemini</span>
+        <span id="ai-modal-latency" style="color: var(--text-muted);">Tốc độ xử lý: ~280ms</span>
+      </div>
+
+      <!-- Modal Body Content -->
+      <div id="ai-modal-body" style="overflow-y: auto; flex: 1; padding: 1.2rem; background: #111111; border: 1px solid var(--border-color); border-radius: 12px; font-size: 0.92rem; line-height: 1.7; color: #e5e7eb; min-height: 180px;">
+      </div>
+
+      <!-- Modal Footer -->
+      <div style="display: flex; justify-content: space-between; align-items: center; margin-top: 1.25rem; border-top: 1px solid var(--border-color); padding-top: 1rem; gap: 0.75rem;">
+        <button type="button" class="btn btn-secondary btn-sm" onclick="copyAISummaryModalText()">📋 Sao Chép Tóm Tắt</button>
+        <button type="button" class="btn btn-primary btn-sm" onclick="closeModal('modal-ai-summary')">Đã Hiểu & Đóng</button>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- ==================================================================== -->
+  <!-- MODAL: CẤU HÌNH & KẾT NỐI TRỢ LÝ AI (GOOGLE GEMINI / SQLITE ENGINE) -->
+  <!-- ==================================================================== -->
+  <div id="modal-ai-config" class="modal-overlay" style="display: none;">
+    <div class="modal-content glass" style="max-width: 580px; width: 92%; padding: 2rem; border-radius: 16px;">
+      <div class="modal-header" style="display: flex; justify-content: space-between; align-items: center; border-bottom: 1px solid var(--border-color); padding-bottom: 1rem; margin-bottom: 1.25rem;">
+        <div style="display: flex; align-items: center; gap: 8px;">
+          <span style="font-size: 1.6rem;">🤖</span>
+          <h3 class="modal-title" style="margin: 0; font-size: 1.25rem;">Cấu Hình & Kết Nối Trợ Lý AI</h3>
+        </div>
+        <button class="btn-close" onclick="closeModal('modal-ai-config')">&times;</button>
+      </div>
+
+      <!-- Current Connection Status -->
+      <div style="background: var(--bg-card-alt); border: 1px solid var(--border-color); border-radius: 10px; padding: 1rem; margin-bottom: 1.25rem;">
+        <div style="font-size: 0.75rem; text-transform: uppercase; color: var(--text-muted); font-weight: 700; margin-bottom: 6px;">Trạng Thái Động Cơ Hiện Tại:</div>
+        <div id="ai-config-current-status">Đang tải...</div>
+      </div>
+
+      <!-- Test Response Box -->
+      <div id="ai-config-test-box" style="display: none; margin-bottom: 1.25rem;"></div>
+
+      <form id="form-ai-config" onsubmit="handleSaveAIConfig(event)">
+        <div class="form-group" style="margin-bottom: 1rem;">
+          <label class="form-label" style="font-weight: 600; font-size: 0.88rem;">
+            🔑 Google Gemini API Key:
+          </label>
+          <input type="password" id="ai-config-gemini-key" class="form-control" placeholder="Nhập Google Gemini API Key (Bắt đầu bằng AIza...)" autocomplete="off">
+          <div style="font-size: 0.75rem; color: var(--text-muted); margin-top: 4px; display: flex; justify-content: space-between; flex-wrap: wrap; gap: 4px;">
+            <span>Nếu để trống, hệ thống sẽ sử dụng <strong>Chuyên Gia Nội Bộ (Grounded SQLite Engine)</strong>.</span>
+            <a href="https://aistudio.google.com/app/apikey" target="_blank" rel="noopener" style="color: var(--gold-light); text-decoration: underline;">Lấy API Key miễn phí ↗</a>
+          </div>
+        </div>
+
+        <div class="form-group" style="margin-bottom: 1.25rem;">
+          <label class="form-label" style="font-weight: 600; font-size: 0.88rem;">
+            🧠 Mô Hình AI (Model):
+          </label>
+          <select id="ai-config-gemini-model" class="form-control">
+            <option value="gemini-1.5-flash">Gemini 1.5 Flash (Tốc độ cao, tối ưu hội thoại & chi phí)</option>
+            <option value="gemini-2.0-flash">Gemini 2.0 Flash (Thế hệ mới, phản hồi tức thì)</option>
+            <option value="gemini-1.5-pro">Gemini 1.5 Pro (Suy luận sâu, phân tích phức tạp)</option>
+          </select>
+        </div>
+
+        <div style="display: flex; gap: 8px; justify-content: flex-end; flex-wrap: wrap; margin-top: 1.5rem; border-top: 1px solid var(--border-color); padding-top: 1.25rem;">
+          <button type="button" class="btn btn-secondary btn-sm" onclick="resetToInternalAIEngine()">
+            🔄 Dùng Chuyên Gia Nội Bộ
+          </button>
+          <button type="button" class="btn btn-secondary btn-sm" onclick="testAIConnection()">
+            ⚡ Thử Nghiệm Kết Nối
+          </button>
+          <button type="submit" id="ai-config-save-btn" class="btn btn-ai btn-sm" style="font-weight: 700;">
+            💾 Lưu Cấu Hình
+          </button>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <!-- ==================================================================== -->
+  <!-- FLOATING AI CHATBOT WIDGET (24/7 ONLINE SALON ADVISOR) -->
+  <!-- ==================================================================== -->
+  <div id="floating-ai-trigger" onclick="toggleAIChatDrawer()" role="button" aria-label="Mở cửa sổ Trợ lý AI Salon" tabindex="0">
+    <div class="ai-trigger-pulse"></div>
+    <div class="ai-trigger-icon">✂️</div>
+    <div class="ai-trigger-content">
+      <div class="ai-trigger-title">Trợ Lý AI Salon</div>
+      <div class="ai-trigger-sub">
+        <span class="ai-trigger-status-dot"></span>
+        <span>Trực tuyến 24/7</span>
+      </div>
+    </div>
+  </div>
+
+  <div id="ai-chat-drawer" role="dialog" aria-label="Cửa sổ Trợ lý AI Salon" aria-modal="false">
+    <!-- Chat Header -->
+    <div class="ai-chat-header">
+      <div class="ai-chat-header-info">
+        <div class="ai-header-avatar">✂️</div>
+        <div>
+          <div class="ai-header-name">Trợ Lý AI Salon Hair Hà Minh</div>
+          <div class="ai-header-status">
+            <span class="ai-status-pulse"></span>
+            <span>Trực tuyến 24/7 • Sẵn sàng tư vấn</span>
+          </div>
+        </div>
+      </div>
+      <div class="ai-header-tools">
+        <button type="button" class="ai-tool-btn" onclick="clearAIChatHistory()" title="Làm mới cuộc trò chuyện" aria-label="Làm mới hội thoại">
+          🧹 Làm mới
+        </button>
+        <button type="button" class="ai-tool-btn close-btn" onclick="toggleAIChatDrawer()" title="Đóng cửa sổ chat" aria-label="Đóng chat">
+          ✕
+        </button>
+      </div>
+    </div>
+
+    <!-- Quick Prompts Chips: Domain-Rich "Vì sao...?" & Key Inquiries -->
+    <div class="ai-quick-prompts-wrapper">
+      <div class="ai-prompts-label">
+        <span>💡 Gợi ý câu hỏi nhanh (Bấm để hỏi ngay):</span>
+      </div>
+      <div class="ai-prompts-scroll">
+        <button type="button" class="ai-chip" onclick="sendQuickPrompt('Vì sao tóc tẩy cấp 8 không được uốn nóng Collagen?')">🔬 Tóc tẩy uốn nóng?</button>
+        <button type="button" class="ai-chip" onclick="sendQuickPrompt('Vì sao sau khi nhuộm Balayage VIP nên bọc Protein tơ tằm?')">🎨 Sau Balayage bọc Protein?</button>
+        <button type="button" class="ai-chip" onclick="sendQuickPrompt('Vì sao mặt tròn nên cắt layer bay mái Curtain thay vì mái bằng?')">💇‍♀️ Mặt tròn cắt kiểu gì?</button>
+        <button type="button" class="ai-chip" onclick="sendQuickPrompt('Vì sao da ngăm undertone ấm nên nhuộm Nâu Tây Balayage thay vì Vàng Bạch Kim?')">🌟 Da ngăm nhuộm màu gì?</button>
+        <button type="button" class="ai-chip" onclick="sendQuickPrompt('Vì sao da đầu bết gàu ngứa rụng tóc cần Scalp Detox?')">🌿 Scalp Detox trị bết gàu?</button>
+        <button type="button" class="ai-chip" onclick="sendQuickPrompt('Cho tôi xem bảng giá dịch vụ niêm yết')">💰 Xem bảng giá CSDL</button>
+        <button type="button" class="ai-chip" onclick="sendQuickPrompt('Hôm nay có thợ nào đang rảnh?')">⏰ Thợ nào đang rảnh?</button>
+        <button type="button" class="ai-chip" onclick="sendQuickPrompt('Vì sao không thể đặt lịch hẹn với thợ Kéo Vàng lúc 14:30?')">🛡️ Xung đột lịch 14:30?</button>
+        <button type="button" class="ai-chip" onclick="sendQuickPrompt('Vì sao hôm nay doanh thu đạt 41.000.000đ?')">📊 Doanh thu hôm nay</button>
+      </div>
+    </div>
+
+    <!-- Messages List -->
+    <div id="ai-chat-messages" class="ai-chat-messages" role="log" aria-live="polite">
+      <div class="chat-message-row bot-row">
+        <div class="chat-avatar bot-avatar">✂️</div>
+        <div class="chat-bubble-ai">
+          <div class="chat-sender-tag">Trợ Lý AI Salon Hair Hà Minh</div>
+          <div class="chat-bubble-body">
+            Xin chào Quý khách! Em là <strong>Trợ lý AI Salon Hair Hà Minh 24/7</strong> 🌟<br><br>
+            Em sẵn sàng hỗ trợ Quý khách:
+            <div class="ai-list-item"><span class="ai-bullet">✦</span> <strong>Tư vấn tạo kiểu & màu nhuộm</strong> tôn nét mặt và tone da.</div>
+            <div class="ai-list-item"><span class="ai-bullet">✦</span> <strong>Khám sức khỏe tóc</strong> & đưa phác đồ phục hồi hư tổn, cháy mủn.</div>
+            <div class="ai-list-item"><span class="ai-bullet">✦</span> <strong>Tra cứu bảng giá, lịch thợ rảnh</strong> và quản lý cuộc hẹn.</div>
+            <br>Quý khách có thể bấm chọn câu hỏi gợi ý phía trên hoặc gõ câu hỏi vào khung bên dưới nhé!
+          </div>
+          <div class="chat-bubble-actions">
+            <button type="button" class="chat-copy-btn" onclick="copyChatText(this)">📋 Sao chép</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Input Footer -->
+    <div class="ai-chat-footer">
+      <form id="ai-chat-form" onsubmit="handleSendAIChat(event)" class="ai-input-wrapper">
+        <input type="text" id="ai-chat-input" class="ai-input-field" placeholder="Hỏi AI về chất tóc, kiểu, màu nhuộm, bảng giá..." autocomplete="off" aria-label="Nội dung câu hỏi cho AI">
+        <button type="submit" id="ai-chat-send-btn" class="ai-send-btn" onclick="handleSendAIChat(event)" title="Gửi tin nhắn" aria-label="Gửi tin nhắn">
+          <span>Gửi</span>
+          <span style="font-size: 1rem;">➤</span>
+        </button>
+      </form>
+      <div class="ai-chat-footnote">
+        <span>⚡ Trợ lý ảo hỗ trợ 24/7 • Bấm Enter để gửi tin</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- TOAST NOTIFICATION CONTAINER -->
+  <div id="toast-container"></div>
+
+  <!-- Script Application Logic -->
+  <script src="/static/js/app.js?v=20261003_aisummary"></script>
+</body>
+</html>

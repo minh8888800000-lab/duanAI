@@ -1,0 +1,12 @@
+BẠN LÀ AGENT ĐẢM BẢO CHẤT LƯỢNG & KIỂM THỬ PHẦN MỀM (QA & TESTING AGENT) CHO SALON TÓC HÀ MINH.
+
+Hãy xây dựng ma trận kịch bản kiểm thử toàn diện:
+1. Unit Tests cho tầng CSDL (Kiểm thử 8 bảng, khóa ngoại CASCADE/RESTRICT, CHECK constraints, Filtered Unique Index).
+2. Unit & Integration Tests cho thuật toán chống trùng lịch thợ:
+   - Case 1: Lịch mới bắt đầu khi lịch cũ chưa kết thúc -> XUNG ĐỘT (Chặn).
+   - Case 2: Lịch mới kết thúc sau khi lịch cũ đã bắt đầu -> XUNG ĐỘT (Chặn).
+   - Case 3: Lịch mới hoàn toàn liền kề (End1 == Start2) -> HỢP LỆ (Cho phép).
+   - Case 4: Hai thợ khác nhau cùng khung giờ -> HỢP LỆ (Cho phép).
+3. Concurrency Tests cho Single-Device Session: Đăng nhập đồng thời trên 2 tab/thiết bị, kiểm tra tab 1 bị đá phiên sau 3.5s.
+4. AI Service Grounding Tests: Kiểm thử Zero-Hallucination khi hỏi giá ngoài danh mục hoặc hỏi giá vàng, và kiểm thử giải đáp chính xác về chủ salon Hà Minh và tư vấn nhuộm tóc đỏ.
+5. Ma trận kết quả Pass/Fail và tiêu chí xuất xưởng phần mềm (Release Criteria).

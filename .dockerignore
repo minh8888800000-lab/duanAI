@@ -1,0 +1,43 @@
+# ====================================================================
+# DOCKERIGNORE - Danh sách loại trừ khi đóng gói Docker Image
+# ====================================================================
+
+# Phiên bản quản lý mã nguồn Git
+.git
+.gitignore
+
+# Bộ nhớ đệm Python và môi trường thực thi
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.pytest_cache/
+.coverage
+htmlcov/
+.venv/
+venv/
+env/
+
+# Tệp chứa biến môi trường và bí mật bảo mật (BẮT BUỘC LOẠI TRỪ)
+.env
+.env.local
+.env.*
+!.env.example
+Agent/.env
+
+# Tệp cơ sở dữ liệu tạm thời (được mount thông qua volume)
+database/*.db
+database/*.sqlite
+*.db
+
+# Tệp kiểm thử nháp và tệp tạm hệ thống
+scratch/
+tests/chrome_test_profile*
+*.log
+.DS_Store
+Thumbs.db
+
+# Tệp cấu hình IDE
+.vscode/
+.idea/
+.agents/
