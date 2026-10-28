@@ -563,18 +563,6 @@
         <button class="btn btn-sm" onclick="handleLogout()" title="Đăng xuất quay về trang chủ khách" style="border: 1.5px solid #ea580c; color: #ea580c; background: #ffffff; font-weight: 700; border-radius: 8px;">
           Đăng Xuất
         </button>
-
-        <button class="btn btn-ai btn-sm" onclick="openAIModal()" style="font-weight: 700;">
-          Trợ Lý AI
-        </button>
-
-        <button id="header-btn-new-appt" class="btn btn-primary btn-sm admin-letan-only" onclick="openNewAppointmentModal()" style="font-weight: 700;">
-          Đặt Lịch
-        </button>
-
-        <button id="header-btn-pos" class="btn btn-emerald btn-sm admin-letan-only" onclick="switchTab('billing')" style="font-weight: 700;">
-          Thu Ngân POS
-        </button>
       </div>
     </header>
 
@@ -852,6 +840,7 @@
  </select>
  </div>
 
+        <div style="display: flex; align-items: center; gap: 0.5rem;">
           <span style="font-size: 0.85rem; color: #78350f; font-weight: 700;">Sắp xếp:</span>
           <select id="filter-sort" class="form-control" style="width: 195px; padding: 0.4rem 0.75rem;" onchange="renderAppointments()">
             <option value="time-asc" selected>Giờ: Sớm nhất trước</option>
