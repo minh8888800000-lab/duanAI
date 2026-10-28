@@ -173,6 +173,7 @@ class TroLyAIService:
                         if parts:
                             text = parts[0].get("text", "").strip()
                             if text:
+                                text = re.sub(r'[\U00010000-\U0010ffff\u2600-\u27bf\u2300-\u23ff\u2b50\ufe0f]', '', text)
                                 return text
                 elif resp.status_code == 429:
                     # Model specific 429: continue to next candidate model
@@ -1087,6 +1088,7 @@ Danh mục dịch vụ salon hiện có:
 
 YÊU CẦU:
 Đóng vai trò Trợ lý AI Salon Tóc thông minh. Hãy phân tích đặc điểm chất tóc trên và đề xuất combo 1-2 dịch vụ phù hợp nhất kèm giải thích ngắn gọn, thuyết phục để Lễ tân/Thợ tư vấn cho khách.
+TUYỆT ĐỐI KHÔNG dùng bất kỳ emoji hay icon biểu tượng nào trong câu trả lời (như hình bóng đèn, cây lá, kéo, ngôi sao). Chỉ dùng văn bản tiếng Việt chuẩn mực, định dạng Markdown tiêu đề, in đậm và gạch đầu dòng.
             """
 
             ai_response = cls._call_gemini(prompt)
@@ -1096,27 +1098,27 @@ YÊU CẦU:
                 tinh_trang_lower = tinh_trang.lower()
                 if "tẩy" in tinh_trang_lower or "bạch kim" in tinh_trang_lower:
                     ai_response = (
-                        f"🌟 **Gợi ý Combo Phục Hồi Khẩn Cấp Cho {ten_khach} (Tóc Tẩy Cấp Cao):**\n"
+                        f"**Gợi ý Combo Phục Hồi Khẩn Cấp Cho {ten_khach} (Tóc Tẩy Cấp Cao):**\n"
                         f"1. **Bọc Protein Tơ Tằm Tái Sinh Tóc Nát (DV011 - 3.200.000đ)**: Khóa ẩm, tái lập lớp biểu bì, chống đứt gãy sau hóa chất tẩy nồng độ cao.\n"
                         f"2. **Cắt Tỉa Tóc Mái & Sấy Phồng Phom Hàn (DV010 - 200.000đ)**: Loại bỏ các ngọn tóc khô giòn, giữ phom bồng bềnh thanh thoát.\n"
-                        f"💡 *Cảnh báo kỹ thuật*: Tuyệt đối KHÔNG sử dụng nhiệt độ máy uốn >120°C trên nền tóc này!"
+                        f"*Cảnh báo kỹ thuật*: Tuyệt đối KHÔNG sử dụng nhiệt độ máy uốn >120°C trên nền tóc này!"
                     )
                 elif "khô" in tinh_trang_lower or "xơ" in tinh_trang_lower or "cháy" in tinh_trang_lower:
                     ai_response = (
-                        f"🌟 **Gợi ý Combo Phục Hồi Chuyên Sâu Cho {ten_khach}:**\n"
+                        f"**Gợi ý Combo Phục Hồi Chuyên Sâu Cho {ten_khach}:**\n"
                         f"1. **Cấy Phục Hồi Cấu Trúc Nano Keratin VIP (DV005 - 2.200.000đ)**: Tái tạo tầng biểu bì tóc, khóa dưỡng chất giúp sợi tóc bóng mượt suốt 3-5 tháng.\n"
                         f"2. **Cắt Tóc Tạo Kiểu Master Stylist (DV001 - 350.000đ)**: Tạo phom layer bay lơi tôn dáng khuôn mặt và loại bỏ ngọn tóc chẻ.\n"
-                        f"💡 *Lời khuyên tư vấn*: Khuyên khách dùng tinh dầu dưỡng Argan và sấy mát tại nhà."
+                        f"*Lời khuyên tư vấn*: Khuyên khách dùng tinh dầu dưỡng Argan và sấy mát tại nhà."
                     )
                 elif "dầu" in tinh_trang_lower or "gàu" in tinh_trang_lower or "bết" in tinh_trang_lower:
                     ai_response = (
-                        f"🌿 **Gợi ý Liệu Trình Da Đầu Cho {ten_khach}:**\n"
+                        f"**Gợi ý Liệu Trình Da Đầu Cho {ten_khach}:**\n"
                         f"1. **Liệu Trình Thải Độc Scalp Detox (DV012 - 1.200.000đ)**: Giải phóng bã nhờn nang tóc, triệt tiêu nấm ngứa, cân bằng pH da đầu.\n"
                         f"2. **Gội Đầu Dưỡng Sinh Hoàng Cung 24 Vị (DV018 - 450.000đ)**: Massage bấm huyệt cổ vai gáy, đả thông 12 đường kinh lạc thư giãn tuyệt đối."
                     )
                 else:
                     ai_response = (
-                        f"✂️ **Gợi ý Phong Cách Đẳng Cấp Cho {ten_khach}:**\n"
+                        f"**Gợi ý Phong Cách Đẳng Cấp Cho {ten_khach}:**\n"
                         f"1. **Nhuộm Balayage / Ombre Thiết Kế VIP (DV003 - 2.800.000đ)**: Kỹ thuật loang màu nghệ thuật tôn sáng 2 tone da châu Á.\n"
                         f"2. **Uốn Sóng Bung Collagen Nano VIP (DV002 - 1.850.000đ)**: Tạo độ phồng tự nhiên bồng bềnh, giữ nếp 6-8 tháng."
                     )
