@@ -149,30 +149,29 @@ function closeModal(modalId) {
 }
 
 function showToast(message, type = 'info') {
- let toastContainer = document.getElementById('toast-container');
- if (!toastContainer) {
- toastContainer = document.createElement('div');
- toastContainer.id = 'toast-container';
- toastContainer.style.cssText = 'position: fixed; top: 20px; right: 20px; z-index: 99999; display: flex; flex-direction: column; gap: 10px; max-width: 380px; pointer-events: none;';
- document.body.appendChild(toastContainer);
- }
- const toast = document.createElement('div');
- toast.style.pointerEvents = 'auto';
- const bgColors = {
- success: 'linear-gradient(135deg, #065f46, #047857)',
- error: 'linear-gradient(135deg, #991b1b, #b91c1c)',
- warning: 'linear-gradient(135deg, #92400e, #b45309)',
- info: 'linear-gradient(135deg, #1e3a8a, #2563eb)'
- };
- toast.style.cssText = `background: ${bgColors[type] || bgColors.info}; color: white; padding: 12px 18px; border-radius: 8px; box-shadow: 0 8px 24px rgba(0,0,0,0.3); font-size: 0.88rem; display: flex; align-items: center; justify-content: space-between; gap: 12px; animation: slideIn 0.3s ease; border: 1px solid rgba(255,255,255,0.2);`;
- const icon = type === 'success' ? '' : (type === 'error' ? '' : (type === 'warning' ? '️' : 'ℹ️'));
- toast.innerHTML = `<span><strong>${icon}</strong> ${message}</span><button onclick="this.parentElement.remove()" style="background:none;border:none;color:white;cursor:pointer;font-size:1.1rem;line-height:1;margin-left:8px;">×</button>`;
- toastContainer.appendChild(toast);
- setTimeout(() => {
- toast.style.opacity = '0';
- toast.style.transition = 'opacity 0.4s ease';
- setTimeout(() => toast.remove(), 400);
- }, 3500);
+  let toastContainer = document.getElementById('toast-container');
+  if (!toastContainer) {
+    toastContainer = document.createElement('div');
+    toastContainer.id = 'toast-container';
+    toastContainer.style.cssText = 'position: fixed; bottom: 24px; right: 24px; z-index: 99999; display: flex; flex-direction: column; gap: 10px; max-width: 440px; pointer-events: none;';
+    document.body.appendChild(toastContainer);
+  }
+  const toast = document.createElement('div');
+  toast.style.pointerEvents = 'auto';
+  const bgColors = {
+    success: 'linear-gradient(135deg, #1e3a8a, #2563eb)',
+    error: 'linear-gradient(135deg, #991b1b, #b91c1c)',
+    warning: 'linear-gradient(135deg, #c2410c, #ea580c)',
+    info: 'linear-gradient(135deg, #1e3a8a, #2563eb)'
+  };
+  toast.style.cssText = `background: ${bgColors[type] || bgColors.info}; color: white; padding: 12px 18px; border-radius: 8px; box-shadow: 0 8px 24px rgba(0,0,0,0.3); font-size: 0.88rem; font-weight: 600; display: flex; align-items: center; justify-content: space-between; gap: 12px; animation: slideIn 0.3s ease; border: 1px solid rgba(255,255,255,0.25);`;
+  toast.innerHTML = `<span>${message}</span><button onclick="this.parentElement.remove()" style="background:none;border:none;color:white;cursor:pointer;font-size:1.1rem;line-height:1;margin-left:8px;" title="Đóng">✕</button>`;
+  toastContainer.appendChild(toast);
+  setTimeout(() => {
+    toast.style.opacity = '0';
+    toast.style.transition = 'opacity 0.4s ease';
+    setTimeout(() => toast.remove(), 400);
+  }, 3500);
 }
 
 
@@ -310,69 +309,73 @@ async function performLogin(username, password) {
  localStorage.setItem('salon_auth_token', data.token);
  localStorage.setItem('salon_user', JSON.stringify(data.user));
 
- closeModal('modal-login');
- showToast(`Đăng nhập thành công: ${state.currentUser.fullName} (${getRoleDisplay(state.currentRole)})`, 'success');
- applyAuthState();
- startSessionHeartbeat();
- loadAppointments();
- } else {
- if (errBox) {
- errBox.innerText = data.message || 'Sai tên đăng nhập hoặc mật khẩu.';
- errBox.style.display = 'block';
- } else {
- showToast(data.message || 'Đăng nhập không thành công', 'error');
- }
- }
- } catch (err) {
- if (errBox) {
- errBox.innerText = 'Lỗi kết nối máy chủ.';
- errBox.style.display = 'block';
- }
- }
+  closeModal('modal-login');
+  showToast(`Đăng nhập thành công: ${state.currentUser.fullName} (${getRoleDisplay(state.currentRole)})`, 'success');
+  applyAuthState();
+  startSessionHeartbeat();
+  if (state.currentRole === 'Admin') {
+    switchTab('dashboard');
+  } else {
+    switchTab('appointments');
+  }
+  } else {
+  if (errBox) {
+  errBox.innerText = data.message || 'Sai tên đăng nhập hoặc mật khẩu.';
+  errBox.style.display = 'block';
+  } else {
+  showToast(data.message || 'Đăng nhập không thành công', 'error');
+  }
+  }
+  } catch (err) {
+  if (errBox) {
+  errBox.innerText = 'Lỗi kết nối máy chủ.';
+  errBox.style.display = 'block';
+  }
+  }
 }
 
 function togglePasswordVisibility(inputId, btn) {
- const el = document.getElementById(inputId);
- if (!el) return;
- if (el.type === 'password') {
- el.type = 'text';
- if (btn) btn.innerText = '';
- } else {
- el.type = 'password';
- if (btn) btn.innerText = '️';
- }
+  const el = document.getElementById(inputId);
+  if (!el) return;
+  if (el.type === 'password') {
+    el.type = 'text';
+    if (btn) btn.innerText = 'Ẩn';
+  } else {
+    el.type = 'password';
+    if (btn) btn.innerText = 'Hiện';
+  }
 }
 
 async function handleLogout() {
- stopSessionHeartbeat();
- try {
- if (state.authToken) {
- await fetch('/api/auth/logout', {
- method: 'POST',
- headers: {
- 'Authorization': `Bearer ${state.authToken}`,
- 'Content-Type': 'application/json'
- }
- });
- }
- } catch (e) {
- // ignore
- }
+  stopSessionHeartbeat();
+  try {
+  if (state.authToken) {
+  await fetch('/api/auth/logout', {
+  method: 'POST',
+  headers: {
+  'Authorization': `Bearer ${state.authToken}`,
+  'Content-Type': 'application/json'
+  }
+  });
+  }
+  } catch (e) {
+  // ignore
+  }
 
- state.authToken = null;
- state.currentRole = null;
- state.currentUser = null;
- localStorage.removeItem('salon_auth_token');
- localStorage.removeItem('salon_user');
- showToast('Đã đăng xuất. Quay về Trang Chủ Salon.', 'info');
- applyAuthState();
+  state.authToken = null;
+  state.currentRole = null;
+  state.currentUser = null;
+  localStorage.removeItem('salon_auth_token');
+  localStorage.removeItem('salon_user');
+  showToast('Đã đăng xuất. Quay về Trang Chủ Salon.', 'info');
+  applyAuthState();
 }
 
 function getRoleDisplay(role) {
- if (role === 'Admin') return ' Quản Lý (Admin)';
- if (role === 'LeTan') return ' Lễ Tân';
- if (role === 'Tho') return '️ Thợ Làm Tóc';
- return 'Khách Hàng';
+  if (role === 'Admin') return 'Quản Lý (Admin)';
+  if (role === 'LeTan') return 'Lễ Tân';
+  if (role === 'Tho') return 'Thợ Làm Tóc';
+  return 'Khách Hàng';
 }
 
 function applyAuthState() {
@@ -399,11 +402,12 @@ function applyAuthState() {
  // Update Header user info
  const nameEl = document.getElementById('current-user-name');
  if (nameEl) nameEl.innerText = state.currentUser.fullName;
- const roleBadge = document.getElementById('current-user-role');
- if (roleBadge) {
- roleBadge.innerText = state.currentRole === 'Admin' ? 'Admin' : (state.currentRole === 'LeTan' ? 'Lễ Tân' : 'Thợ Làm Tóc');
- roleBadge.className = `badge ${state.currentRole === 'Admin' ? 'badge-warning' : (state.currentRole === 'LeTan' ? 'badge-info' : 'badge-primary')}`;
- }
+  const roleBadge = document.getElementById('current-user-role');
+  if (roleBadge) {
+    roleBadge.innerText = state.currentRole === 'Admin' ? 'Admin' : (state.currentRole === 'LeTan' ? 'Lễ Tân' : 'Thợ Làm Tóc');
+    roleBadge.className = 'badge';
+    roleBadge.style.cssText = 'margin-left: 6px; background: #ea580c !important; color: #ffffff !important; font-weight: 800; border: none; padding: 3px 10px; font-size: 0.75rem; border-radius: 999px;';
+  }
 
  // Update Quick Switch buttons active state
  document.querySelectorAll('.role-badge-group .role-btn').forEach(btn => {
@@ -2218,7 +2222,7 @@ async function quickAISuggest(customerId) {
  iconEl.style.borderColor = 'rgba(168, 85, 247, 0.8)';
  }
  const titleEl = document.getElementById('ai-modal-title');
- if (titleEl) titleEl.innerText = 'AI Gợi Ý Dịch Vụ & Combo Cá Nhân Hóa (UC008)';
+ if (titleEl) titleEl.innerText = 'AI Gợi Ý Dịch Vụ & Combo Cá Nhân Hóa';
 
  const subEl = document.getElementById('ai-modal-subtitle');
  if (subEl) subEl.innerText = `${cust.HoTen} (${cust.MaKhachHang}) • SĐT: ${cust.SoDienThoai || 'Chưa lưu'}`;
@@ -2234,7 +2238,7 @@ async function quickAISuggest(customerId) {
  bodyEl.innerHTML = `
  <div style="text-align: center; padding: 2.5rem 1rem;">
  <div style="font-size: 2.8rem; margin-bottom: 0.85rem; animation: pulse 1.2s infinite ease-in-out;"></div>
- <div style="font-size: 1.05rem; font-weight: 700; color: #c084fc;">Đang phân tích chất tóc & đề xuất combo tối ưu...</div>
+ <div style="font-size: 1.05rem; font-weight: 700; color: #ea580c; font-weight: 700;">Đang phân tích chất tóc & đề xuất combo tối ưu...</div>
  <div style="font-size: 0.82rem; color: var(--text-muted); margin-top: 6px;">Dữ liệu bảng giá niêm yết CSDL Salon Hair Hà Minh</div>
  </div>
  `;
@@ -2253,14 +2257,15 @@ async function quickAISuggest(customerId) {
  if (badgeEl) badgeEl.innerHTML = ` <strong>${data.model || 'Gemini 3.8 Flash'}</strong> (Live Grounded SQLite)`;
  if (latencyEl) latencyEl.innerText = `️ ${data.elapsed_ms || 210} ms`;
 
- const formattedHtml = data.suggestion
+ const cleanSuggestion = (data.suggestion || '').replace(/[\u{1F300}-\u{1FAFF}\u{2600}-\u{27BF}\u{FE00}-\u{FE0F}]/gu, '');
+  const formattedHtml = cleanSuggestion
  .replace(/\*\*(.*?)\*\*/g, '<strong>$1</strong>')
  .split('\n')
  .map(line => {
  line = line.trim();
  if (!line) return '<div style="height: 8px;"></div>';
  if (line.startsWith('• ') || line.startsWith('- ')) {
- return `<div style="display: flex; gap: 8px; margin-bottom: 8px; align-items: flex-start;"><span style="color: #c084fc;"></span><div>${line.substring(2)}</div></div>`;
+ return `<div style="display: flex; gap: 8px; margin-bottom: 8px; align-items: flex-start;"><span style="color: #ea580c; font-weight: 700;"></span><div>${line.substring(2)}</div></div>`;
  }
  return `<div style="margin-bottom: 6px;">${line}</div>`;
  })
@@ -2294,7 +2299,7 @@ async function quickAISummary(customerId) {
  iconEl.style.borderColor = 'var(--gold-primary)';
  }
  const titleEl = document.getElementById('ai-modal-title');
- if (titleEl) titleEl.innerText = 'AI Tóm Tắt 5 Giây Cho Thợ (UC010)';
+ if (titleEl) titleEl.innerText = 'AI Tóm Tắt 5 Giây Cho Thợ';
  
  const subEl = document.getElementById('ai-modal-subtitle');
  if (subEl) subEl.innerText = `${cust.HoTen} (${cust.MaKhachHang}) • SĐT: ${cust.SoDienThoai || 'Chưa lưu'}`;
@@ -2329,7 +2334,8 @@ async function quickAISummary(customerId) {
  if (badgeEl) badgeEl.innerHTML = ` <strong>${data.model || 'Gemini 3.8 Flash'}</strong> (Live Grounded SQLite)`;
  if (latencyEl) latencyEl.innerText = `️ ${data.elapsed_ms || 180} ms`;
 
- const formattedHtml = data.summary
+ const cleanSummary = (data.summary || '').replace(/[\u{1F300}-\u{1FAFF}\u{2600}-\u{27BF}\u{FE00}-\u{FE0F}]/gu, '');
+  const formattedHtml = cleanSummary
  .replace(/\*\*(.*?)\*\*/g, '<strong>$1</strong>')
  .split('\n')
  .map(line => {
@@ -4126,7 +4132,8 @@ async function handleSendResetOTP() {
 
  const otpInput = document.getElementById('forgot-otp-code');
  if (otpInput) {
- otpInput.value = data.otp_demo || '';
+ otpInput.value = '';
+ otpInput.placeholder = 'Nhập 6 số mã OTP...';
  otpInput.focus();
  }
 
@@ -4228,4 +4235,65 @@ async function handleVerifyOTPAndResetPassword(e) {
  errBox.style.display = 'block';
  }
  }
+}
+
+
+// ====================================================================
+// DYNAMIC DATE FILTERS INITIALIZATION (TODAY, YESTERDAY, TOMORROW)
+// ====================================================================
+function initDynamicDateFilters() {
+  try {
+    const now = new Date();
+    const formatYMD = d => {
+      const y = d.getFullYear();
+      const m = String(d.getMonth() + 1).padStart(2, '0');
+      const day = String(d.getDate()).padStart(2, '0');
+      return `${y}-${m}-${day}`;
+    };
+    const formatDM = d => {
+      const day = String(d.getDate()).padStart(2, '0');
+      const m = String(d.getMonth() + 1).padStart(2, '0');
+      return `${day}/${m}`;
+    };
+
+    const today = new Date(now);
+    const tomorrow = new Date(now);
+    tomorrow.setDate(tomorrow.getDate() + 1);
+    const yesterday = new Date(now);
+    yesterday.setDate(yesterday.getDate() - 1);
+
+    const todayYMD = formatYMD(today);
+    const tomorrowYMD = formatYMD(tomorrow);
+    const yesterdayYMD = formatYMD(yesterday);
+
+    // Update appointment date filter
+    const filterDateSelect = document.getElementById('filter-date');
+    if (filterDateSelect) {
+      filterDateSelect.innerHTML = `
+        <option value="${todayYMD}" selected>Hôm nay (${formatDM(today)})</option>
+        <option value="${tomorrowYMD}">Ngày mai (${formatDM(tomorrow)})</option>
+        <option value="${yesterdayYMD}">Hôm qua (${formatDM(yesterday)})</option>
+        <option value="">Tất cả các ngày</option>
+        <option value="custom">Chọn ngày khác...</option>
+      `;
+      filterDateSelect.value = todayYMD;
+    }
+
+    // Update dashboard default date inputs (First of month to today)
+    const firstDayOfMonth = new Date(today.getFullYear(), today.getMonth(), 1);
+    const firstDayYMD = formatYMD(firstDayOfMonth);
+
+    const repStart = document.getElementById('report-start-date');
+    const repEnd = document.getElementById('report-end-date');
+    if (repStart && !repStart.value) repStart.value = firstDayYMD;
+    if (repEnd && !repEnd.value) repEnd.value = todayYMD;
+
+    // Update report ledger default date inputs
+    const repPageStart = document.getElementById('report-page-start-date');
+    const repPageEnd = document.getElementById('report-page-end-date');
+    if (repPageStart && !repPageStart.value) repPageStart.value = firstDayYMD;
+    if (repPageEnd && !repPageEnd.value) repPageEnd.value = todayYMD;
+  } catch (err) {
+    console.error("Error initializing dynamic date filters:", err);
+  }
 }

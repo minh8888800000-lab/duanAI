@@ -23,11 +23,11 @@
     <!-- TOP ANNOUNCEMENT & CONTACT BAR -->
     <div class="barber-topbar">
       <div class="barber-topbar-left">
-        <span class="topbar-icon">📍</span>
+        
         <span>188 Thái Hà, Đống Đa, Hà Nội</span>
       </div>
       <div class="barber-topbar-right">
-        <span class="topbar-icon">📞</span>
+        
         <span>Hotline VIP: <strong>090.123.4567</strong></span>
       </div>
     </div>
@@ -54,14 +54,11 @@
       </nav>
 
       <div class="barber-header-actions">
-        <button type="button" class="barber-search-btn" onclick="scrollToGuestServicesSearch()" title="Tìm kiếm dịch vụ" style="background: #fff7ed !important; border: 1.5px solid #fed7aa !important; color: #ea580c !important;">
-          🔍
-        </button>
         <button type="button" class="btn-barber-book" onclick="scrollToGuestBooking()" style="background: linear-gradient(135deg, #ea580c 0%, #f59e0b 100%) !important; color: #ffffff !important; border: none !important; font-weight: 800 !important; border-radius: 8px; padding: 0.65rem 1.4rem; box-shadow: 0 4px 15px rgba(234, 88, 12, 0.35) !important;">
           ĐẶT LỊCH HẸN
         </button>
         <button type="button" class="btn-barber-staff" onclick="openLoginModal()" title="Cổng đăng nhập nhân sự nội bộ" style="background: #ffffff !important; color: #ea580c !important; border: 1.5px solid #fed7aa !important; font-weight: 700; border-radius: 8px; padding: 0.6rem 1rem;">
-          🔐 Đăng Nhập
+          Đăng Nhập
         </button>
       </div>
     </header>
@@ -92,7 +89,7 @@
                 Bảng Giá Dịch Vụ
               </a>
               <button type="button" class="btn-hero-ai" onclick="toggleAIChatDrawer()" style="background: linear-gradient(135deg, #ea580c 0%, #f59e0b 100%) !important; color: #ffffff !important; font-weight: 800 !important; padding: 0.55rem 1.3rem !important; border-radius: 8px !important; border: none !important; box-shadow: 0 4px 15px rgba(234, 88, 12, 0.3) !important; font-size: 0.86rem; cursor: pointer; display: inline-flex; align-items: center;">
-                ✨ Trợ Lý AI Tư Vấn
+                Trợ Lý AI Tư Vấn
               </button>
             </div>
           </div>
@@ -120,7 +117,7 @@
                 Về Chúng Tôi
               </a>
               <button type="button" class="btn-hero-ai" onclick="toggleAIChatDrawer()" style="background: linear-gradient(135deg, #ea580c 0%, #f59e0b 100%) !important; color: #ffffff !important; font-weight: 800 !important; padding: 0.55rem 1.3rem !important; border-radius: 8px !important; border: none !important; box-shadow: 0 4px 15px rgba(234, 88, 12, 0.3) !important; font-size: 0.86rem; cursor: pointer; display: inline-flex; align-items: center;">
-                ✨ Trợ Lý AI Tư Vấn
+                Trợ Lý AI Tư Vấn
               </button>
             </div>
           </div>
@@ -214,7 +211,7 @@
               <p class="highlight-card-desc">Fade, Taper, Pompadour sắc nét định hình góc cạnh khuôn mặt chuẩn tỷ lệ vàng.</p>
               <div class="highlight-card-footer">
                 <span class="highlight-card-price">120.000 đ</span>
-                <span class="highlight-card-btn">Đặt Ngay ➔</span>
+                <span class="highlight-card-btn">Đặt Ngay</span>
               </div>
             </div>
           </div>
@@ -230,7 +227,7 @@
               <p class="highlight-card-desc">Ủ khăn nóng thảo mộc 100%, bọt cạo mịn màng và cạo lưỡi lam êm ái thư giãn.</p>
               <div class="highlight-card-footer">
                 <span class="highlight-card-price">80.000 đ</span>
-                <span class="highlight-card-btn">Đặt Ngay ➔</span>
+                <span class="highlight-card-btn">Đặt Ngay</span>
               </div>
             </div>
           </div>
@@ -246,7 +243,7 @@
               <p class="highlight-card-desc">Sấy phồng tạo phom tự nhiên, vuốt pomade/clay chính hãng giữ nếp bền đẹp 24h.</p>
               <div class="highlight-card-footer">
                 <span class="highlight-card-price">50.000 đ</span>
-                <span class="highlight-card-btn">Đặt Ngay ➔</span>
+                <span class="highlight-card-btn">Đặt Ngay</span>
               </div>
             </div>
           </div>
@@ -262,7 +259,7 @@
               <p class="highlight-card-desc">Gội dưỡng sinh tinh dầu bạc hà bưởi, bấm huyệt vai gáy thư thái sảng khoái.</p>
               <div class="highlight-card-footer">
                 <span class="highlight-card-price">70.000 đ</span>
-                <span class="highlight-card-btn">Đặt Ngay ➔</span>
+                <span class="highlight-card-btn">Đặt Ngay</span>
               </div>
             </div>
           </div>
@@ -283,12 +280,12 @@
 
         <!-- Service Filter Chips -->
         <div class="barber-filter-chips">
-          <button type="button" class="pos-cat-btn active" onclick="filterGuestServices('', this)">🌟 Tất Cả Dịch Vụ</button>
-          <button type="button" class="pos-cat-btn" onclick="filterGuestServices('Cắt', this)">✂️ Cắt &amp; Cạo Viền</button>
-          <button type="button" class="pos-cat-btn" onclick="filterGuestServices('Uốn', this)">🌀 Uốn Texture &amp; Phồng</button>
-          <button type="button" class="pos-cat-btn" onclick="filterGuestServices('Nhuộm', this)">🎨 Nhuộm &amp; Tẩy Màu</button>
-          <button type="button" class="pos-cat-btn" onclick="filterGuestServices('Phục hồi', this)">🧬 Phục Hồi Keratin</button>
-          <button type="button" class="pos-cat-btn" onclick="filterGuestServices('Gội', this)">💆 Gội &amp; Massage</button>
+          <button type="button" class="pos-cat-btn active" onclick="filterGuestServices('', this)">Tất Cả Dịch Vụ</button>
+          <button type="button" class="pos-cat-btn" onclick="filterGuestServices('Cắt', this)">Cắt &amp; Cạo Viền</button>
+          <button type="button" class="pos-cat-btn" onclick="filterGuestServices('Uốn', this)">Uốn Texture &amp; Phồng</button>
+          <button type="button" class="pos-cat-btn" onclick="filterGuestServices('Nhuộm', this)">Nhuộm &amp; Tẩy Màu</button>
+          <button type="button" class="pos-cat-btn" onclick="filterGuestServices('Phục hồi', this)">Phục Hồi Keratin</button>
+          <button type="button" class="pos-cat-btn" onclick="filterGuestServices('Gội', this)">Gội &amp; Massage</button>
         </div>
 
         <!-- Guest Services Catalog Grid (Dynamic) -->
@@ -331,31 +328,31 @@
             
             <div class="booking-grid-2">
               <div class="form-group">
-                <label class="form-label">👤 Họ và Tên Quý Khách (*):</label>
+                <label class="form-label">Họ và Tên Quý Khách (*):</label>
                 <input type="text" id="guest-book-name" class="form-control barber-input" placeholder="Ví dụ: Nguyễn Văn Nam" required>
               </div>
               <div class="form-group">
-                <label class="form-label">📞 Số Điện Thoại Nhận Tin Nhắc Lịch (*):</label>
+                <label class="form-label">Số Điện Thoại Nhận Tin Nhắc Lịch (*):</label>
                 <input type="tel" id="guest-book-phone" class="form-control barber-input" placeholder="Ví dụ: 0909123456" required>
               </div>
             </div>
 
             <div class="booking-grid-2">
               <div class="form-group">
-                <label class="form-label">✂️ Stylist / Thợ Phụ Trách Mong Muốn:</label>
+                <label class="form-label">Stylist / Thợ Phụ Trách Mong Muốn:</label>
                 <select id="guest-book-stylist" class="form-control barber-select">
-                  <option value="auto">✨ Salon Tự Động Xếp Thợ Đang Rảnh</option>
+                  <option value="auto">Salon Tự Động Xếp Thợ Đang Rảnh</option>
                 </select>
               </div>
               <div class="form-group">
-                <label class="form-label">🕒 Ngày & Giờ Hẹn Đến Tiệm (*):</label>
+                <label class="form-label"> Ngày & Giờ Hẹn Đến Tiệm (*):</label>
                 <input type="datetime-local" id="guest-book-datetime" class="form-control barber-input" required>
               </div>
             </div>
 
             <!-- Quick Time Slot Chips for convenience -->
             <div class="quick-time-section">
-              <span class="quick-time-label">⚡ Chọn nhanh khung giờ hôm nay:</span>
+              <span class="quick-time-label">Chọn nhanh khung giờ hôm nay:</span>
               <div class="quick-time-chips">
                 <button type="button" class="time-chip" onclick="setQuickTimeSlot('09:00')">09:00</button>
                 <button type="button" class="time-chip" onclick="setQuickTimeSlot('10:30')">10:30</button>
@@ -371,7 +368,7 @@
             <!-- Services Checkboxes for Guest -->
             <div class="form-group" style="margin-bottom: 1.5rem;">
               <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 0.6rem;">
-                <label class="form-label" style="margin: 0;">💈 Chọn Các Dịch Vụ Muốn Làm (*):</label>
+                <label class="form-label" style="margin: 0;">Chọn Các Dịch Vụ Muốn Làm (*):</label>
                 <span style="font-size: 0.8rem; color: #ff9e58; font-weight: 600;">Hệ thống tự động tính thời gian & giá</span>
               </div>
               
@@ -394,20 +391,20 @@
               </div>
               
               <div class="barber-calc-box">
-                <div>⏱️ Thời gian dự kiến: <strong id="guest-book-calc-time" style="color: #38bdf8; font-size: 1.1rem;">0 phút</strong></div>
-                <div>💰 Chi phí niêm yết: <strong id="guest-book-calc-price" style="color: #ff9e58; font-size: 1.25rem;">0 đ</strong></div>
+                <div>Thời gian dự kiến: <strong id="guest-book-calc-time" style="color: #38bdf8; font-size: 1.1rem;">0 phút</strong></div>
+                <div>Chi phí niêm yết: <strong id="guest-book-calc-price" style="color: #ff9e58; font-size: 1.25rem;">0 đ</strong></div>
               </div>
             </div>
 
             <div class="form-group" style="margin-bottom: 1.5rem;">
-              <label class="form-label">📝 Ghi Chú Riêng (Yêu cầu kiểu tóc, độ phồng, cạo râu...):</label>
+              <label class="form-label">Ghi Chú Riêng (Yêu cầu kiểu tóc, độ phồng, cạo râu...):</label>
               <textarea id="guest-book-notes" class="form-control barber-input" rows="2" placeholder="Ví dụ: Cắt High Fade sát chân, tỉa râu quai nón, da đầu nhạy cảm..."></textarea>
             </div>
 
             <div id="guest-book-alert" style="display: none; padding: 0.9rem; border-radius: 8px; margin-bottom: 1.25rem; font-size: 0.9rem;"></div>
 
             <button type="submit" class="btn-barber-submit">
-              🚀 XÁC NHẬN ĐẶT LỊCH HẸN TRỰC TUYẾN
+              XÁC NHẬN ĐẶT LỊCH HẸN TRỰC TUYẾN
             </button>
           </form>
         </div>
@@ -419,7 +416,7 @@
     <section id="guest-lookup-section" class="barber-lookup-section" style="background: #fffaf5 !important; padding: 4.5rem 1.5rem; border-top: 1px solid #fed7aa;">
       <div class="barber-container" style="max-width: 720px;">
         <div class="barber-lookup-card" style="background: #ffffff !important; border: 1.5px solid #fed7aa !important; border-radius: 20px; padding: 2.5rem; text-align: center; box-shadow: 0 10px 30px rgba(67, 20, 7, 0.06);">
-          <div style="font-size: 2.2rem; margin-bottom: 0.5rem;">🔍</div>
+          <div style="font-size: 2.2rem; margin-bottom: 0.5rem;"></div>
           <h3 style="font-size: 1.45rem; font-weight: 800; color: #0f172a !important; margin-bottom: 0.5rem;">Tra Cứu Lịch Hẹn Của Bạn</h3>
           <p style="color: #475569 !important; font-size: 0.92rem; margin-bottom: 1.4rem; font-weight: 500;">Nhập số điện thoại đã đăng ký để kiểm tra trạng thái lịch hẹn và thợ phụ trách.</p>
           <div style="display: flex; gap: 0.75rem; justify-content: center; flex-wrap: wrap;">
@@ -461,21 +458,21 @@
             <div class="footer-heading" style="font-size: 0.95rem; font-weight: 800; text-transform: uppercase; letter-spacing: 1.2px; color: #0f172a !important; margin-bottom: 1.25rem;">Hệ Thống Trụ Sở &amp; Cơ Sở</div>
             <div class="footer-contact-list" style="display: flex; flex-direction: column; gap: 1.1rem;">
               <div class="contact-item" style="display: flex; align-items: flex-start; gap: 10px; font-size: 0.9rem; line-height: 1.6; color: #334155 !important;">
-                <span class="c-icon" style="color: #ea580c; font-size: 1.15rem;">📍</span>
+                <span class="c-icon" style="color: #ea580c; font-size: 1.15rem;"></span>
                 <div>
                   <strong style="color: #0f172a !important;">Trụ Sở Chính (Hà Nội):</strong><br>
                   188 Thái Hà, Đống Đa, TP. Hà Nội
                 </div>
               </div>
               <div class="contact-item" style="display: flex; align-items: flex-start; gap: 10px; font-size: 0.9rem; line-height: 1.6; color: #334155 !important;">
-                <span class="c-icon" style="color: #ea580c; font-size: 1.15rem;">📍</span>
+                <span class="c-icon" style="color: #ea580c; font-size: 1.15rem;"></span>
                 <div>
                   <strong style="color: #0f172a !important;">Cơ sở 2 (Cầu Giấy):</strong><br>
                   26 Trần Thái Tông, Cầu Giấy, TP. Hà Nội
                 </div>
               </div>
               <div class="contact-item" style="display: flex; align-items: flex-start; gap: 10px; font-size: 0.9rem; line-height: 1.6; color: #334155 !important;">
-                <span class="c-icon" style="color: #ea580c; font-size: 1.15rem;">📍</span>
+                <span class="c-icon" style="color: #ea580c; font-size: 1.15rem;"></span>
                 <div>
                   <strong style="color: #0f172a !important;">Cơ sở 3 (TP.HCM):</strong><br>
                   188 Võ Văn Ngân, TP. Thủ Đức, TP. Hồ Chí Minh
@@ -489,14 +486,14 @@
             <div class="footer-heading" style="font-size: 0.95rem; font-weight: 800; text-transform: uppercase; letter-spacing: 1.2px; color: #0f172a !important; margin-bottom: 1.25rem;">Hotline &amp; Giờ Mở Cửa</div>
             <div class="footer-contact-list" style="display: flex; flex-direction: column; gap: 1.1rem;">
               <div class="contact-item" style="display: flex; align-items: flex-start; gap: 10px; font-size: 0.9rem; line-height: 1.6; color: #334155 !important;">
-                <span class="c-icon" style="color: #ea580c; font-size: 1.15rem;">📞</span>
+                <span class="c-icon" style="color: #ea580c; font-size: 1.15rem;"></span>
                 <div>
                   <strong style="color: #0f172a !important;">Hotline Đặt Hẹn VIP:</strong><br>
                   <span style="color: #ea580c; font-size: 1.35rem; font-weight: 900;">090.123.4567</span><br>
                 </div>
               </div>
               <div class="contact-item" style="display: flex; align-items: flex-start; gap: 10px; font-size: 0.9rem; line-height: 1.6; color: #334155 !important;">
-                <span class="c-icon" style="color: #ea580c; font-size: 1.15rem;">🕒</span>
+                <span class="c-icon" style="color: #ea580c; font-size: 1.15rem;"></span>
                 <div>
                   <strong style="color: #0f172a !important;">Giờ Làm Việc:</strong><br>
                   Thứ 2 - Chủ Nhật: <strong style="color: #0f172a !important;">08:30 - 21:30</strong><br>
@@ -512,7 +509,7 @@
           <div>© 2026 SALON HAIR HÀ MINH. Bản quyền thuộc về Hệ Thống Quản Lý Đặt Lịch Salon Tóc Tích Hợp AI.</div>
           <div>
             <button type="button" class="btn-footer-staff-login" onclick="openLoginModal()" style="background: #ffffff !important; border: 1.5px solid #ea580c !important; color: #ea580c !important; font-weight: 700; border-radius: 8px; padding: 0.6rem 1.2rem; cursor: pointer; box-shadow: 0 2px 8px rgba(234, 88, 12, 0.15);">
-              🔐 Cổng Đăng Nhập Nhân Sự Nội Bộ (Admin / Lễ Tân / Thợ)
+              Cổng Đăng Nhập Nhân Sự Nội Bộ (Admin / Lễ Tân / Thợ)
             </button>
           </div>
         </div>
@@ -528,48 +525,58 @@
   <!-- ==================================================================== -->
   <div id="view-staff-app" style="display: none;">
 
- <!-- TOP NAVIGATION HEADER FOR STAFF (ĐỒNG NHẤT VỚI BÊN NGOÀI - TRẮNG & CAM SÁNG HOÀNG GIA) -->
- <header class="header">
- <div class="brand" style="cursor: pointer;" onclick="switchTab('dashboard')" title="Quay về bảng điều khiển">
- <img src="/static/images/barber_logo.svg" alt="Salon Hair Hà Minh Logo" class="barber-logo-img" style="width: 40px; height: 40px;">
- <div>
- <div class="brand-title">SALON HAIR HÀ MINH</div>
- <div class="brand-subtitle">188 Thái Hà, Đống Đa, Hà Nội • Hotline: 090.123.4567</div>
- </div>
- </div>
+    <!-- TOP ANNOUNCEMENT & CONTACT BAR FOR STAFF (ĐỒNG NHẤT 100% VỚI ẢNH 2 - CAM SÁNG & TRẮNG HOÀNG GIA) -->
+    <div class="barber-topbar">
+      <div class="barber-topbar-left">
+        <span>188 Thái Hà, Đống Đa, Hà Nội</span>
+      </div>
+      <div class="barber-topbar-right">
+        <span>Hotline VIP: <strong>090.123.4567</strong></span>
+      </div>
+    </div>
 
- <!-- Real-time Revenue Display Directly on Header (Visible ONLY to Admin) -->
- <div id="staff-header-revenue-pill" class="header-revenue-pill" title="Doanh số trực tiếp hệ thống (Dành riêng cho Quản lý)">
- <span class="pulse-dot"></span>
- <span><strong>Hôm nay:</strong> <span id="header-today-rev">{{ "{:,.0f}".format(summary.kpi.doanh_thu_hom_nay).replace(",", ".") }} đ</span></span>
- <span style="opacity: 0.35;">|</span>
- <span><strong>Tổng DT:</strong> <span id="header-total-rev">{{ "{:,.0f}".format(summary.kpi.tong_doanh_thu).replace(",", ".") }} đ</span></span>
- </div>
+    <!-- TOP NAVIGATION HEADER FOR STAFF (ĐỒNG NHẤT VỚI BÊN NGOÀI - TRẮNG & CAM SÁNG HOÀNG GIA) -->
+    <header class="header">
+      <div class="brand" style="cursor: pointer;" onclick="switchTab('dashboard')" title="Quay về bảng điều khiển">
+        <img src="/static/images/barber_logo.svg" alt="Salon Hair Hà Minh Logo" class="barber-logo-img" style="width: 44px; height: 44px;">
+        <div>
+          <div class="brand-title" style="color: #0f172a !important; font-size: 1.32rem; font-weight: 900; letter-spacing: 0.5px;">SALON HAIR HÀ MINH</div>
+          <div class="brand-subtitle" style="color: #ea580c !important; font-size: 0.75rem; font-weight: 700; letter-spacing: 0.5px;">HỆ THỐNG TẠO MẪU TÓC CAO CẤP • MASTER STYLIST HÀ MINH</div>
+        </div>
+      </div>
 
- <!-- Logged in User Profile & Quick Actions -->
- <div class="header-actions">
- <div class="user-pill">
- <span id="current-user-name" style="font-weight: 600;">Hà Minh Giám Đốc</span>
- <span id="current-user-role" class="badge badge-warning" style="margin-left: 4px;">Admin</span>
- </div>
+      <!-- Real-time Revenue Display Directly on Header (Visible ONLY to Admin) -->
+      <div id="staff-header-revenue-pill" class="header-revenue-pill" title="Doanh số trực tiếp hệ thống (Dành riêng cho Quản lý)">
+        <span class="pulse-dot"></span>
+        <span><strong>Hôm nay:</strong> <span id="header-today-rev" style="color: #ea580c; font-weight: 800;">{{ "{:,.0f}".format(summary.kpi.doanh_thu_hom_nay).replace(",", ".") }} đ</span></span>
+        <span style="opacity: 0.35;">|</span>
+        <span><strong>Tổng DT:</strong> <span id="header-total-rev" style="color: #0f172a; font-weight: 800;">{{ "{:,.0f}".format(summary.kpi.tong_doanh_thu).replace(",", ".") }} đ</span></span>
+      </div>
 
- <button class="btn btn-secondary btn-sm" onclick="handleLogout()" title="Đăng xuất quay về trang chủ khách" style="border-color: #fecdd3; color: #e11d48; background: #fff1f2; font-weight: 600;">
- Đăng Xuất
- </button>
+      <!-- Logged in User Profile & Quick Actions -->
+      <div class="header-actions">
+        <div class="user-pill">
+          <span id="current-user-name" style="font-weight: 700; color: #0f172a;">Hà Minh Giám Đốc</span>
+          <span id="current-user-role" class="badge" style="margin-left: 6px; background: #ea580c !important; color: #ffffff !important; font-weight: 800; border: none; padding: 3px 10px; font-size: 0.75rem;">Admin</span>
+        </div>
 
- <button class="btn btn-ai btn-sm" onclick="openAIModal()" style="font-weight: 600;">
- Trợ Lý AI
- </button>
+        <button class="btn btn-sm" onclick="handleLogout()" title="Đăng xuất quay về trang chủ khách" style="border: 1.5px solid #ea580c; color: #ea580c; background: #ffffff; font-weight: 700; border-radius: 8px;">
+          Đăng Xuất
+        </button>
 
- <button id="header-btn-new-appt" class="btn btn-primary btn-sm admin-letan-only" onclick="openNewAppointmentModal()" style="font-weight: 700; background: linear-gradient(135deg, #ea580c 0%, #f59e0b 100%); border: none;">
- Đặt Lịch (F2)
- </button>
+        <button class="btn btn-ai btn-sm" onclick="openAIModal()" style="font-weight: 700;">
+          Trợ Lý AI
+        </button>
 
- <button id="header-btn-pos" class="btn btn-emerald btn-sm admin-letan-only" onclick="switchTab('billing')" style="font-weight: 700;">
- Thu Ngân POS (F4)
- </button>
- </div>
- </header>
+        <button id="header-btn-new-appt" class="btn btn-primary btn-sm admin-letan-only" onclick="openNewAppointmentModal()" style="font-weight: 700;">
+          Đặt Lịch
+        </button>
+
+        <button id="header-btn-pos" class="btn btn-emerald btn-sm admin-letan-only" onclick="switchTab('billing')" style="font-weight: 700;">
+          Thu Ngân POS
+        </button>
+      </div>
+    </header>
 
  <!-- MAIN LAYOUT -->
  <div class="main-layout">
@@ -633,18 +640,18 @@
  <div style="display: flex; align-items: center; justify-content: space-between; margin-bottom: 1.5rem; flex-wrap: wrap; gap: 1rem;">
  <div>
  <h2 style="font-size: 1.6rem; font-weight: 700;">Bảng Điều Khiển Tổng Quan</h2>
- <p style="color: var(--text-secondary); font-size: 0.875rem;">Theo dõi hiệu suất doanh thu và hoạt động salon theo thời gian thực (UC007)</p>
+ <p style="color: var(--text-secondary); font-size: 0.875rem;">Theo dõi hiệu suất doanh thu và hoạt động salon theo thời gian thực</p>
  </div>
  
- <!-- Date Filter and Export for UC007 -->
- <div style="display: flex; align-items: center; gap: 0.5rem; flex-wrap: wrap;">
- <span style="font-size: 0.85rem; color: var(--text-muted);">Từ ngày:</span>
- <input type="date" id="report-start-date" class="form-control" style="width: 140px; padding: 0.4rem 0.6rem;">
- <span style="font-size: 0.85rem; color: var(--text-muted);">Đến:</span>
- <input type="date" id="report-end-date" class="form-control" style="width: 140px; padding: 0.4rem 0.6rem;">
- <button class="btn btn-secondary btn-sm" onclick="exportReportCSV()">Xuất Báo Cáo (CSV)</button>
- <button class="btn btn-secondary btn-sm" onclick="loadDashboard()">Làm mới</button>
- </div>
+        <!-- Date Filter and Export for UC007 -->
+        <div style="display: flex; align-items: center; gap: 0.5rem; flex-wrap: wrap;">
+          <span style="font-size: 0.85rem; color: #78350f; font-weight: 700;">Từ ngày:</span>
+          <input type="date" id="report-start-date" class="form-control" value="2026-10-01" style="width: 140px; padding: 0.4rem 0.6rem;">
+          <span style="font-size: 0.85rem; color: #78350f; font-weight: 700;">Đến:</span>
+          <input type="date" id="report-end-date" class="form-control" value="2026-10-28" style="width: 140px; padding: 0.4rem 0.6rem;">
+          <button class="btn btn-secondary btn-sm" onclick="exportReportCSV()">Xuất Báo Cáo (CSV)</button>
+          <button class="btn btn-secondary btn-sm" onclick="loadDashboard()">Làm mới</button>
+        </div>
  </div>
 
  <div class="kpi-grid" style="grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));">
@@ -780,12 +787,12 @@
  <p id="appointments-tab-subheading" style="color: var(--text-secondary); font-size: 0.875rem;">Sơ đồ ghế salon thời gian thực & Chống trùng lịch thợ tự động</p>
  </div>
  <div style="display: flex; gap: 0.5rem; align-items: center; flex-wrap: wrap;">
- <div style="background: #f1f5f9; border: 1px solid var(--border-color); padding: 3px; border-radius: 8px; display: flex; gap: 2px;">
- <button id="btn-view-grid" class="btn btn-secondary btn-sm active" onclick="switchApptView('grid')"> Sơ Đồ Ghế (Timeline)</button>
- <button id="btn-view-list" class="btn btn-secondary btn-sm" onclick="switchApptView('list')"> Thẻ Lịch Hẹn</button>
- </div>
- <button class="btn btn-secondary btn-sm" onclick="loadAppointments()"> Làm Mới</button>
- <button class="btn btn-primary btn-sm admin-letan-only" onclick="openNewAppointmentModal()">+ Thêm Lịch Mới</button>
+        <div style="background: #fff7ed; border: 1.5px solid #fed7aa; padding: 3px; border-radius: 8px; display: flex; gap: 2px;">
+          <button id="btn-view-grid" class="btn btn-secondary btn-sm active" onclick="switchApptView('grid')" style="border: none;">Sơ Đồ Ghế (Timeline)</button>
+          <button id="btn-view-list" class="btn btn-secondary btn-sm" onclick="switchApptView('list')" style="border: none;">Thẻ Lịch Hẹn</button>
+        </div>
+        <button class="btn btn-secondary btn-sm" onclick="loadAppointments()">Làm Mới</button>
+        <button class="btn btn-primary btn-sm admin-letan-only" onclick="openNewAppointmentModal()">+ Thêm Lịch Mới</button>
  </div>
  </div>
 
@@ -794,7 +801,7 @@
  <div style="display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 1rem;">
  <div>
  <div style="font-size: 1.15rem; font-weight: 700; color: var(--gold-light); display: flex; align-items: center; gap: 8px;">
- <span>️</span> <span>Chào Stylist: <strong id="tho-banner-name" style="color: var(--text-primary);"></strong></span>
+ <span></span> <span>Chào Stylist: <strong id="tho-banner-name" style="color: var(--text-primary);"></strong></span>
  <span class="badge badge-primary">Thợ Phụ Trách</span>
  </div>
  <div style="font-size: 0.85rem; color: var(--text-secondary); margin-top: 4px;">
@@ -815,9 +822,9 @@
  <div style="display: flex; align-items: center; gap: 0.5rem;">
  <span style="font-size: 0.85rem; color: var(--text-muted);"> Ngày:</span>
  <select id="filter-date" class="form-control" style="width: 175px; padding: 0.4rem 0.75rem;" onchange="onDateFilterChanged()">
- <option value="2026-09-19" selected>Hôm nay (19/09)</option>
- <option value="2026-09-20">Ngày mai (20/09)</option>
- <option value="2026-09-18">Hôm qua (18/09)</option>
+ <option value="2026-10-28" selected>Hôm nay (28/10)</option>
+ <option value="2026-10-29">Ngày mai (29/10)</option>
+ <option value="2026-10-27">Hôm qua (27/10)</option>
  <option value="">Tất cả các ngày</option>
  <option value="custom">Chọn ngày khác...</option>
  </select>
@@ -845,16 +852,14 @@
  </select>
  </div>
 
- <!-- Sort Options (Sắp xếp theo giờ, giá, trạng thái) -->
- <div style="display: flex; align-items: center; gap: 0.5rem;">
- <span style="font-size: 0.85rem; color: var(--text-muted);">↕️ Sắp xếp:</span>
- <select id="filter-sort" class="form-control" style="width: 195px; padding: 0.4rem 0.75rem;" onchange="renderAppointments()">
- <option value="time-asc" selected> Giờ: Sớm nhất trước</option>
- <option value="time-desc"> Giờ: Muộn nhất trước</option>
- <option value="status">️ Trạng thái phục vụ</option>
- <option value="price-desc"> Giá tiền: Cao Thấp</option>
- <option value="price-asc"> Giá tiền: Thấp Cao</option>
- </select>
+          <span style="font-size: 0.85rem; color: #78350f; font-weight: 700;">Sắp xếp:</span>
+          <select id="filter-sort" class="form-control" style="width: 195px; padding: 0.4rem 0.75rem;" onchange="renderAppointments()">
+            <option value="time-asc" selected>Giờ: Sớm nhất trước</option>
+            <option value="time-desc">Giờ: Muộn nhất trước</option>
+            <option value="status">Trạng thái phục vụ</option>
+            <option value="price-desc">Giá tiền: Cao đến thấp</option>
+            <option value="price-asc">Giá tiền: Thấp đến cao</option>
+          </select>
  </div>
 
  <!-- Quick Text Search Filter -->
@@ -886,50 +891,49 @@
  <!-- Page Header Clinova Style -->
  <div style="display: flex; align-items: center; justify-content: space-between; margin-bottom: 1.5rem; flex-wrap: wrap; gap: 1rem;">
  <div>
- <h2 style="font-size: 1.6rem; font-weight: 800; color: #0f172a; display: flex; align-items: center; gap: 10px; margin: 0 0 4px 0;">
- <span style="color: #2563eb; font-size: 1.8rem;"></span> Quản lý Hồ sơ Khách hàng
- </h2>
- <p style="color: #64748b; font-size: 0.9rem; margin: 0; font-weight: 500;">
- Tra cứu, thêm mới và cập nhật danh sách hồ sơ khách hàng salon, chất tóc &amp; tiền sử hóa chất
- </p>
- </div>
- <button class="btn btn-primary" onclick="openNewCustomerModal()" style="background: linear-gradient(135deg, #ea580c 0%, #f59e0b 100%); color: #ffffff; border: none; font-weight: 700; padding: 0.65rem 1.4rem; border-radius: 8px; box-shadow: 0 4px 15px rgba(234, 88, 12, 0.3); display: flex; align-items: center; gap: 6px;">
- <span style="font-size: 1.1rem; line-height: 1;">+</span> Thêm Khách Hàng Mới
- </button>
- </div>
+        <h2 style="font-size: 1.6rem; font-weight: 800; color: #0f172a; margin: 0 0 4px 0;">
+          Quản lý Hồ sơ Khách hàng
+        </h2>
+        <p style="color: #64748b; font-size: 0.9rem; margin: 0; font-weight: 500;">
+          Tra cứu, thêm mới và cập nhật danh sách hồ sơ khách hàng salon, chất tóc &amp; tiền sử hóa chất
+        </p>
+      </div>
+      <button class="btn btn-primary" onclick="openNewCustomerModal()" style="color: #ffffff; border: none; font-weight: 700; padding: 0.65rem 1.4rem; border-radius: 8px; box-shadow: 0 4px 15px rgba(234, 88, 12, 0.3); display: flex; align-items: center; gap: 6px;">
+        <span style="font-size: 1.1rem; line-height: 1;">+</span> Thêm Khách Hàng Mới
+      </button>
+    </div>
 
- <!-- Clinova Search Bar -->
- <div style="background: #ffffff; padding: 1rem 1.25rem; border-radius: 12px; border: 1px solid #e2e8f0; margin-bottom: 1.5rem; display: flex; gap: 0.75rem; align-items: center; box-shadow: 0 2px 8px rgba(0,0,0,0.03);">
- <div style="position: relative; flex: 1;">
- <span style="position: absolute; left: 14px; top: 50%; transform: translateY(-50%); color: #94a3b8; font-size: 1rem;"></span>
- <input type="text" id="customer-search-input" class="form-control" placeholder="Tìm tên, Số điện thoại, Mã KH hoặc tình trạng tóc..." oninput="debounceSearchCustomers()" style="padding-left: 40px; height: 44px; border-radius: 8px; background: #f8fafc; border: 1px solid #e2e8f0; font-size: 0.92rem; color: #0f172a;">
- </div>
- <button type="button" class="btn btn-primary" onclick="loadCustomers()" style="height: 44px; padding: 0 1.6rem; font-weight: 700; border-radius: 8px; background: #2563eb; border: none; color: #ffffff; cursor: pointer; box-shadow: 0 3px 10px rgba(37, 99, 235, 0.3);">
- Tìm kiếm
- </button>
- </div>
+    <!-- Clinova Search Bar -->
+    <div style="background: #ffffff; padding: 1rem 1.25rem; border-radius: 12px; border: 1.5px solid #fed7aa; margin-bottom: 1.5rem; display: flex; gap: 0.75rem; align-items: center; box-shadow: 0 4px 15px rgba(234, 88, 12, 0.03);">
+      <div style="position: relative; flex: 1;">
+        <input type="text" id="customer-search-input" class="form-control" placeholder="Tìm tên, Số điện thoại, Mã KH hoặc tình trạng tóc..." oninput="debounceSearchCustomers()" style="height: 44px; border-radius: 8px; font-size: 0.92rem;">
+      </div>
+      <button type="button" class="btn btn-primary" onclick="loadCustomers()" style="height: 44px; padding: 0 1.6rem; font-weight: 700; border-radius: 8px; cursor: pointer;">
+        Tìm kiếm
+      </button>
+    </div>
 
- <!-- Clinova Data Table Card -->
- <div style="background: #ffffff; border: 1px solid #e2e8f0; border-radius: 12px; overflow: hidden; box-shadow: 0 4px 20px rgba(0,0,0,0.04);">
- <div class="table-responsive" style="margin: 0; border: none;">
- <table class="custom-table clinova-table" style="width: 100%; border-collapse: collapse; text-align: left;">
- <thead>
- <tr style="background: #f8fafc; border-bottom: 2px solid #e2e8f0;">
- <th style="padding: 14px 18px; font-size: 0.78rem; font-weight: 800; color: #475569; text-transform: uppercase; letter-spacing: 0.5px; width: 60px;">ID</th>
- <th style="padding: 14px 18px; font-size: 0.78rem; font-weight: 800; color: #475569; text-transform: uppercase; letter-spacing: 0.5px;">HỌ VÀ TÊN</th>
- <th style="padding: 14px 18px; font-size: 0.78rem; font-weight: 800; color: #475569; text-transform: uppercase; letter-spacing: 0.5px;">NGÀY SINH / GT</th>
- <th style="padding: 14px 18px; font-size: 0.78rem; font-weight: 800; color: #475569; text-transform: uppercase; letter-spacing: 0.5px;">SỐ ĐIỆN THOẠI</th>
- <th style="padding: 14px 18px; font-size: 0.78rem; font-weight: 800; color: #475569; text-transform: uppercase; letter-spacing: 0.5px;">MÃ KH / HẠNG VIP</th>
- <th style="padding: 14px 18px; font-size: 0.78rem; font-weight: 800; color: #475569; text-transform: uppercase; letter-spacing: 0.5px;">TIỀN SỬ TÓC / GHI CHÚ</th>
- <th style="padding: 14px 18px; font-size: 0.78rem; font-weight: 800; color: #475569; text-transform: uppercase; letter-spacing: 0.5px; text-align: right;">THAO TÁC</th>
- </tr>
- </thead>
- <tbody id="customers-table-body">
- <!-- Clinova Rows loaded dynamically -->
- </tbody>
- </table>
- </div>
- </div>
+    <!-- Clinova Data Table Card -->
+    <div style="background: #ffffff; border: 1.5px solid #fed7aa; border-radius: 12px; overflow: hidden; box-shadow: 0 4px 20px rgba(234, 88, 12, 0.04);">
+      <div class="table-responsive" style="margin: 0; border: none;">
+        <table class="custom-table clinova-table" style="width: 100%; border-collapse: collapse; text-align: left;">
+          <thead>
+            <tr style="background: #fff7ed; border-bottom: 2px solid #fed7aa;">
+              <th style="padding: 14px 18px; font-size: 0.78rem; font-weight: 800; color: #9a3412; text-transform: uppercase; letter-spacing: 0.5px; width: 60px;">ID</th>
+              <th style="padding: 14px 18px; font-size: 0.78rem; font-weight: 800; color: #9a3412; text-transform: uppercase; letter-spacing: 0.5px;">HỌ VÀ TÊN</th>
+              <th style="padding: 14px 18px; font-size: 0.78rem; font-weight: 800; color: #9a3412; text-transform: uppercase; letter-spacing: 0.5px;">NGÀY SINH / GT</th>
+              <th style="padding: 14px 18px; font-size: 0.78rem; font-weight: 800; color: #9a3412; text-transform: uppercase; letter-spacing: 0.5px;">SỐ ĐIỆN THOẠI</th>
+              <th style="padding: 14px 18px; font-size: 0.78rem; font-weight: 800; color: #9a3412; text-transform: uppercase; letter-spacing: 0.5px;">MÃ KH / HẠNG VIP</th>
+              <th style="padding: 14px 18px; font-size: 0.78rem; font-weight: 800; color: #9a3412; text-transform: uppercase; letter-spacing: 0.5px;">TIỀN SỬ TÓC / GHI CHÚ</th>
+              <th style="padding: 14px 18px; font-size: 0.78rem; font-weight: 800; color: #9a3412; text-transform: uppercase; letter-spacing: 0.5px; text-align: right;">THAO TÁC</th>
+            </tr>
+          </thead>
+          <tbody id="customers-table-body">
+            <!-- Clinova Rows loaded dynamically -->
+          </tbody>
+        </table>
+      </div>
+    </div>
 
  <!-- Giữ lại container cũ để tương thích 100% nếu cần fallback -->
  <div id="customers-list-container" style="display: none;"></div>
@@ -1061,7 +1065,7 @@
  </div>
  <div style="display: flex; gap: 0.5rem;">
  <button class="btn btn-secondary btn-sm" onclick="loadBillingQueue(); renderPOSServiceCatalog();"> Làm Mới</button>
- <button class="btn btn-primary btn-sm" onclick="clearPOSCart()">+ Đơn Mới (F3)</button>
+ <button class="btn btn-primary btn-sm" onclick="clearPOSCart()">+ Đơn Mới</button>
  </div>
  </div>
 
@@ -1075,7 +1079,7 @@
  <div class="glass" style="padding: 1.25rem;">
  <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 0.85rem; flex-wrap: wrap; gap: 0.5rem;">
  <div style="font-weight: 700; font-size: 1.1rem; color: var(--gold-light);">
- ️ Menu Dịch Vụ Salon (Click Chọn Nhanh)
+  Menu Dịch Vụ Salon (Click Chọn Nhanh)
  </div>
  <!-- Category Filter Pills -->
  <div style="display: flex; gap: 6px; overflow-x: auto; padding-bottom: 4px;">
@@ -1180,7 +1184,7 @@
  </div>
 
  <button class="btn btn-primary" style="width: 100%; font-size: 1.05rem; padding: 0.9rem;" onclick="submitPOSDirectCheckout()">
- Xác Nhận Thanh Toán & In Hóa Đơn (F9)
+ Xác Nhận Thanh Toán & In Hóa Đơn
  </button>
  </div>
 
@@ -1210,7 +1214,7 @@
  <div class="kpi-value" style="color: var(--gold-light);">{{ "{:,.0f}".format(summary.kpi.tong_doanh_thu).replace(",", ".") }} đ</div>
  <div style="font-size: 0.75rem; color: var(--gold-light); margin-top: 4px;">{{ summary.kpi.tong_hoa_don }} hóa đơn thanh toán</div>
  </div>
- <div class="kpi-icon-box"></div>
+ 
  </div>
 
  <div class="kpi-card glass">
@@ -1219,7 +1223,7 @@
  <div class="kpi-value" style="color: var(--accent-emerald);">{{ "{:,.0f}".format(summary.kpi.doanh_thu_hom_nay).replace(",", ".") }} đ</div>
  <div style="font-size: 0.75rem; color: var(--text-muted); margin-top: 4px;">{{ summary.kpi.so_don_hom_nay }} lượt thanh toán</div>
  </div>
- <div class="kpi-icon-box"></div>
+ 
  </div>
 
  <div class="kpi-card glass">
@@ -1228,7 +1232,7 @@
  <div class="kpi-value" style="color: var(--accent-cyan);">{{ "{:,.0f}".format(summary.kpi.doanh_thu_tuan_nay).replace(",", ".") }} đ</div>
  <div style="font-size: 0.75rem; color: var(--text-muted); margin-top: 4px;">Tăng trưởng mạnh mẽ</div>
  </div>
- <div class="kpi-icon-box"></div>
+ 
  </div>
 
  <div class="kpi-card glass">
@@ -1237,21 +1241,21 @@
  <div class="kpi-value" style="color: #a855f7;">{{ "{:,.0f}".format(summary.kpi.aov).replace(",", ".") }} đ</div>
  <div style="font-size: 0.75rem; color: var(--text-muted); margin-top: 4px;">Phân khúc dịch vụ VIP</div>
  </div>
- <div class="kpi-icon-box"></div>
+ 
  </div>
  </div>
 
  <!-- Ledger Filter Bar -->
  <div class="glass" style="padding: 1.25rem; display: flex; gap: 1rem; align-items: center; flex-wrap: wrap; margin-bottom: 1.5rem;">
- <div style="display: flex; align-items: center; gap: 0.5rem;">
- <span style="font-size: 0.85rem; color: var(--text-muted);">Từ ngày:</span>
- <input type="date" id="report-page-start-date" class="form-control" style="width: 140px; padding: 0.4rem;" onchange="loadReportsPage()">
- </div>
+        <div style="display: flex; align-items: center; gap: 0.5rem;">
+          <span style="font-size: 0.85rem; color: #78350f; font-weight: 700;">Từ ngày:</span>
+          <input type="date" id="report-page-start-date" class="form-control" value="2026-10-01" style="width: 140px; padding: 0.4rem;" onchange="loadReportsPage()">
+        </div>
 
- <div style="display: flex; align-items: center; gap: 0.5rem;">
- <span style="font-size: 0.85rem; color: var(--text-muted);">Đến ngày:</span>
- <input type="date" id="report-page-end-date" class="form-control" style="width: 140px; padding: 0.4rem;" onchange="loadReportsPage()">
- </div>
+        <div style="display: flex; align-items: center; gap: 0.5rem;">
+          <span style="font-size: 0.85rem; color: #78350f; font-weight: 700;">Đến ngày:</span>
+          <input type="date" id="report-page-end-date" class="form-control" value="2026-10-28" style="width: 140px; padding: 0.4rem;" onchange="loadReportsPage()">
+        </div>
 
  <div style="display: flex; align-items: center; gap: 0.5rem;">
  <span style="font-size: 0.85rem; color: var(--text-muted);">Hình thức:</span>
@@ -1383,8 +1387,8 @@
  <div style="display: flex; gap: 6px; flex-wrap: wrap;">
  <button type="button" class="why-filter-tab active" onclick="filterWhyQuestions('all', this)"> Tất Cả (16)</button>
  <button type="button" class="why-filter-tab" onclick="filterWhyQuestions('chemical', this)"> Hóa Chất & Phục Hồi (5)</button>
- <button type="button" class="why-filter-tab" onclick="filterWhyQuestions('facial', this)">‍️ Dáng Mặt & Kiểu (4)</button>
- <button type="button" class="why-filter-tab" onclick="filterWhyQuestions('schedule', this)">️ Lịch & Xung Đột (4)</button>
+ <button type="button" class="why-filter-tab" onclick="filterWhyQuestions('facial', this)">‍ Dáng Mặt & Kiểu (4)</button>
+ <button type="button" class="why-filter-tab" onclick="filterWhyQuestions('schedule', this)"> Lịch & Xung Đột (4)</button>
  <button type="button" class="why-filter-tab" onclick="filterWhyQuestions('finance', this)"> Doanh Thu CSDL (3)</button>
  </div>
  </div>
@@ -1455,7 +1459,7 @@
  <!-- Card 6 -->
  <div class="why-card" data-category="facial">
  <div>
- <span class="why-badge why-badge-facial">‍️ Dáng Mặt & Tạo Kiểu</span>
+ <span class="why-badge why-badge-facial">‍ Dáng Mặt & Tạo Kiểu</span>
  <div class="why-question">Vì sao khuôn mặt tròn nên cắt layer bay mái Curtain thay vì mái bằng?</div>
  <div class="why-preview">Mái bằng cắt ngang làm ngắn tỉ lệ chiều dọc khuôn mặt; mái rèm Curtain vát nghiêng 45° tạo đường dẫn thị giác thon gọn dáng oval...</div>
  </div>
@@ -1467,7 +1471,7 @@
  <!-- Card 7 -->
  <div class="why-card" data-category="facial">
  <div>
- <span class="why-badge why-badge-facial">‍️ Dáng Mặt & Tạo Kiểu</span>
+ <span class="why-badge why-badge-facial">‍ Dáng Mặt & Tạo Kiểu</span>
  <div class="why-question">Vì sao da ngăm undertone ấm nên nhuộm Nâu Tây Balayage thay vì Vàng Bạch Kim?</div>
  <div class="why-preview">Vàng bạch kim chọi sắc độ lạnh làm da ngăm bị xỉn màu và nhợt nhạt; Nâu Tây ánh mật ong tạo độ tương phản ấm tôn sáng 2 tone da...</div>
  </div>
@@ -1479,7 +1483,7 @@
  <!-- Card 8 -->
  <div class="why-card" data-category="facial">
  <div>
- <span class="why-badge why-badge-facial">‍️ Dáng Mặt & Tạo Kiểu</span>
+ <span class="why-badge why-badge-facial">‍ Dáng Mặt & Tạo Kiểu</span>
  <div class="why-question">Vì sao nam giới mặt vuông nên uốn Texture phồng (850k) thay vì ép sát da đầu?</div>
  <div class="why-preview">Ép tóc thẳng sát đầu làm lộ đường quai hàm bạnh thô; sóng xoăn Texture tăng thể tích đỉnh đầu, làm mềm góc cạnh và hài hòa nam tính...</div>
  </div>
@@ -1491,7 +1495,7 @@
  <!-- Card 9 -->
  <div class="why-card" data-category="facial">
  <div>
- <span class="why-badge why-badge-facial">‍️ Dáng Mặt & Tạo Kiểu</span>
+ <span class="why-badge why-badge-facial">‍ Dáng Mặt & Tạo Kiểu</span>
  <div class="why-question">Vì sao tóc mỏng xẹp nên chọn Duỗi phồng chân tóc Volume Perm Hàn Quốc (950k)?</div>
  <div class="why-preview">Kỹ thuật tạo sóng vi điểm sát da đầu nâng sợi tóc đứng tự nhiên 3cm, khắc phục triệt để tình trạng đầu bẹp hoặc tóc dính sát sọ...</div>
  </div>
@@ -1503,7 +1507,7 @@
  <!-- Card 10 -->
  <div class="why-card" data-category="schedule">
  <div>
- <span class="why-badge why-badge-schedule">️ Lịch Hẹn & Xung Đột</span>
+ <span class="why-badge why-badge-schedule"> Lịch Hẹn & Xung Đột</span>
  <div class="why-question">Vì sao hệ thống từ chối đặt lịch lúc 14:30 ngày 19/09/2026 cho Stylist Kéo Vàng?</div>
  <div class="why-preview">Thợ Kéo Vàng đang trong ca hẹn LH005 từ 14:00 đến 16:20. Thuật toán (S1 &lt; E2) AND (S2 &lt; E1) tự động chặn để chống overbooking...</div>
  </div>
@@ -1515,7 +1519,7 @@
  <!-- Card 11 -->
  <div class="why-card" data-category="schedule">
  <div>
- <span class="why-badge why-badge-schedule">️ Lịch Hẹn & Xung Đột</span>
+ <span class="why-badge why-badge-schedule"> Lịch Hẹn & Xung Đột</span>
  <div class="why-question">Vì sao thuật toán chống trùng lịch áp dụng công thức (S1 &lt; E2) AND (S2 &lt; E1)?</div>
  <div class="why-preview">Công thức chuẩn toán học giao tập hợp thời gian bao quát 4 kịch bản chồng chéo, loại bỏ 100% lỗi xung đột ghế và thợ làm tóc...</div>
  </div>
@@ -1527,7 +1531,7 @@
  <!-- Card 12 -->
  <div class="why-card" data-category="schedule">
  <div>
- <span class="why-badge why-badge-schedule">️ Lịch Hẹn & Xung Đột</span>
+ <span class="why-badge why-badge-schedule"> Lịch Hẹn & Xung Đột</span>
  <div class="why-question">Vì sao Salon Hair Hà Minh áp dụng quy tắc đặt cọc 20% cho hóa chất trên 2.000.000đ?</div>
  <div class="why-preview">Các ca VIP kéo dài 2-3 tiếng của Master Stylist và hóa chất hữu cơ pha chế riêng; tiền cọc bảo đảm giữ chỗ và giảm tỷ lệ No-show...</div>
  </div>
@@ -1539,7 +1543,7 @@
  <!-- Card 13 -->
  <div class="why-card" data-category="schedule">
  <div>
- <span class="why-badge why-badge-schedule">️ Lịch Hẹn & Xung Đột</span>
+ <span class="why-badge why-badge-schedule"> Lịch Hẹn & Xung Đột</span>
  <div class="why-question">Vì sao dịch vụ Nhuộm French Airtouch Highlight được thiết lập thời lượng 180 phút?</div>
  <div class="why-preview">Kỹ thuật Pháp 6 bước tinh vi: sấy tách sợi tơ vi điểm, nâng tone đa tầng, khử vàng rêu, vào màu Glossy và ủ dưỡng khóa màu...</div>
  </div>
@@ -1600,7 +1604,7 @@
  <div style="display: flex; align-items: center; gap: 0.75rem;">
  <span style="font-size: 1.8rem;"></span>
  <div>
- <div style="font-weight: 700; font-size: 1.1rem; color: var(--gold-light);">AI Gợi Ý Dịch Vụ Theo Chất Tóc (UC008)</div>
+ <div style="font-weight: 700; font-size: 1.1rem; color: var(--gold-light);">AI Gợi Ý Dịch Vụ Theo Chất Tóc</div>
  <div style="font-size: 0.75rem; color: var(--text-muted);">Phân tích chất tóc & lịch sử để upsell combo VIP</div>
  </div>
  </div>
@@ -1622,7 +1626,7 @@
  <div style="display: flex; align-items: center; gap: 0.75rem;">
  <span style="font-size: 1.8rem;"></span>
  <div>
- <div style="font-weight: 700; font-size: 1.1rem; color: var(--gold-light);">AI Sinh Tin Nhắn Nhắc Lịch (UC009)</div>
+ <div style="font-weight: 700; font-size: 1.1rem; color: var(--gold-light);">AI Sinh Tin Nhắn Nhắc Lịch</div>
  <div style="font-size: 0.75rem; color: var(--text-muted);">Tạo tin nhắn Zalo/SMS chuẩn mực, ấm áp, cá nhân hóa</div>
  </div>
  </div>
@@ -1642,7 +1646,7 @@
  <div style="display: flex; align-items: center; gap: 0.75rem;">
  <span style="font-size: 1.8rem;"></span>
  <div>
- <div style="font-weight: 700; font-size: 1.1rem; color: var(--gold-light);">AI Tóm Tắt 5 Giây Cho Thợ (UC010)</div>
+ <div style="font-weight: 700; font-size: 1.1rem; color: var(--gold-light);">AI Tóm Tắt 5 Giây Cho Thợ</div>
  <div style="font-size: 0.75rem; color: var(--text-muted);">Cô đọng thói quen & lưu ý kỹ thuật trước khi làm tóc</div>
  </div>
  </div>
@@ -1669,7 +1673,7 @@
  <!-- ==================================================================== -->
  <div id="modal-session-kicked" class="modal-overlay" style="display: none; z-index: 999999; background: rgba(15, 23, 42, 0.45); backdrop-filter: blur(10px);">
  <div class="glass" style="max-width: 480px; width: 92%; padding: 2.2rem; border-radius: 18px; position: relative; box-shadow: 0 25px 50px rgba(239, 68, 68, 0.25); border: 2px solid #ef4444; background: #ffffff; color: var(--text-primary); text-align: center; animation: fadeIn 0.25s ease;">
- <div style="font-size: 3rem; margin-bottom: 0.5rem;">️</div>
+ <div style="font-size: 3rem; margin-bottom: 0.5rem;"></div>
  <h3 style="font-size: 1.35rem; font-weight: 800; color: #ef4444; margin-bottom: 0.75rem;">
  Phiên Làm Việc Đã Hết Hiệu Lực
  </h3>
@@ -1716,7 +1720,7 @@
  <div style="position: relative;">
  <span style="position: absolute; left: 14px; top: 50%; transform: translateY(-50%); font-size: 1.1rem; color: #94a3b8;"></span>
  <input type="password" id="login-password" class="form-control" placeholder="Nhập mật khẩu..." required style="padding-left: 44px; padding-right: 44px; height: 46px; border-radius: 10px; background: #f8fafc; border: 1.5px solid #e2e8f0; font-size: 0.92rem; font-weight: 500; color: #0f172a;">
- <button type="button" onclick="togglePasswordVisibility('login-password', this)" style="position: absolute; right: 12px; top: 50%; transform: translateY(-50%); background: none; border: none; cursor: pointer; font-size: 1.15rem; color: #64748b;" title="Hiện/Ẩn mật khẩu">️</button>
+ <button type="button" onclick="togglePasswordVisibility('login-password', this)" style="position: absolute; right: 12px; top: 50%; transform: translateY(-50%); background: none; border: none; cursor: pointer; font-size: 1.15rem; color: #64748b;" title="Hiện/Ẩn mật khẩu"></button>
  </div>
  </div>
 
@@ -1821,7 +1825,7 @@
  <label class="form-label" style="font-size: 0.88rem; font-weight: 600; color: #334155; margin-bottom: 6px;">Mật Khẩu Mới:</label>
  <div style="position: relative;">
  <input type="password" id="forgot-new-password" class="form-control" placeholder="Nhập mật khẩu mới (tối thiểu 4 ký tự)..." required style="padding-right: 40px; height: 44px; border-radius: 10px; background: #f8fafc; border: 1.5px solid #e2e8f0; font-size: 0.92rem; font-weight: 500; color: #0f172a;">
- <button type="button" onclick="togglePasswordVisibility('forgot-new-password', this)" style="position: absolute; right: 10px; top: 50%; transform: translateY(-50%); background: none; border: none; cursor: pointer; font-size: 1.15rem; color: #64748b;" title="Hiện/Ẩn">️</button>
+ <button type="button" onclick="togglePasswordVisibility('forgot-new-password', this)" style="position: absolute; right: 10px; top: 50%; transform: translateY(-50%); background: none; border: none; cursor: pointer; font-size: 1.15rem; color: #64748b;" title="Hiện/Ẩn"></button>
  </div>
  </div>
 
@@ -1829,7 +1833,7 @@
  <label class="form-label" style="font-size: 0.88rem; font-weight: 600; color: #334155; margin-bottom: 6px;">Xác Nhận Mật Khẩu Mới:</label>
  <div style="position: relative;">
  <input type="password" id="forgot-confirm-password" class="form-control" placeholder="Nhập lại mật khẩu mới..." required style="padding-right: 40px; height: 44px; border-radius: 10px; background: #f8fafc; border: 1.5px solid #e2e8f0; font-size: 0.92rem; font-weight: 500; color: #0f172a;">
- <button type="button" onclick="togglePasswordVisibility('forgot-confirm-password', this)" style="position: absolute; right: 10px; top: 50%; transform: translateY(-50%); background: none; border: none; cursor: pointer; font-size: 1.15rem; color: #64748b;" title="Hiện/Ẩn">️</button>
+ <button type="button" onclick="togglePasswordVisibility('forgot-confirm-password', this)" style="position: absolute; right: 10px; top: 50%; transform: translateY(-50%); background: none; border: none; cursor: pointer; font-size: 1.15rem; color: #64748b;" title="Hiện/Ẩn"></button>
  </div>
  </div>
 
@@ -1949,7 +1953,7 @@
  <div id="modal-reschedule" class="modal-overlay">
  <div class="modal-content glass">
  <div class="modal-header">
- <div class="modal-title">️ Đổi Giờ / Chuyển Thợ Lịch Hẹn</div>
+ <div class="modal-title"> Đổi Giờ / Chuyển Thợ Lịch Hẹn</div>
  <button class="btn-close" onclick="closeModal('modal-reschedule')">&times;</button>
  </div>
  <form id="form-reschedule" onsubmit="handleRescheduleAppointment(event)">
@@ -2093,14 +2097,14 @@
  <label class="form-label">Mật Khẩu: <span style="color: #ef4444;">*</span></label>
  <div style="position: relative;">
  <input type="password" id="modal-acc-password" class="form-control" required placeholder="Mật khẩu tối thiểu 4 ký tự..." autocomplete="off" style="padding-right: 40px;">
- <button type="button" onclick="togglePasswordVisibility('modal-acc-password', this)" style="position: absolute; right: 8px; top: 50%; transform: translateY(-50%); background: none; border: none; cursor: pointer; font-size: 1.15rem; padding: 4px;" title="Hiện/Ẩn mật khẩu">️</button>
+ <button type="button" onclick="togglePasswordVisibility('modal-acc-password', this)" style="position: absolute; right: 8px; top: 50%; transform: translateY(-50%); background: none; border: none; cursor: pointer; font-size: 1.15rem; padding: 4px;" title="Hiện/Ẩn mật khẩu"></button>
  </div>
  </div>
 
  <div class="form-group">
  <label class="form-label">Phân Quyền / Vai Trò: <span style="color: #ef4444;">*</span></label>
  <select id="modal-acc-role" class="form-control" required onchange="handleAccRoleChange(this.value)">
- <option value="Tho">️ Thợ Làm Tóc (Tho) - Xem lịch hẹn & trạng thái</option>
+ <option value="Tho"> Thợ Làm Tóc (Tho) - Xem lịch hẹn & trạng thái</option>
  <option value="LeTan"> Lễ Tân & Thu Ngân (LeTan) - Đặt lịch, thanh toán POS & khách hàng</option>
  <option value="Admin"> Quản Trị Viên (Admin) - Toàn quyền quản lý, báo cáo & nhân sự</option>
  </select>
@@ -2140,7 +2144,7 @@
  <label class="form-label">Mật Khẩu Mới: <span style="color: #ef4444;">*</span></label>
  <div style="position: relative;">
  <input type="password" id="modal-pwd-new-pass" class="form-control" required placeholder="Nhập mật khẩu mới (tối thiểu 4 ký tự)..." autocomplete="off" style="padding-right: 40px;">
- <button type="button" onclick="togglePasswordVisibility('modal-pwd-new-pass', this)" style="position: absolute; right: 8px; top: 50%; transform: translateY(-50%); background: none; border: none; cursor: pointer; font-size: 1.15rem; padding: 4px;" title="Hiện/Ẩn mật khẩu">️</button>
+ <button type="button" onclick="togglePasswordVisibility('modal-pwd-new-pass', this)" style="position: absolute; right: 8px; top: 50%; transform: translateY(-50%); background: none; border: none; cursor: pointer; font-size: 1.15rem; padding: 4px;" title="Hiện/Ẩn mật khẩu"></button>
  </div>
  </div>
  <div style="display: flex; justify-content: flex-end; gap: 0.75rem; margin-top: 1.5rem;">
@@ -2199,7 +2203,7 @@
  <div id="modal-service" class="modal-overlay">
  <div class="modal-content glass">
  <div class="modal-header">
- <div class="modal-title">️ Thêm Dịch Vụ Salon</div>
+ <div class="modal-title"> Thêm Dịch Vụ Salon</div>
  <button class="btn-close" onclick="closeModal('modal-service')">&times;</button>
  </div>
  <form id="form-service" onsubmit="handleCreateService(event)">
@@ -2296,7 +2300,7 @@
 
  <div class="receipt-modal-actions" style="display: flex; justify-content: flex-end; gap: 0.75rem; margin-top: 1rem; border-top: 1px solid #e2e8f0; padding-top: 1rem;">
  <button type="button" class="btn btn-secondary" onclick="closeModal('modal-receipt')">Đóng</button>
- <button type="button" class="btn btn-primary" onclick="printReceiptSlip()">️ In Phiếu Hóa Đơn</button>
+ <button type="button" class="btn btn-primary" onclick="printReceiptSlip()"> In Phiếu Hóa Đơn</button>
  </div>
  </div>
  </div>
@@ -2305,44 +2309,34 @@
  <!-- MODAL: AI TÓM TẮT HỒ SƠ 5S CHO THỢ (UC010) & GỢI Ý DỊCH VỤ (UC008) -->
  <!-- ==================================================================== -->
  <div id="modal-ai-summary" class="modal-overlay" style="display: none;">
- <div class="modal-content glass" style="max-width: 640px; width: 92%; padding: 2rem; border-radius: 18px; border: 1px solid var(--border-strong); box-shadow: var(--shadow-xl); background: #161616; max-height: 90vh; display: flex; flex-direction: column;">
- 
- <!-- Modal Header -->
- <div style="display: flex; justify-content: space-between; align-items: flex-start; border-bottom: 1px solid var(--border-color); padding-bottom: 1rem; margin-bottom: 1.25rem;">
- <div style="display: flex; align-items: center; gap: 12px;">
- <div id="ai-modal-icon" style="width: 44px; height: 44px; border-radius: 12px; background: rgba(216, 86, 39, 0.2); border: 1px solid var(--gold-primary); display: flex; align-items: center; justify-content: center; font-size: 1.5rem;">
- 
- </div>
- <div>
- <h3 id="ai-modal-title" style="margin: 0; font-size: 1.25rem; font-weight: 800; color: #ffffff;">AI Tóm Tắt 5 Giây Cho Thợ</h3>
- <div id="ai-modal-subtitle" style="font-size: 0.8rem; color: var(--gold-light); margin-top: 3px;">Hồ Sơ Khách Hàng</div>
- </div>
- </div>
- <button class="btn-close" onclick="closeModal('modal-ai-summary')">&times;</button>
- </div>
+    <div class="modal-content" style="max-width: 660px; width: 92%; padding: 2rem; border-radius: 20px; border: 1.5px solid #fed7aa; box-shadow: 0 25px 60px rgba(67, 20, 7, 0.15); background: #ffffff; max-height: 90vh; display: flex; flex-direction: column;">
+      
+      <!-- Modal Header -->
+      <div style="display: flex; justify-content: space-between; align-items: flex-start; border-bottom: 1px solid #ffedd5; padding-bottom: 1rem; margin-bottom: 1.25rem;">
+        <div>
+          <h3 id="ai-modal-title" style="margin: 0; font-size: 1.3rem; font-weight: 800; color: #1c1917;">AI Tóm Tắt 5 Giây Cho Thợ</h3>
+          <div id="ai-modal-subtitle" style="font-size: 0.85rem; color: #ea580c; margin-top: 4px; font-weight: 700;">Hồ Sơ Khách Hàng</div>
+        </div>
+        <button class="btn-close" style="font-size: 1.8rem; line-height: 1; color: #94a3b8; cursor: pointer; border: none; background: none;" onclick="closeModal('modal-ai-summary')">&times;</button>
+      </div>
 
- <!-- Engine & Execution Badge -->
- <div style="display: flex; justify-content: space-between; align-items: center; background: #1f1f1f; border: 1px solid var(--border-color); border-radius: 8px; padding: 6px 12px; margin-bottom: 1rem; font-size: 0.78rem;">
- <span id="ai-modal-engine-badge" style="color: var(--accent-emerald); font-weight: 700;"> Live Grounded SQLite & Gemini</span>
- <span id="ai-modal-latency" style="color: var(--text-muted);">Tốc độ xử lý: ~280ms</span>
- </div>
 
- <!-- Modal Body Content -->
- <div id="ai-modal-body" style="overflow-y: auto; flex: 1; padding: 1.2rem; background: #111111; border: 1px solid var(--border-color); border-radius: 12px; font-size: 0.92rem; line-height: 1.7; color: #e5e7eb; min-height: 180px;">
- </div>
+      <!-- Modal Body Content -->
+      <div id="ai-modal-body" style="overflow-y: auto; flex: 1; padding: 1.25rem 1.4rem; background: #fffaf5; border: 1.5px solid #fed7aa; border-radius: 14px; font-size: 0.95rem; line-height: 1.75; color: #1c1917; min-height: 200px;">
+      </div>
 
- <!-- Modal Footer -->
- <div style="display: flex; justify-content: space-between; align-items: center; margin-top: 1.25rem; border-top: 1px solid var(--border-color); padding-top: 1rem; gap: 0.75rem;">
- <button type="button" class="btn btn-secondary btn-sm" onclick="copyAISummaryModalText()"> Sao Chép Tóm Tắt</button>
- <button type="button" class="btn btn-primary btn-sm" onclick="closeModal('modal-ai-summary')">Đã Hiểu & Đóng</button>
- </div>
+      <!-- Modal Footer -->
+      <div style="display: flex; justify-content: space-between; align-items: center; margin-top: 1.25rem; border-top: 1px solid #ffedd5; padding-top: 1rem; gap: 0.75rem;">
+        <button type="button" class="btn btn-secondary btn-sm" style="background: #ffffff; border: 1.5px solid #fed7aa; color: #78350f; font-weight: 700; padding: 0.6rem 1.2rem; border-radius: 8px;" onclick="copyAISummaryModalText()">Sao Chép Tóm Tắt</button>
+        <button type="button" class="btn btn-primary btn-sm" style="background: linear-gradient(135deg, #ea580c 0%, #f59e0b 100%); color: #ffffff; border: none; font-weight: 800; padding: 0.6rem 1.4rem; border-radius: 8px; box-shadow: 0 4px 15px rgba(234, 88, 12, 0.35);" onclick="closeModal('modal-ai-summary')">Đã Hiểu & Đóng</button>
+      </div>
 
- </div>
- </div>
+    </div>
+  </div>
 
- <!-- ==================================================================== -->
- <!-- MODAL: CẤU HÌNH & KẾT NỐI TRỢ LÝ AI (GOOGLE GEMINI / SQLITE ENGINE) -->
- <!-- ==================================================================== -->
+  <!-- ==================================================================== -->
+  <!-- MODAL: CẤU HÌNH & KẾT NỐI TRỢ LÝ AI (GOOGLE GEMINI / SQLITE ENGINE) -->
+  <!-- ==================================================================== -->
  <div id="modal-ai-config" class="modal-overlay" style="display: none;">
  <div class="modal-content glass" style="max-width: 580px; width: 92%; padding: 2rem; border-radius: 16px;">
  <div class="modal-header" style="display: flex; justify-content: space-between; align-items: center; border-bottom: 1px solid var(--border-color); padding-bottom: 1rem; margin-bottom: 1.25rem;">
@@ -2404,22 +2398,17 @@
  <!-- FLOATING AI CHATBOT WIDGET (24/7 ONLINE SALON ADVISOR) -->
  <!-- ==================================================================== -->
  <div id="floating-ai-trigger" onclick="toggleAIChatDrawer()" role="button" aria-label="Mở cửa sổ Trợ lý AI Salon" tabindex="0">
- <div class="ai-trigger-pulse"></div>
- <div class="ai-trigger-icon">️</div>
- <div class="ai-trigger-content">
- <div class="ai-trigger-title">Trợ Lý AI Salon</div>
- <div class="ai-trigger-sub">
- <span class="ai-trigger-status-dot"></span>
- <span>Trực tuyến 24/7</span>
- </div>
- </div>
- </div>
+    <div style="display: flex; align-items: center; gap: 8px;">
+      <span style="font-weight: 800; font-size: 0.92rem;">Trợ Lý AI Salon</span>
+      <span style="font-size: 0.75rem; background: rgba(0,0,0,0.18); padding: 2px 8px; border-radius: 12px; font-weight: 600;">Trực tuyến 24/7</span>
+    </div>
+  </div>
 
  <div id="ai-chat-drawer" role="dialog" aria-label="Cửa sổ Trợ lý AI Salon" aria-modal="false">
  <!-- Chat Header -->
  <div class="ai-chat-header">
  <div class="ai-chat-header-info">
- <div class="ai-header-avatar">️</div>
+ 
  <div>
  <div class="ai-header-name">Trợ Lý AI Salon Hair Hà Minh</div>
  <div class="ai-header-status">
@@ -2433,7 +2422,7 @@
  Làm mới
  </button>
  <button type="button" class="ai-tool-btn close-btn" onclick="toggleAIChatDrawer()" title="Đóng cửa sổ chat" aria-label="Đóng chat">
- 
+ ✕
  </button>
  </div>
  </div>
@@ -2446,12 +2435,12 @@
  <div class="ai-prompts-scroll">
  <button type="button" class="ai-chip" onclick="sendQuickPrompt('Vì sao tóc tẩy cấp 8 không được uốn nóng Collagen?')"> Tóc tẩy uốn nóng?</button>
  <button type="button" class="ai-chip" onclick="sendQuickPrompt('Vì sao sau khi nhuộm Balayage VIP nên bọc Protein tơ tằm?')"> Sau Balayage bọc Protein?</button>
- <button type="button" class="ai-chip" onclick="sendQuickPrompt('Vì sao mặt tròn nên cắt layer bay mái Curtain thay vì mái bằng?')">‍️ Mặt tròn cắt kiểu gì?</button>
+ <button type="button" class="ai-chip" onclick="sendQuickPrompt('Vì sao mặt tròn nên cắt layer bay mái Curtain thay vì mái bằng?')">‍ Mặt tròn cắt kiểu gì?</button>
  <button type="button" class="ai-chip" onclick="sendQuickPrompt('Vì sao da ngăm undertone ấm nên nhuộm Nâu Tây Balayage thay vì Vàng Bạch Kim?')"> Da ngăm nhuộm màu gì?</button>
  <button type="button" class="ai-chip" onclick="sendQuickPrompt('Vì sao da đầu bết gàu ngứa rụng tóc cần Scalp Detox?')"> Scalp Detox trị bết gàu?</button>
  <button type="button" class="ai-chip" onclick="sendQuickPrompt('Cho tôi xem bảng giá dịch vụ niêm yết')"> Xem bảng giá CSDL</button>
  <button type="button" class="ai-chip" onclick="sendQuickPrompt('Hôm nay có thợ nào đang rảnh?')"> Thợ nào đang rảnh?</button>
- <button type="button" class="ai-chip" onclick="sendQuickPrompt('Vì sao không thể đặt lịch hẹn với thợ Kéo Vàng lúc 14:30?')">️ Xung đột lịch 14:30?</button>
+ <button type="button" class="ai-chip" onclick="sendQuickPrompt('Vì sao không thể đặt lịch hẹn với thợ Kéo Vàng lúc 14:30?')"> Xung đột lịch 14:30?</button>
  <button type="button" class="ai-chip" onclick="sendQuickPrompt('Vì sao hôm nay doanh thu đạt 41.000.000đ?')"> Doanh thu hôm nay</button>
  </div>
  </div>
@@ -2459,15 +2448,15 @@
  <!-- Messages List -->
  <div id="ai-chat-messages" class="ai-chat-messages" role="log" aria-live="polite">
  <div class="chat-message-row bot-row">
- <div class="chat-avatar bot-avatar">️</div>
+ 
  <div class="chat-bubble-ai">
  <div class="chat-sender-tag">Trợ Lý AI Salon Hair Hà Minh</div>
  <div class="chat-bubble-body">
  Xin chào Quý khách! Em là <strong>Trợ lý AI Salon Hair Hà Minh 24/7</strong> <br><br>
  Em sẵn sàng hỗ trợ Quý khách:
- <div class="ai-list-item"><span class="ai-bullet"></span> <strong>Tư vấn tạo kiểu & màu nhuộm</strong> tôn nét mặt và tone da.</div>
- <div class="ai-list-item"><span class="ai-bullet"></span> <strong>Khám sức khỏe tóc</strong> & đưa phác đồ phục hồi hư tổn, cháy mủn.</div>
- <div class="ai-list-item"><span class="ai-bullet"></span> <strong>Tra cứu bảng giá, lịch thợ rảnh</strong> và quản lý cuộc hẹn.</div>
+ <div class="ai-list-item" style="margin: 4px 0;">• <strong>Tư vấn tạo kiểu &amp; màu nhuộm:</strong> Tôn nét mặt và tone da.</div>
+ <div class="ai-list-item" style="margin: 4px 0;">• <strong>Khám sức khỏe tóc:</strong> Đưa phác đồ phục hồi hư tổn, cháy mủn.</div>
+ <div class="ai-list-item" style="margin: 4px 0;">• <strong>Tra cứu bảng giá, lịch thợ:</strong> Tra cứu thợ đang rảnh và đặt lịch hẹn.</div>
  <br>Quý khách có thể bấm chọn câu hỏi gợi ý phía trên hoặc gõ câu hỏi vào khung bên dưới nhé!
  </div>
  <div class="chat-bubble-actions">
